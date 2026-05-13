@@ -4,10 +4,7 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const basicAuth = request.headers.get("authorization");
 
-  if (
-    pathname.startsWith("/brand") ||
-    pathname.startsWith("/brand-old")
-  ) {
+  if (pathname.startsWith("/brand")) {
     if (!checkAuth(basicAuth, process.env.OWNER_USER, process.env.OWNER_PASS)) {
       return unauthorized("brand");
     }
@@ -87,7 +84,6 @@ function unauthorized(realm: string) {
 export const config = {
   matcher: [
     "/brand/:path*",
-    "/brand-old/:path*",
     "/media/:path*",
     "/admin/:path*",
   ],

@@ -2,8 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /brand
 Disallow: /brand/
-Disallow: /brand-old
-Disallow: /brand-old/
 Disallow: /media
 Disallow: /media/
 Disallow: /admin

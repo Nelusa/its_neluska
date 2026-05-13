@@ -16,7 +16,6 @@ What you want to confirm:
 
 - `/` loads even if Twitch environment variables are missing or invalid
 - `/brand` returns `401` without credentials
-- `/brand-old` returns `401` without credentials
 - `/media` returns `401` without credentials
 - `/admin` returns `401` without credentials
 - public pages stay public
@@ -26,7 +25,6 @@ Suggested local spot checks:
 ```bash
 curl -I http://localhost:3000/
 curl -I http://localhost:3000/brand
-curl -I http://localhost:3000/brand-old
 curl -I http://localhost:3000/media
 curl -I -u neluska:your-password http://localhost:3000/brand
 ```
@@ -78,7 +76,6 @@ After deployment, check:
 
 - `/` renders correctly
 - `/brand` shows browser auth before login
-- `/brand-old` shows browser auth before login
 - `/media` shows browser auth before login
 - `/admin` shows browser auth before login
 - logged-in `/brand` has `noindex,nofollow`
@@ -96,16 +93,12 @@ Headers to confirm:
 
 ### Public content
 
-- landing / about / schedule / work pages live in `src/app/`
+- landing / about / schedule / twitch-panels pages live in `src/app/`
 - schedule data lives in `src/lib/schedule.ts`
 
 ### Active brand system
 
 - the real brand kit lives in `src/app/brand/`
-
-### Historical / archive material
-
-- `src/app/brand-old/` is the older draft
 
 ### Assets likely to change
 

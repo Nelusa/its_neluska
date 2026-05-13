@@ -19,14 +19,8 @@ This repo has two personalities:
 ### Protected routes
 
 - `/brand` current full brand kit, refactored into app code
-- `/brand-old` older component-based draft kept as reference
 - `/media` lighter protected route for sharing links / partner context
 - `/admin` reserved protected route for future internal tools
-
-### Legacy compatibility
-
-- `/brand-attempt-1` redirects to `/brand-old`
-- `/brand-attempt-2` redirects to `/brand`
 
 ## Current Source Of Truth
 
@@ -34,12 +28,9 @@ If you only remember one thing, remember this:
 
 - `/brand` is the active, living brand system
 - `src/app/brand/` is the main source of truth for the protected brand kit
-- `src/app/brand-old/` is historical, not the main implementation
 
-That means:
-
-- edit `src/app/brand/` when changing the real brand kit
-- use `src/lib/brand-kit.ts` mainly for the older draft and the Twitch panels route
+Edit `src/app/brand/` when changing the real brand kit. Shared data that belongs to
+the current brand experience lives in `src/app/brand/sections/data.tsx`.
 
 ## Stack
 
@@ -108,11 +99,6 @@ npm run start
 - Shared brand primitives: [src/app/brand/sections/primitives.tsx](src/app/brand/sections/primitives.tsx)
 - Shared brand data blocks: [src/app/brand/sections/data.tsx](src/app/brand/sections/data.tsx)
 
-### Secondary / historical brand pieces
-
-- Older draft route: [src/app/brand-old/page.tsx](src/app/brand-old/page.tsx)
-- Older data model used by `brand-old` and Twitch panels: [src/lib/brand-kit.ts](src/lib/brand-kit.ts)
-
 ### Shared infra
 
 - Protected-route auth: [src/middleware.ts](src/middleware.ts)
@@ -144,7 +130,7 @@ Font files live in `src/fonts/` so Next can optimize them through `next/font/loc
 
 Passwords are controlled through environment variables only:
 
-- `OWNER_USER` / `OWNER_PASS` protect `/brand`, `/brand-old`, and `/admin`
+- `OWNER_USER` / `OWNER_PASS` protect `/brand` and `/admin`
 - `MEDIA_USER` / `MEDIA_PASS` protect `/media`
 
 To rotate a password:

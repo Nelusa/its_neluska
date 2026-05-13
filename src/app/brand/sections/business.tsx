@@ -1347,12 +1347,6 @@ export function FooterSection() {
             ↗ live site
           </Link>
           <Link
-            href="/brand-old"
-            className="nav-link bg-white text-[var(--pp-600)]"
-          >
-            ↗ brand old
-          </Link>
-          <Link
             href="/media"
             className="nav-link bg-white text-[var(--pp-600)]"
           >

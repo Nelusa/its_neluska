@@ -99,12 +99,6 @@ export default function BrandKitChrome() {
           >
             ↗ live site
           </Link>
-          <Link
-            href="/brand-old"
-            className="block rounded-md px-2 py-1 leading-[1.35] text-[var(--pp-600)] no-underline transition hover:bg-[var(--pp-50)]"
-          >
-            ↗ brand old
-          </Link>
         </div>
       </aside>
 

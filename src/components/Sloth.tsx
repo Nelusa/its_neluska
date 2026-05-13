@@ -28,9 +28,12 @@ export interface SlothProps {
 }
 
 const SLOTH_SRC: Record<SlothVariant, string> = {
+  // TODO: user will provide sloth-balloons.svg etc.
   balloons: "/assets/sloths/svg/sloth-hearts.svg",
+  // TODO: user will provide sloth-peek.svg etc.
   peek: "/assets/sloths/svg/sloth-doodle.svg",
   heart: "/assets/sloths/svg/sloth-hearts.svg",
+  // TODO: user will provide sloth-coffee.svg etc.
   coffee: "/assets/sloths/svg/sloth-camping.svg",
   code: "/assets/sloths/svg/sloth-laptop.svg",
   zzz: "/assets/sloths/svg/sloth-sleeping.svg",

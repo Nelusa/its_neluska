@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node scripts/postbuild-fix.mjs",
     "start": "next start",
     "lint": "eslint . --max-warnings=0"
   },
@@ -15,9 +14,7 @@
     "react-dom": "^19.2.5"
   },
   "overrides": {
-    "next": {
-      "postcss": "8.5.10"
-    }
+    "postcss": "8.5.10"
   },
   "devDependencies": {
     "@types/node": "^20",
@@ -25,7 +22,7 @@
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.4",
     "eslint-config-next": "^15.5.15",
-    "postcss": "^8",
+    "postcss": "8.5.10",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.9.3"
   }

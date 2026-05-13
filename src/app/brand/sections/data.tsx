@@ -7,6 +7,66 @@ const STORY_H = 640;
 const REEL_W = 240;
 const REEL_H = 360;
 
+export interface TwitchPanelData {
+  slug: "about" | "schedule" | "rules" | "setup" | "socials" | "support";
+  number: string;
+  label: string;
+  eyebrow: string;
+  title: string;
+  body: string;
+}
+
+export const twitchPanels: TwitchPanelData[] = [
+  {
+    slug: "about",
+    number: "01",
+    label: "about me",
+    eyebrow: "About · ahoj pookies",
+    title: "soft nerd princess",
+    body: "Frontend dev by day, sloth 24/7, beginner LoL journey, no flaming.",
+  },
+  {
+    slug: "schedule",
+    number: "02",
+    label: "schedule",
+    eyebrow: "Streaming rhythm · Prague time",
+    title: "catch me live",
+    body: "Usually Tue and Thu around 20:00, with occasional cozy Sunday extras.",
+  },
+  {
+    slug: "rules",
+    number: "03",
+    label: "chat rules",
+    eyebrow: "Sloth energy only",
+    title: "be kind",
+    body: "No hate, no spam, and backseating only when invited. Keep it gentle and fun.",
+  },
+  {
+    slug: "setup",
+    number: "04",
+    label: "my setup",
+    eyebrow: "Gear · updated 2026",
+    title: "my setup",
+    body: "Keychron Q1, Sony ZV-E10, Shure SM7B, Elgato lighting and cozy chaos.",
+  },
+  {
+    slug: "socials",
+    number: "05",
+    label: "socials",
+    eyebrow: "Find me elsewhere",
+    title: "say hi",
+    body: "Instagram for daily life, GitHub for code, and neluska.dev as the home base.",
+  },
+  {
+    slug: "support",
+    number: "06",
+    label: "support",
+    eyebrow: "Tips · subs · little help",
+    title: "support the stream",
+    body: "Thank-you panel for tips, subs, and wishlist support without breaking the cozy tone.",
+  },
+];
+
 export const DITL = [
   {
     t: "0:00",

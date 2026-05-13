@@ -1,13 +1,18 @@
-import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
-import nextTypescript from "eslint-config-next/typescript";
+import { FlatCompat } from "@eslint/eslintrc";
+import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
 
 const archiveGlobs = ["public/brand-archive/**", "references/**"];
 const config = [
   {
     ignores: [".next/**", "node_modules/**", ...archiveGlobs],
   },
-  ...nextCoreWebVitals,
-  ...nextTypescript,
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     files: ["src/app/brand/**/*.ts", "src/app/brand/**/*.tsx"],
     rules: {

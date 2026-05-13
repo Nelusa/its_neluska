@@ -5,7 +5,7 @@ import { TwitchPanelPreview } from "@/components/brand/TwitchPanelPreview";
 import { LinkCard } from "@/components/LinkCard";
 import { Section } from "@/components/Section";
 import { SiteFrame } from "@/components/SiteFrame";
-import { twitchPanels } from "@/lib/brand-kit";
+import { twitchPanels } from "@/app/brand/sections/data";
 
 export const metadata: Metadata = {
   title: "twitch panels",

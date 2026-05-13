@@ -1,5 +1,5 @@
 import { Sloth } from "@/components/Sloth";
-import type { TwitchPanelData } from "@/lib/brand-kit";
+import type { TwitchPanelData } from "@/app/brand/sections/data";
 
 export interface TwitchPanelPreviewProps {
   panel: TwitchPanelData;
@@ -143,7 +143,7 @@ export function TwitchPanelPreview({ panel }: TwitchPanelPreviewProps) {
             <div className="mt-3 grid grid-cols-2 gap-2 text-[11px]">
               {[
                 ["IG", "@its_neluska"],
-                ["GitHub", "@neluska"],
+                ["GitHub", "@Nelusa"],
                 ["Web", "neluska.dev"],
                 ["Discord", "soon"],
               ].map(([label, value]) => (

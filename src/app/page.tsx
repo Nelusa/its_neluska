@@ -74,7 +74,7 @@ export default async function HomePage() {
                 icon={<span aria-hidden="true">📷</span>}
               />
               <LinkCard
-                href="https://github.com/neluska"
+                href="https://github.com/Nelusa"
                 label="code on github"
                 sublabel="react, typescript, svelte, three.js toys"
                 icon={<span aria-hidden="true">&lt;/&gt;</span>}
@@ -129,7 +129,7 @@ export default async function HomePage() {
             external={false}
           />
           <LinkCard
-            href="https://github.com/neluska"
+            href="https://github.com/Nelusa"
             label="code experiments"
             sublabel="frontend builds, TypeScript, and little web toys"
             icon={<span aria-hidden="true">✦</span>}

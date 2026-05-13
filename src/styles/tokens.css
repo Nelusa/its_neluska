@@ -1,0 +1,222 @@
+/* its_neluska — design tokens */
+:root {
+  /* Princess Purple — exact hex */
+  --pp-50: #EEE6F4;
+  --pp-100: #DCCDE8;
+  --pp-200: #BCA3CC;
+  --pp-300: #875BA4;
+  --pp-400: #875BA4;
+  --pp-500: #6D4E82;
+  --pp-600: #4E3464;
+  --pp-700: #2A103F;
+
+  /* Pastel Yellow */
+  --py-50: #FFFDF6;
+  --py-100: #FFF7DA;
+  --py-200: #FFF0B2;
+  --py-300: #FCEB86;
+  --py-400: #F1E07C;
+  --py-500: #E6D571;
+  --py-600: #D8C765;
+
+  /* Dusty Rose */
+  --dr-50: #F6E8EE;
+  --dr-100: #EACFDA;
+  --dr-200: #D8A6B8;
+  --dr-300: #B97C93;
+  --dr-400: #8E5C72;
+  --dr-500: #8E5C72;
+
+  /* Mauve Pink */
+  --mp-50: #F3E6EF;
+  --mp-100: #E1BDD5;
+  --mp-200: #C58BB0;
+  --mp-300: #9F6D8E;
+  --mp-400: #744E68;
+
+  /* Twitch exact hex */
+  --tw-deep: #2D1B4E;
+  --tw-deep-2: #1F1238;
+  --tw-purple: #2A103F;
+  --tw-lav: #DCC9E8;
+  --tw-butter: #F5E574;
+  --tw-heart: #F4A8C0;
+  --py-text: #FFF2A3;
+
+  /* Neutrals */
+  --ink: oklch(0.24 0.03 310);
+  --ink-soft: oklch(0.42 0.04 310);
+  --paper: oklch(0.985 0.006 80);
+  --paper-2: oklch(0.96 0.012 320);
+  --paper-3: oklch(0.93 0.02 330);
+  --line: oklch(0.88 0.02 320);
+
+  /* semantic */
+  --bg: var(--paper);
+  --fg: var(--ink);
+  --muted: var(--ink-soft);
+
+  /* radii */
+  --r-xs: 6px;
+  --r-sm: 10px;
+  --r-md: 16px;
+  --r-lg: 24px;
+  --r-xl: 32px;
+  --r-2xl: 48px;
+
+  /* shadows — soft, low-sat */
+  --sh-sm: 0 1px 2px oklch(0.3 0.03 310 / 0.06), 0 1px 1px oklch(0.3 0.03 310 / 0.04);
+  --sh-md: 0 6px 16px oklch(0.3 0.05 310 / 0.08), 0 2px 4px oklch(0.3 0.03 310 / 0.04);
+  --sh-lg: 0 18px 40px oklch(0.3 0.06 310 / 0.12), 0 6px 12px oklch(0.3 0.03 310 / 0.06);
+  --sh-glow: 0 0 0 6px oklch(0.85 0.1 320 / 0.25);
+
+  /* type */
+  --ff-display: var(--font-display), system-ui, sans-serif;
+  --ff-body: var(--font-body), system-ui, sans-serif;
+  --ff-script: var(--font-script), cursive;
+  --ff-mono: "JetBrains Mono", "SFMono-Regular", ui-monospace, monospace;
+}
+
+.h-display {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+
+.h-script {
+  font-family: var(--ff-script);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.body-sans {
+  font-family: var(--ff-body);
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--fg);
+}
+
+.mono {
+  font-family: var(--ff-mono);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--ff-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+.eyebrow {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pp-500);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-family: var(--ff-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  background: var(--paper);
+  color: var(--ink-soft);
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--sh-sm);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pp-100);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::selection {
+  background: var(--pp-200);
+  color: var(--pp-700);
+}
+
+.contour-dark {
+  background-color: var(--tw-deep);
+  background-image: url("/assets/patterns/waves.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 55% auto;
+  position: relative;
+}
+
+.contour-dark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-color: var(--tw-deep);
+  mix-blend-mode: color;
+  opacity: 0.55;
+}
+
+.contour-light {
+  background-color: var(--tw-lav);
+  background-image: url("/assets/patterns/waves.png");
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 55% auto;
+}
+
+.halftone-beam {
+  background-image: radial-gradient(
+    circle at center,
+    rgba(78, 52, 100, 0.5) 0.8px,
+    transparent 1.3px
+  );
+  background-size: 7px 7px;
+  -webkit-mask-image: linear-gradient(
+    115deg,
+    transparent 35%,
+    #000 45%,
+    #000 55%,
+    transparent 65%
+  );
+  mask-image: linear-gradient(
+    115deg,
+    transparent 35%,
+    #000 45%,
+    #000 55%,
+    transparent 65%
+  );
+}

@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /brand
+Disallow: /brand/
+Disallow: /brand-old
+Disallow: /brand-old/
+Disallow: /media
+Disallow: /media/
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api
+Disallow: /api/
+
+Sitemap: https://neluska.dev/sitemap.xml

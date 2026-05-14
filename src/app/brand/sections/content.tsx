@@ -11,13 +11,9 @@ import {
   SlothASMR,
   StoryGrid,
 } from "./data";
-import {
-  DotDivider,
-  FeedPreview,
-  IGShowcase,
-  KitSection,
-  PostGrid9,
-} from "./primitives";
+import { IGShowcase } from "@/app/brand/mocks/ig";
+import { DotDivider, KitSection } from "./primitives";
+import { FeedPreview, PostGrid9 } from "./PostMocks";
 
 export function IGRealSection() {
   return (

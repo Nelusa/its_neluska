@@ -1,6 +1,8 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 
+import { cn } from "@/lib/cn";
+
 export interface LinkCardProps {
   href: string;
   label: string;
@@ -26,41 +28,41 @@ export function LinkCard({
       href={href}
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noreferrer noopener" : undefined}
-      className={[
+      className={cn(
         "group flex min-h-11 items-center gap-4 rounded-[22px] border px-4 py-4 shadow-[var(--sh-sm)] transition-transform duration-200 hover:-translate-y-0.5 motion-reduce:transition-none",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--pp-400)] focus-visible:ring-offset-2",
         primary
           ? "border-transparent bg-[var(--tw-purple)] text-white focus-visible:ring-offset-[var(--tw-purple)]"
           : "border-[rgba(78,52,100,0.1)] bg-[rgba(255,253,242,0.88)] text-[var(--ink)] focus-visible:ring-offset-[var(--paper)]",
-      ].join(" ")}
+      )}
     >
       <div
         aria-hidden="true"
-        className={[
+        className={cn(
           "flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl text-lg",
           primary
             ? "bg-[rgba(245,229,116,0.14)] text-[var(--tw-butter)]"
             : "bg-[var(--paper-2)] text-[var(--pp-700)]",
-        ].join(" ")}
+        )}
       >
         {icon}
       </div>
 
       <div className="min-w-0 flex-1">
         <div
-          className={[
+          className={cn(
             "truncate font-display text-[15px] uppercase leading-[1.05]",
             primary ? "text-white" : "text-[var(--pp-700)]",
-          ].join(" ")}
+          )}
         >
           {label}
         </div>
         {sublabel ? (
           <p
-            className={[
+            className={cn(
               "mt-1 overflow-hidden text-sm leading-5",
               primary ? "text-[var(--py-text)]" : "text-[var(--ink-soft)]",
-            ].join(" ")}
+            )}
             style={{
               display: "-webkit-box",
               WebkitBoxOrient: "vertical",

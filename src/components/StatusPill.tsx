@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 
+import { cn } from "@/lib/cn";
 import type { TwitchStatus } from "@/lib/twitch";
 
 export interface StatusPillProps {
@@ -56,30 +57,31 @@ export function StatusPill({
 
   return (
     <div
-      className={[
+      className={cn(
         "inline-flex min-h-11 max-w-full items-center gap-3 rounded-full px-4 py-3 shadow-[var(--sh-sm)]",
         resolved.isLive
           ? "bg-[var(--tw-purple)] text-white"
           : "bg-[rgba(255,253,242,0.9)] text-[var(--pp-700)]",
-      ].join(" ")}
+      )}
     >
       <span
         aria-hidden="true"
-        className={[
+        className={cn(
           "block h-2.5 w-2.5 rounded-full",
           resolved.isLive
             ? "animate-pulse bg-[#ef6a6a]"
             : "bg-[rgba(78,52,100,0.25)]",
-        ].join(" ")}
+        )}
       />
       <div className="min-w-0">
         <p className="truncate font-mono text-[11px] uppercase tracking-[0.18em]">
           {resolved.isLive ? "live now" : "offline"}
         </p>
         <p
-          className={`truncate text-sm ${
-            resolved.isLive ? "text-[var(--tw-lav)]" : "text-[var(--ink-soft)]"
-          }`}
+          className={cn(
+            "truncate text-sm",
+            resolved.isLive ? "text-[var(--tw-lav)]" : "text-[var(--ink-soft)]",
+          )}
         >
           {description}
         </p>

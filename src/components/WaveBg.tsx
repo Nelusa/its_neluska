@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { cn } from "@/lib/cn";
+
 export interface WaveBgProps {
   position?: "top-right" | "bottom-left" | "both";
   opacity?: number;
@@ -11,8 +13,6 @@ export function WaveBg({
   opacity = 0.45,
   flip = false,
 }: WaveBgProps) {
-  const sharedTransform = flip ? "scaleX(-1)" : undefined;
-
   return (
     <div aria-hidden="true" className="pointer-events-none fixed inset-0 overflow-hidden">
       {(position === "bottom-left" || position === "both") && (
@@ -21,8 +21,11 @@ export function WaveBg({
           alt=""
           width={600}
           height={480}
-          className="absolute -bottom-10 -left-12 h-auto w-[55vw] max-w-[540px] object-contain"
-          style={{ opacity, transform: sharedTransform }}
+          className={cn(
+            "absolute -bottom-10 -left-12 h-auto w-[55vw] max-w-[540px] object-contain",
+            flip && "-scale-x-100",
+          )}
+          style={{ opacity }}
         />
       )}
       {(position === "top-right" || position === "both") && (
@@ -31,8 +34,8 @@ export function WaveBg({
           alt=""
           width={600}
           height={480}
-          className="absolute -right-10 -top-10 h-auto w-[45vw] max-w-[420px] object-contain"
-          style={{ opacity, transform: "scaleX(-1)" }}
+          className="absolute -right-10 -top-10 h-auto w-[45vw] max-w-[420px] -scale-x-100 object-contain"
+          style={{ opacity }}
         />
       )}
     </div>

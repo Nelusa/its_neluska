@@ -1,5 +1,7 @@
 import { Fragment, type CSSProperties, type ReactNode } from "react";
 
+import { cn } from "@/lib/cn";
+
 import { ClaudeSloth, Sparkle, Washi } from "./primitives";
 
 const STORY_W = 360;
@@ -63,7 +65,7 @@ export const twitchPanels: TwitchPanelData[] = [
     label: "support",
     eyebrow: "Tips · subs · little help",
     title: "support the stream",
-    body: "Thank-you panel for tips, subs, and wishlist support without breaking the cozy tone.",
+    body: "Thanks panel for tips, subs, and wishlist support without breaking the cozy tone.",
   },
 ];
 
@@ -158,55 +160,65 @@ export const SLOTH = [
   },
   {
     t: "50-58s",
-    body: 'end card: "vote your favorite 🦥 (drop the number)" + 5 numbered slot polaroids',
+    body: 'end card: "vote a favorite 🦥 (drop the number)" + 5 numbered slot polaroids',
   },
 ];
 
+export const QUICK_DEV_TIP = [
+  {
+    t: "0-3s · HOOK",
+    body: 'bold on-screen text: "stop doing X in Svelte" (pick one small bad habit devs repeat)',
+  },
+  {
+    t: "3-15s",
+    body: "screen recording: the problem – broken UI, console error, or janky interaction (no face required)",
+  },
+  {
+    t: "15-25s",
+    body: "screen recording: the fix – same frame, apply pattern (store, snippet, or component structure)",
+  },
+  {
+    t: "25-30s",
+    body: 'end card: handle @its_neluska + "save for the next refactor"',
+  },
+] as const;
+
 export const PILLARS = [
   {
-    pct: 30,
+    pct: 35,
     name: "soft life",
     mode: "princess",
     color: "var(--mp-100)",
     ink: "var(--dr-500)",
-    desc: "cozy setup, balcony, coffee, skincare, yoga, slow mornings",
-    formats: ["photo dump", "story aesthetic", "reel vlog"],
+    desc: "cozy setup, balcony, coffee, skincare, yoga, slow mornings, flowers",
+    formats: ["photo dump", "aesthetic reel", "story series"],
   },
   {
-    pct: 25,
+    pct: 30,
     name: "builder mode",
     mode: "nerd",
     color: "var(--pp-100)",
     ink: "var(--pp-700)",
-    desc: "svelte, three.js, R3F, your 3D template system, build logs",
-    formats: ["carousel tutorial", "terminal post", "reel tip"],
+    desc: "svelte, three.js, R3F, 3D template system, build logs, quick tips",
+    formats: ["60s tutorial reel", "carousel tip", "code screenshot post"],
   },
   {
     pct: 20,
-    name: "streamer vibes",
-    mode: "funny",
-    color: "var(--pp-400)",
-    ink: "#fff9d8",
-    desc: "LOL clips, twitch reminders, stream highlights, chaotic wins",
-    formats: ["reel clip", "live now story", "stream poster"],
-  },
-  {
-    pct: 15,
-    name: "sloth energy",
+    name: "sloth + personality",
     mode: "funny",
     color: "var(--py-200)",
     ink: "var(--pp-700)",
-    desc: "the collection, memes, relatable confessions, pure vibe",
-    formats: ["confession post", "vibe post", "sticker story"],
+    desc: "sloth collection, Lego builds, puzzles, memes, confessions, gaming moments",
+    formats: ["personality reel", "confession post", "photo with caption", "stream highlight reel"],
   },
   {
-    pct: 10,
+    pct: 15,
     name: "real talk",
     mode: "princess",
     color: "var(--dr-100)",
     ink: "var(--dr-500)",
-    desc: "anxiety journey, burnout, women in tech, honest moments",
-    formats: ["quote card", "long caption", "carousel essay"],
+    desc: "anxiety journey, women in tech, honest moments, small wins",
+    formats: ["long caption post", "carousel essay", "quote card"],
   },
 ];
 
@@ -215,38 +227,39 @@ export const CAL_KEY = {
   nerd: { color: "var(--pp-100)", ink: "var(--pp-700)", dot: "var(--pp-500)" },
   funny: { color: "var(--py-200)", ink: "var(--pp-700)", dot: "var(--dr-300)" },
   live: { color: "#2a1d3d", ink: "#ffe875", dot: "#ff6b6b" },
+  stories: { color: "var(--mp-50)", ink: "var(--pp-600)", dot: "var(--pp-400)" },
   rest: { color: "transparent", ink: "var(--ink-soft)", dot: "transparent" },
 } as const;
 
 export const MONTH = [
-  { d: "Mon 20", t: "nerd", label: 'Post · "hi, I\'m Neluska" carousel', notes: "intro post · 7 slides · princess/nerd/funny" },
-  { d: "Tue 21", t: "princess", label: "Story · morning balcony", notes: "gm story · poll: what should I build today?" },
-  { d: "Wed 22", t: "funny", label: "Reel · unboxing 1000-piece sloth puzzle", notes: "asmr · use trending cozy audio" },
-  { d: "Thu 23", t: "live", label: "STREAM · LOL with chill build in bg", notes: "20:00-22:00 · announce via story at 18:00" },
-  { d: "Fri 24", t: "nerd", label: "Post · svelte store tip (terminal)", notes: "save-worthy · tag @sveltesociety" },
-  { d: "Sat 25", t: "princess", label: "Photo dump · soft saturday", notes: "5 images · café + yoga + skincare" },
-  { d: "Sun 26", t: "rest", label: "rest + plan next week", notes: "batch content on sunday eve" },
-  { d: "Mon 27", t: "nerd", label: "Reel · three.js scene in 60s", notes: `hook: "everyone says it's hard. it's not."` },
-  { d: "Tue 28", t: "princess", label: "Post · cozy desk setup tour", notes: "photo · mention keyboard, lamp, sloth plushie" },
-  { d: "Wed 29", t: "funny", label: "Story · confession poll", notes: "do you debug or do you cry? (both)" },
-  { d: "Thu 30", t: "live", label: "STREAM · coding a landing page live", notes: "focused build · answer questions on twitch" },
-  { d: "Fri 01", t: "nerd", label: "Post · build log #2 carousel", notes: "show 3d template system progress" },
-  { d: "Sat 02", t: "funny", label: "Reel · sloth impressions", notes: "low effort · high reach · stay silly" },
-  { d: "Sun 03", t: "rest", label: "rest", notes: "" },
-  { d: "Mon 04", t: "princess", label: "Post · real talk on anxiety + dev", notes: "long caption · honest, no pity" },
-  { d: "Tue 05", t: "nerd", label: "Story · what I'm building this week", notes: "countdown + question sticker" },
-  { d: "Wed 06", t: "funny", label: "Reel · LOL ranked rage clip", notes: "self-deprecating caption · twitch CTA" },
-  { d: "Thu 07", t: "live", label: "STREAM · puzzle + chill music", notes: "cozy content · co-working stream" },
-  { d: "Fri 08", t: "princess", label: 'Post · quote card "soft is strong"', notes: "save + share-bait · use script font" },
-  { d: "Sat 09", t: "nerd", label: 'Carousel · "5 svelte tricks"', notes: "7 slides · most saveable content type" },
-  { d: "Sun 10", t: "rest", label: "rest", notes: "" },
-  { d: "Mon 11", t: "princess", label: "Story series · ask me anything", notes: "question sticker · answer 10 in stories" },
-  { d: "Tue 12", t: "funny", label: "Reel · sloth collection tour", notes: "name your favorite poll" },
-  { d: "Wed 13", t: "nerd", label: "Post · template system reveal", notes: "link in bio · this is the one" },
-  { d: "Thu 14", t: "live", label: "STREAM · collab / girls who code", notes: "invite another dev girl" },
+  { d: "Mon 20", t: "nerd", label: 'Carousel · "hi, I\'m Neluska" intro', notes: "7 slides · princess / nerd / funny" },
+  { d: "Tue 21", t: "stories", label: "Stories only", notes: "BTS, polls, what I'm building" },
+  { d: "Wed 22", t: "funny", label: "Reel · sloth puzzle unboxing", notes: "trending cozy audio · ~45s" },
+  { d: "Thu 23", t: "stories", label: "Stories only", notes: "engagement – reply, comment on niche accounts" },
+  { d: "Fri 24", t: "nerd", label: "Post · svelte tip (terminal style)", notes: "save-worthy · tag @sveltesociety" },
+  { d: "Sat 25", t: "stories", label: "Stories only", notes: "optional soft moment – no feed pressure" },
+  { d: "Sun 26", t: "rest", label: "batch + plan next week", notes: "2-3h · shoot & edit 3-4 reels, schedule" },
+  { d: "Mon 27", t: "nerd", label: "Reel · quick dev tip (screen cap)", notes: "30s · hook in first 3s" },
+  { d: "Tue 28", t: "stories", label: "Stories only", notes: "balcony / coffee / work-in-progress" },
+  { d: "Wed 29", t: "princess", label: "Post · cozy desk setup tour", notes: "photo or carousel · warm caption" },
+  { d: "Thu 30", t: "live", label: "LIVE EVENT · dev or cozy stream", notes: "1-2× / month max · mine for reels after" },
+  { d: "Fri 01", t: "stories", label: "Stories only", notes: '"LIVE NOW" if streaming · else skip' },
+  { d: "Sat 02", t: "funny", label: "Reel · Lego fail or sloth bit", notes: "low effort · high recognition" },
+  { d: "Sun 03", t: "rest", label: "batch + rest", notes: "no feed post · prep week 3" },
+  { d: "Mon 04", t: "princess", label: "Post · real talk (anxiety + dev)", notes: "long caption · honest, no pity" },
+  { d: "Tue 05", t: "stories", label: "Stories only", notes: "question sticker · AMA answers" },
+  { d: "Wed 06", t: "nerd", label: "Carousel · build log #2", notes: "3D template progress" },
+  { d: "Thu 07", t: "stories", label: "Stories only", notes: "comment on 10 accounts · community" },
+  { d: "Fri 08", t: "princess", label: 'Post · quote card · "soft is strong"', notes: "save + share" },
+  { d: "Sat 09", t: "stories", label: "Stories only", notes: "photo dump preview in stories" },
+  { d: "Sun 10", t: "rest", label: "batch + rest", notes: "" },
+  { d: "Mon 11", t: "stories", label: "Stories only", notes: "week 4 teaser · soft check-in" },
+  { d: "Tue 12", t: "funny", label: "Reel · sloth collection tour", notes: "poll: pick a favorite" },
+  { d: "Wed 13", t: "nerd", label: "Post · template system reveal", notes: "link in bio" },
+  { d: "Thu 14", t: "live", label: "LIVE EVENT · puzzle + chill", notes: "2nd stream this month max · mine clips after" },
   { d: "Fri 15", t: "princess", label: "Photo · friday little things", notes: "low-lift · keeps feed warm" },
-  { d: "Sat 16", t: "funny", label: "Reel · first-month recap", notes: "stats + thanks · community moment" },
-  { d: "Sun 17", t: "rest", label: "plan month 2", notes: "" },
+  { d: "Sat 16", t: "funny", label: "Reel · first-month recap", notes: "stats + thanks" },
+  { d: "Sun 17", t: "rest", label: "batch + plan month 2", notes: "" },
 ] as const;
 
 export const LAUNCH = [
@@ -259,31 +272,31 @@ export const LAUNCH = [
     slides: [
       { t: "hi, i'm neluska ✦", note: "cover · big script + sloth peeking in corner" },
       { t: "dev by day", note: 'purple gradient · mono subtitle: "svelte · three.js · r3f"' },
-      { t: "sloth at heart", note: "yellow bg · sloth sticker wall (your stickers)" },
-      { t: "things i love", note: "grid: puzzles, lego, LOL, yoga, oat lattes, bad code" },
-      { t: "things i post", note: "3 circles: princess / nerd / funny — chart style" },
-      { t: "come hang ♡", note: "twitch handle · streaming soon" },
-      { t: "let's be soft together", note: 'cta: follow + comment "🦥" for dm' },
+      { t: "sloth at heart", note: "yellow bg · sloth sticker wall (my stickers)" },
+      { t: "things i love", note: "grid: puzzles, lego, yoga, oat lattes, bad code" },
+      { t: "things i post", note: "3 circles: princess / nerd / funny – chart style" },
+      { t: "find me ✿", note: "Instagram @its_neluska primary · Twitch when I stream" },
+      { t: "let's be soft together", note: 'cta: follow + comment "🦥"' },
     ],
     caption:
-      `i've been online forever but somehow never like this. so here's the intro: i build 3D websites, i hoard sloth plushies, i cry at code reviews and at sunsets equally. i play LOL badly on twitch. my aesthetic is "what if your dev was also a princess." ✿ stay for the tutorials, the nonsense, the quiet moments. 🦥 tell me one weird thing you love in the comments.`,
+      `i've been online forever but somehow never like this. intro post: i build 3D websites, i hoard sloth plushies, i cry at code reviews and at sunsets equally. most days I'm on Instagram – reels, cozy desk, dev tips. streams happen sometimes and they're extra. my aesthetic is "what if my dev life was also a princess movie." ✿ comments: one weird tiny collection – i'll go first in stories.`,
     hashtags:
-      "#softnerd #womenintech #svelte #threejs #cozyaesthetic #sloth #twitchstreamer",
+      "#softnerd #womenintech #svelte #threejs #cozyaesthetic #sloth #frontenddev",
   },
   {
     day: "DAY 2 · TUE",
-    type: "STORY SET · 5 stories",
+    type: "STORY SET · 4-5 stories",
     color: "#F6E8EE",
     ink: "#8E5C72",
     title: "morning on the balcony",
     slides: [
       { t: "gm", note: 'photo of coffee · script "coffee first · then chaos"' },
-      { t: "what today looks like", note: 'photo · checklist graphic · "build · stream · yoga"' },
-      { t: "poll: what should i build today?", note: "poll — three.js scene vs svelte tutorial" },
+      { t: "what today looks like", note: 'photo · checklist · "batch sunday · 3 posts · stories"' },
+      { t: "poll: what should i build today?", note: "poll – three.js scene vs svelte tutorial" },
       { t: "between meetings", note: 'photo of laptop + plushie · "still 3 bugs in"' },
-      { t: "tonight", note: "teaser for thursday's stream · countdown sticker" },
+      { t: "soft close", note: "no stream countdown – maybe \"catch me on the feed\" (or skip)" },
     ],
-    caption: "[stories — no caption, just tone]",
+    caption: "[stories – no caption, just tone]",
     hashtags: "",
   },
   {
@@ -295,61 +308,57 @@ export const LAUNCH = [
     slides: [
       { t: "0-3s · HOOK", note: 'close-up: puzzle box lid opening, text overlay "1000 pieces. 1 sloth. 0 braincells."' },
       { t: "3-10s", note: "time-lapse pouring pieces, washi tape sound, cozy ASMR feel" },
-      { t: "10-25s", note: "cut to sorting by color — princess purple pieces, pastel yellow pieces, etc." },
+      { t: "10-25s", note: "cut to sorting by color – princess purple pieces, pastel yellow pieces, etc." },
       { t: "25-35s", note: "pov hands working, natural light, plant in bg" },
-      { t: "35-45s · PAYOFF", note: "time skip: you + finished puzzle + sloth plushie lookalike side by side" },
+      { t: "35-45s · PAYOFF", note: "time skip: me + finished puzzle + sloth plushie lookalike side by side" },
     ],
     caption:
-      "the line between \"hobby\" and \"mental health coping mechanism\" is blurry in this house 🦥 what's your rainy day activity?",
+      "the line between \"hobby\" and \"mental health coping mechanism\" is blurry in this house 🦥 what's my rainy-day move? (drop yours in the comments.)",
     hashtags: "#cozyhobby #puzzlegirl #slothlover #softaesthetic #asmrpuzzle",
   },
   {
     day: "DAY 4 · THU",
-    type: "FIRST STREAM · 20:00-22:00",
-    color: "#4E3464",
-    ink: "#FCEB86",
-    title: "first stream ever ♡",
+    type: "POST OR REEL · desk / day-in-life",
+    color: "#E0D3EC",
+    ink: "#2A103F",
+    title: "where the magic (and bugs) happen",
     slides: [
-      { t: "18:00 — announce story", note: '"FIRST STREAM · 2h to go" · countdown sticker · twitch link' },
-      { t: "19:30 — final ping", note: 'story: "30min. i\'m nervous. come hold my hand"' },
-      { t: "20:00 — go live", note: 'IG post: "live now · losing ranked so you don\'t have to" · twitch image' },
-      { t: "21:00 — mid-stream story", note: 'repost a funny clip · "this is going well"' },
-      { t: "22:15 — wrap", note: 'story: "that was terrifying. thank you. ♡" · subscribers count' },
+      { t: "wide shot", note: "desk tour – plants, lamp, keyboard, sloth, monitor wallpaper" },
+      { t: "detail stack", note: "macro: keycaps, cable management, coffee ring coaster" },
+      { t: "reel alt", note: "OR 30s vertical: pan across desk + text \"my whole personality fits on 120cm\"" },
     ],
     caption:
-      "livestream goes out as linked post — main announcement handled in stories + twitch alerts",
-    hashtags: "#twitchstreamer #leagueoflegends #cozystream #womenwhogame",
+      "come sit at my desk for a second ✿ this is where the pastel meets the terminal. what's the one desk object I'd save in a fire? (obviously the sloth.)",
+    hashtags: "#desksetup #cozygaming #womenintech #devlife #softaesthetic",
   },
   {
     day: "DAY 5 · FRI",
     type: "NERD POST · terminal",
     color: "#2A103F",
     ink: "#FCEB86",
-    title: "svelte tip: one-liner you'll actually use",
+    title: "svelte tip: one-liner I'll actually use",
     slides: [
       { t: "hook graphic", note: "terminal post w/ $mood writable store · yellow accent" },
       { t: "caption", note: "write up WHEN to use it + link to svelte docs" },
     ],
     caption:
-      "stores are a mood ♡ literally. save this for the next time you have 7 components all needing the same state. no prop drilling, no vibe killing. (and yes, i'll die on this hill.)",
+      "stores are a mood ♡ literally. saving this for the next time I have 7 components all needing the same state. no prop drilling, no vibe killing. (and yes, i'll die on this hill.)",
     hashtags: "#svelte #sveltejs #webdev #frontenddev #100daysofcode",
   },
   {
     day: "DAY 6 · SAT",
-    type: "PHOTO DUMP · 5 slides",
+    type: "LIGHT · stories + optional dump",
     color: "#EACFDA",
     ink: "#8E5C72",
-    title: "week one in pictures",
+    title: "if I have one more photo in me",
     slides: [
-      { t: "1", note: "balcony morning — coffee + sunlight + laptop corner" },
-      { t: "2", note: "OOTD mirror selfie — lavender knit + linen" },
-      { t: "3", note: "puzzle-in-progress detail" },
-      { t: "4", note: "stream setup — purple keyboard + plushie + monitor glow" },
-      { t: "5", note: 'journal entry close-up, handwritten "i did the scary thing"' },
+      { t: "stories", note: "3 slides max – balcony, coffee, work-in-progress" },
+      { t: "optional carousel", note: "skip if tired – 3-4 photos is enough for week one" },
+      { t: "BONUS · stream", note: "if I go live this week, amazing – if not, I schedule a cozy stream for week 2-3" },
     ],
     caption:
-      "a week. a launch. a very full heart. ♡ thank you to everyone who showed up for stream 1 — i see you, i appreciate you. more next week. 🦥",
-    hashtags: "#photodump #softweek #cozygirl #womenintech",
+      "soft launch doesn't mean empty tank. I post if I have a spoon left; if not, stories-only Saturday is valid. ♡",
+    hashtags: "#softlaunch #cozygirl #womenintech",
   },
   {
     day: "DAY 7 · SUN",
@@ -358,8 +367,8 @@ export const LAUNCH = [
     ink: "#2A103F",
     title: "plan week 2",
     slides: [
-      { t: "no posting", note: "rest day · engage in stories only (reply to DMs)" },
-      { t: "batch session", note: "2-3pm: shoot 10 photos for next week · 1 reel · plan 3 posts" },
+      { t: "no feed post", note: "rest day · engage in stories only (reply to DMs)" },
+      { t: "batch session", note: "2-3h: shoot 3-4 reels or photos · edit · schedule Mon-Fri" },
       { t: "close the laptop by 8pm", note: "non-negotiable ♡" },
     ],
     caption: "",
@@ -368,17 +377,17 @@ export const LAUNCH = [
 ] as const;
 
 export const HOOKS = [
-  { mode: "princess", h: "the cozy dev corner tour you didn't know you needed ✦" },
-  { mode: "princess", h: "POV: your backend girl has a pastel aesthetic" },
+  { mode: "princess", h: "the cozy dev corner tour I didn't know I needed ✦" },
+  { mode: "princess", h: "POV: I'm the backend girl with a pastel aesthetic" },
   { mode: "princess", h: "romanticizing debugging at 2am with oat milk latte" },
   { mode: "nerd", h: "i rewrote my portfolio in svelte. here's what broke." },
-  { mode: "nerd", h: "three.js tutorials lied to you. do THIS instead." },
+  { mode: "nerd", h: "three.js tutorials lied to me. here's what actually worked." },
   { mode: "nerd", h: "one file. 40 lines. a whole 3D scene." },
-  { mode: "funny", h: "signs you're a dev AND a sloth (all of them apply to me)" },
+  { mode: "funny", h: "signs I'm a dev AND a sloth (all of them apply)" },
   { mode: "funny", h: "me: i'll just stream for an hour. five hours later..." },
   { mode: "funny", h: "rating my own code as if it's a boyfriend" },
   { mode: "princess", h: "a love letter to the women in tech who go first" },
-  { mode: "nerd", h: "if react is your bestie, svelte is your therapist" },
+  { mode: "nerd", h: "if react is my bestie, svelte is my therapist" },
   { mode: "funny", h: "the LOL ranked arc no one asked for, narrated by me" },
 ] as const;
 
@@ -415,10 +424,12 @@ export function DayInLife() {
                 {row.shot}
               </div>
               <div
-                className="border-t border-dashed border-[rgba(255,247,218,0.15)] py-2.5 leading-[1.45] text-[#E1BDD5]"
-                style={{ fontStyle: row.text ? "italic" : "normal" }}
+                className={cn(
+                  "border-t border-dashed border-[rgba(255,247,218,0.15)] py-2.5 leading-[1.45] text-[#E1BDD5]",
+                  row.text && "italic",
+                )}
               >
-                {row.text || "—"}
+                {row.text || "–"}
               </div>
             </Fragment>
           ))}
@@ -430,7 +441,7 @@ export function DayInLife() {
           CAPTION
         </div>
         <div className="text-[13px] leading-[1.55]">
-          "pov: you're a dev but you're also kind of a 1950s heroine in a
+          "pov: I'm a dev but I'm also kind of a 1950s heroine in a
           romance novel. a day in my little life 🦥✨"
         </div>
       </div>
@@ -467,8 +478,45 @@ export function SlothASMR() {
           CAPTION
         </div>
         <div className="text-[13px] leading-[1.55] text-[#2A103F]">
-          "ok so this is a problem 🦥 drop your favorite number in the comments
-          and i'll tell you its name. (yes they have names.)"
+          "ok so this is a problem 🦥 drop a number in the comments
+          and i'll name that sloth. (yes they have names.)"
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function QuickDevTipReel() {
+  return (
+    <div className="rounded-[20px] bg-[#2A103F] p-8 text-[#FFF7DA]">
+      <div className="mb-5 flex flex-wrap items-baseline gap-4">
+        <div className="h-display text-[36px] leading-[0.92] text-[#FCEB86]">
+          quick dev tip · reel
+        </div>
+        <div className="font-mono text-[11px] tracking-[0.14em] text-[#BCA3CC]">
+          30s · screen-first · batch-friendly
+        </div>
+      </div>
+
+      <div className="grid gap-2.5">
+        {QUICK_DEV_TIP.map((step, i) => (
+          <div
+            key={i}
+            className="grid gap-4 rounded-xl bg-[rgba(255,247,218,0.08)] px-[18px] py-[14px] min-[680px]:grid-cols-[100px_1fr]"
+          >
+            <div className="font-mono text-[11px] tracking-[0.12em] text-[#FCEB86]">
+              {step.t}
+            </div>
+            <div className="text-[13px] leading-[1.5] text-[#E1BDD5]">{step.body}</div>
+          </div>
+        ))}
+      </div>
+      <div className="mt-6 rounded-xl bg-[rgba(255,247,218,0.08)] px-4 py-[14px]">
+        <div className="mb-1.5 font-mono text-[9px] tracking-[0.2em] text-[#FCEB86]">
+          CAPTION
+        </div>
+        <div className="text-[13px] leading-[1.55]">
+          "tiny svelte thing that saved my sanity this week. save it for the next time I'm copy-pasting the same prop chain 🦥"
         </div>
       </div>
     </div>
@@ -518,13 +566,19 @@ export function Pillars() {
 
 export function Rhythm() {
   const days = [
-    { d: "mon", items: [{ t: "post", m: "nerd" }, { t: "3-5 stories", m: "princess" }] },
-    { d: "tue", items: [{ t: "3-5 stories", m: "princess" }, { t: "poll", m: "funny" }] },
-    { d: "wed", items: [{ t: "reel", m: "funny" }, { t: "stories", m: "princess" }] },
-    { d: "thu", items: [{ t: "STREAM", m: "live" }, { t: "live-now story", m: "funny" }] },
-    { d: "fri", items: [{ t: "post", m: "nerd" }, { t: "stories", m: "princess" }] },
-    { d: "sat", items: [{ t: "photo dump", m: "princess" }, { t: "reel", m: "funny" }] },
-    { d: "sun", items: [{ t: "rest + batch", m: "rest" }] },
+    { d: "mon", items: [{ t: "dev post or reel", m: "nerd" }, { t: "2-3 stories", m: "princess" }] },
+    { d: "tue", items: [{ t: "stories only", m: "stories" }, { t: "BTS · polls", m: "princess" }] },
+    { d: "wed", items: [{ t: "cozy / aesthetic", m: "princess" }, { t: "2-3 stories", m: "stories" }] },
+    { d: "thu", items: [{ t: "stories only", m: "stories" }, { t: "engagement", m: "funny" }] },
+    { d: "fri", items: [{ t: "personality post", m: "funny" }, { t: "2-3 stories", m: "princess" }] },
+    {
+      d: "sat",
+      items: [
+        { t: "optional post / clip", m: "funny" },
+        { t: "or stories only", m: "stories" },
+      ],
+    },
+    { d: "sun", items: [{ t: "batch 2-3h", m: "rest" }, { t: "rest", m: "rest" }] },
   ] as const;
 
   return (
@@ -545,8 +599,7 @@ export function Rhythm() {
                   key={i}
                   className="mb-1.5 rounded-lg px-2.5 py-2 text-xs font-medium"
                   style={{
-                    background:
-                      item.m === "rest" ? "var(--paper-2)" : key.color,
+                    background: item.m === "rest" ? "var(--paper-2)" : key.color,
                     color: key.ink,
                   }}
                 >
@@ -579,12 +632,14 @@ export function Calendar() {
             return (
               <div
                 key={i}
-                className="flex min-h-[130px] flex-col gap-1.5 rounded-[10px] p-3"
+                className={cn(
+                  "flex min-h-[130px] flex-col gap-1.5 rounded-[10px] p-3",
+                  entry.t === "rest" && "border border-dashed border-[var(--line)]",
+                  entry.t === "stories" && "border border-solid border-[var(--line)]",
+                )}
                 style={{
                   background: entry.t === "rest" ? "var(--paper-2)" : k.color,
                   color: k.ink,
-                  border:
-                    entry.t === "rest" ? "1px dashed var(--line)" : "none",
                 }}
               >
                 <div className="flex items-center justify-between">
@@ -626,8 +681,12 @@ export function Calendar() {
           funny
         </span>
         <span>
+          <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full bg-[var(--mp-50)] align-[-1px] ring-1 ring-[var(--line)]" />
+          stories only
+        </span>
+        <span>
           <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full bg-[#2a1d3d] align-[-1px]" />
-          stream day
+          live event
         </span>
         <span>
           <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full border border-dashed border-[var(--line)] bg-[var(--paper-2)] align-[-1px]" />
@@ -958,7 +1017,7 @@ function StoryCodeTip() {
         </div>
       </div>
       <div className="absolute bottom-10 left-6 right-6 rounded-[14px] bg-[rgba(255,255,255,0.8)] px-4 py-3 text-center font-body text-[13px] text-[var(--pp-600)]">
-        save this for your next svelte project ✦
+        save this for my next svelte project ✦
       </div>
     </StoryFrame>
   );
@@ -975,11 +1034,11 @@ function StoryQuestion() {
         ⁂ ASK ME ANYTHING
       </div>
       <div className="h-display absolute left-6 right-6 top-[100px] text-[48px] leading-[0.95] text-[#fff9d8]">
-        what do
+        what should
         <br />
-        you want
+        I build
         <br />
-        to know?
+        next?
       </div>
       <div className="absolute left-6 right-6 top-80 rounded-[20px] border border-[rgba(255,255,255,0.25)] bg-[rgba(255,255,255,0.15)] px-[18px] py-5 backdrop-blur-[12px]">
         <div className="mb-2.5 font-mono text-[10px] tracking-[0.18em] text-[#ffe875]">
@@ -1142,7 +1201,7 @@ export function ReelsRow() {
             REEL · 60s
           </div>
           <div className="h-display absolute left-4 right-4 top-[70px] text-[34px] leading-[0.9] text-[#ffe875]">
-            your first
+            my first
             <br />
             three.js
             <br />

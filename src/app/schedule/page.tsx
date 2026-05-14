@@ -56,18 +56,18 @@ export default function SchedulePage() {
   return (
     <SiteFrame bg="paper">
       <section className="max-w-3xl">
-        <p className="eyebrow">stream rhythm</p>
+        <p className="eyebrow">live events</p>
         <h1 className="mt-3 text-5xl uppercase leading-[0.9] text-[var(--pp-700)] sm:text-6xl">
           catch me live
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--ink-soft)] sm:text-lg">
-          Timezone CET / CEST (Prague). The rhythm is the real promise, not the
-          exact minute, so schedule may shift a little. Follow on Twitch for
-          notifications.
+          Streams are occasional events, not a weekly grid. Timezone CET / CEST
+          (Prague). Exact dates land on Instagram first; Twitch notifications
+          ping the exact go-live minute.
         </p>
       </section>
 
-      <Section label="✦ this week" title="usual pattern" bg="lavender">
+      <Section label="✦ heads up" title="next slot" bg="lavender">
         <div className="grid gap-4 md:grid-cols-3">
           {schedule.map((slot) => {
             const style = categoryCopy[slot.category];
@@ -111,8 +111,8 @@ export default function SchedulePage() {
         <article className="max-w-2xl rounded-[28px] border border-[rgba(78,52,100,0.12)] bg-[var(--paper-2)] p-6 shadow-[var(--sh-md)]">
           <p className="text-sm leading-7 text-[var(--ink-soft)]">
             Schedule may shift with life, energy, and the occasional sloth pace.
-            Twitch notifications are the best source of truth when you want the
-            exact ping.
+            Notifications on Twitch stay the best ping for the exact go-live
+            moment.
           </p>
         </article>
       </Section>

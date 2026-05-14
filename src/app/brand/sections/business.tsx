@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { cn } from "@/lib/cn";
+
 import { KitSection } from "./primitives";
 
 export function SlothSystemSection() {
@@ -85,13 +87,13 @@ export function SlothSystemSection() {
     {
       n: "01",
       title: "Open master template",
-      body: 'In Canva, keep ONE master file with all templates (post, carousel, story, reel cover) as pages. Duplicate the page you need instead of starting fresh.',
+      body: 'In Canva, keep ONE master file with all templates (post, carousel, story, reel cover) as pages. Duplicate the page I need instead of starting fresh.',
       tag: 'save as "neluska ~ master"',
     },
     {
       n: "02",
       title: "Pull sloth from Elements",
-      body: `Search "sloth" in your Elements → favorites. Drop onto template. Pick the variant that matches today's mood (princess / gamer / cozy).`,
+      body: `Search "sloth" in my Elements → favorites. Drop onto template. Pick the variant that matches today's mood (princess / gamer / cozy).`,
       tag: "keep to ONE sloth per post",
     },
     {
@@ -116,18 +118,18 @@ export function SlothSystemSection() {
   ];
 
   const donts = [
-    "Don't center the sloth - breaks composition",
-    "Don't use 3+ sloths unless the post IS about collection",
-    "Don't rotate or flip - keep canonical orientation",
-    "Don't put sloth over face / food - it covers the hero",
+    "I don't center the sloth – it breaks composition",
+    "I don't use 3+ sloths unless the post IS about collection",
+    "I don't rotate or flip – keep canonical orientation",
+    "I don't put sloth over face / food – it covers the hero",
   ];
 
   return (
     <KitSection
       id="slothpack"
-      eyebrow="20 · SLOTH STICKER SYSTEM"
+      eyebrow="21 · SLOTH STICKER SYSTEM"
       title="the cast of characters"
-      sub="Your sloths are the most identifiable element of your brand - more than logo, font, or color. Use them like reaction emojis: one per post, matched to the mood."
+      sub="My sloths are the most identifiable element of my brand – more than logo, font, or color. I use them like reaction emojis: one per post, matched to the mood."
     >
       <div className="mb-8 grid gap-3 min-[640px]:grid-cols-2 min-[980px]:grid-cols-3">
         {slothGallery.map((sloth) => (
@@ -205,20 +207,20 @@ export function KPISection() {
     {
       ch: "Instagram",
       metric: "Followers",
-      q1: "500",
-      q2: "1.5k",
-      q3: "3k",
-      q4: "5k",
-      north: "reach + discovery",
+      q1: "600",
+      q2: "2k",
+      q3: "4k",
+      q4: "6k",
+      north: "reach + discovery (IG-first)",
     },
     {
       ch: "Instagram",
-      metric: "Reel avg views",
-      q1: "300",
-      q2: "1k",
-      q3: "3k",
-      q4: "8k",
-      north: "hook quality",
+      metric: "IG Reels avg views",
+      q1: "400",
+      q2: "1.2k",
+      q3: "3.5k",
+      q4: "9k",
+      north: "hook quality + saves",
     },
     {
       ch: "Instagram",
@@ -232,29 +234,29 @@ export function KPISection() {
     {
       ch: "Twitch",
       metric: "Followers",
-      q1: "100",
-      q2: "300",
-      q3: "700",
-      q4: "1.5k",
-      north: "community growth",
+      q1: "50",
+      q2: "100",
+      q3: "200",
+      q4: "400",
+      north: "community growth (low-frequency streams)",
     },
     {
       ch: "Twitch",
       metric: "Avg concurrent",
-      q1: "3-5",
-      q2: "8-12",
-      q3: "15-25",
-      q4: "30-50",
-      north: "retention + raid-worthy",
+      q1: "2-3",
+      q2: "5-8",
+      q3: "8-12",
+      q4: "12-20",
+      north: "retention when I go live",
     },
     {
       ch: "Twitch",
       metric: "Affiliate?",
       q1: "-",
-      q2: "✓",
+      q2: "-",
       q3: "✓",
       q4: "✓",
-      north: "unlock subs/bits at 50 followers · 3 avg · 500 min · 7 unique days",
+      north: "50 followers · 3 avg · 500 min · 7 unique days – slower at 1-2 streams/mo",
     },
     {
       ch: "Web",
@@ -290,21 +292,21 @@ export function KPISection() {
     {
       when: "Quarterly",
       what: "Full KPI table vs. target - adjust strategy",
-      why: "Don't sail by stars you can't see",
+      why: "I don't sail by stars I can't see",
     },
     {
       when: "Never",
-      what: "Compare to other creators you admire",
-      why: "Envy is a content-killer. Stay in your lane.",
+      what: "Compare myself to other creators I admire",
+      why: "Envy is a content-killer. I stay in my lane.",
     },
   ];
 
   return (
     <KitSection
       id="kpis"
-      eyebrow="21 · KPI DASHBOARD"
+      eyebrow="22 · KPI DASHBOARD"
       title="what success looks like"
-      sub="Brand without metrics is vibes. Here's what you measure, when you measure, and what's healthy vs concerning. Year 1 targets are realistic - not moonshot, not beige."
+      sub="Brand without metrics is vibes. Here's what I measure, when I measure, and what's healthy vs concerning. Year 1 targets are realistic - not moonshot, not beige."
       bg="var(--paper-2)"
     >
       <div className="mb-8">
@@ -343,7 +345,7 @@ export function KPISection() {
                 {quarterly.map((row, i) => (
                   <tr
                     key={`${row.ch}-${row.metric}`}
-                    className={i === 0 ? "" : "border-t border-[var(--line)]"}
+                    className={cn(i !== 0 && "border-t border-[var(--line)]")}
                   >
                     <td className="px-[14px] py-2.5 font-mono text-[11px] text-[var(--pp-600)]">
                       {row.ch}
@@ -381,7 +383,7 @@ export function KPISection() {
         <p className="mb-0 mt-2.5 max-w-[640px] text-[14px] leading-[1.6] text-[var(--ink)]">
           <strong>Did I enjoy making this?</strong> If yes, 80% of the other
           numbers will take care of themselves over 18 months. If no, no growth
-          hack saves you. Burnout is the silent brand-killer.
+          hack saves me. Burnout is the silent brand-killer.
         </p>
       </div>
 
@@ -420,7 +422,7 @@ export function CrisisSection() {
         "Post-stream: screenshot, block, move on",
         "If multiple → enable followers-only chat (30 min minimum)",
       ],
-      note: "Trolls want air. Deny oxygen. Your regulars will handle the rest if you seem calm.",
+      note: "Trolls want air. Deny oxygen. My regulars handle the rest if I stay calm.",
     },
     {
       title: "Cancel attempt · pile-on · doxxing attempt",
@@ -429,7 +431,7 @@ export function CrisisSection() {
         "Breathe. Wait 24h minimum before posting anything.",
         "Screenshot everything (evidence if it escalates legally)",
         "Lock down: private IG, disable Twitch chat, turn off comments",
-        "If allegation is true → one apology post, direct, no excuses. Don't delete history.",
+        "If allegation is true → one apology post, direct, no excuses. I don't delete history.",
         "If allegation is false → silence + one short factual statement. No back-and-forth.",
         "Report harassment to platforms (Twitch + IG both have forms)",
       ],
@@ -439,7 +441,7 @@ export function CrisisSection() {
       title: "Burnout · motivation crash",
       gut: "push through, post anyway",
       do: [
-        'Cancel stream with one sentence: "sick day, see you [next date] ♡"',
+        'Cancel stream with one sentence: "sick day, back [next date] ♡"',
         "Schedule 1 week of IG pre-made (use content calendar backlog)",
         "NO content about being burned out - takes more than it gives",
         "Return with something small (IG story, not a reel) - rebuild momentum",
@@ -452,10 +454,10 @@ export function CrisisSection() {
       do: [
         "Stay calm - viewers LOVE tech fails, they're relatable",
         'Tweet/post "stream died, brb 5 min" - stay human',
-        "If something personal leaked (address, face you didn't mean, NSFW) → end stream IMMEDIATELY",
+        "If something personal leaked (address, face I didn't mean to show, NSFW) → end stream IMMEDIATELY",
         "Twitch contact form for VOD deletion if needed",
       ],
-      note: "Tech fails = bonding opportunity. Don't over-apologize - 10 seconds max.",
+      note: "Tech fails = bonding opportunity. I don't over-apologize – 10 seconds max.",
     },
     {
       title: "DM creep · parasocial slide · stalker",
@@ -465,18 +467,18 @@ export function CrisisSection() {
         "Block early. Politeness is not owed.",
         "Save screenshots before blocking (if pattern escalates)",
         "If real-life threat → police. Twitch + IG also have formal channels.",
-        "Tell someone you trust (partner, friend, family) - don't carry it alone",
+        "I tell someone I trust (partner, friend, family) – I don't carry it alone",
       ],
-      note: "Your safety > any viewer's feelings. Always. No exceptions.",
+      note: "My safety > any viewer's feelings. Always. No exceptions.",
     },
   ];
 
   return (
     <KitSection
       id="crisis"
-      eyebrow="22 · CRISIS PLAYBOOK"
+      eyebrow="23 · CRISIS PLAYBOOK"
       title="when things go sideways"
-      sub="Not fun, not optional. Having a plan written down means your panic-brain doesn't have to decide. Read this once, remember where it is."
+      sub="Not fun, not optional. Having a plan written down means my panic-brain doesn't have to decide. I read this once, remember where it is."
     >
       <div className="grid gap-[18px]">
         {scenarios.map((scenario, i) => (
@@ -492,7 +494,7 @@ export function CrisisSection() {
                 {scenario.title}
               </div>
               <div className="rounded-md bg-[var(--dr-50)] px-2.5 py-2 text-[11px] italic text-[var(--dr-400)]">
-                Don't: {scenario.gut}
+                Wrong instinct: {scenario.gut}
               </div>
             </div>
 
@@ -520,20 +522,20 @@ export function CollabSection() {
   const templates = [
     {
       title: "Outreach · small streamer (similar size)",
-      when: "You've watched them 3+ times, chatted, they know your handle",
-      dm: `hey [name]! loved your [specific thing] stream last week, the [specific moment] had me 🦥
+      when: "I've watched them 3+ times, chatted, they know my handle",
+      dm: `hey [name]! loved that [specific thing] stream last week, the [specific moment] had me 🦥
 
-would you be down for a co-stream / host swap sometime? thinking [specific idea - e.g. "we both play an hour of [game], switch communities"]. no pressure, just throwing it out there ♡
+open to a co-stream / host swap sometime? thinking [specific idea - e.g. "we both play an hour of [game], switch communities"]. no pressure, just throwing it out there ♡
 
 - @its_neluska`,
-      rule: "Mention something SPECIFIC you actually watched. Generic = deleted.",
+      rule: "Mention something SPECIFIC I actually watched. Generic = deleted.",
     },
     {
-      title: "Outreach · creator you admire (bigger)",
+      title: "Outreach · creator I admire (bigger)",
       when: "Long-term. Build presence in their chat for 2+ months first.",
-      dm: `hi [name]! been lurking in your streams for a while (@its_neluska, the sloth one 🦥)
+      dm: `hi [name]! been lurking in chat for a while (@its_neluska, the sloth one 🦥)
 
-not pitching anything - just wanted to say your [specific episode/post/stream] taught me [specific thing]. if you ever do community collabs / showcase small streamers, I'd love to be in the pool.
+not pitching anything - just wanted to say that [specific episode/post/stream] taught me [specific thing]. if they ever do community collabs / showcase small streamers, I'd love to be in the pool.
 
 either way, thanks for the content ♡`,
       rule: "No ask on first DM. Just gratitude. The ask comes later, or organically.",
@@ -545,17 +547,17 @@ either way, thanks for the content ♡`,
 
 a few questions before I commit:
 · what's the deliverable (post count, reel, stream mention)?
-· usage rights (yours? mine? exclusive how long?)
+· usage rights (theirs? mine? exclusive how long?)
 · compensation (flat fee, revenue share, product-only?)
 · audience fit - here's a quick brand doc: [link to brand kit or media one-pager]
 
 I only work with products I'd actually use, so happy to chat further if it feels aligned ♡`,
-      rule: "NEVER accept product-only deals under $500 retail. Your time is worth money.",
+      rule: "NEVER accept product-only deals under $500 retail. My time is worth money.",
     },
     {
       title: "Dev collab · open-source / hackathon",
       when: "GitHub + Twitter dev circle",
-      dm: `hey! working on [your project] and saw you did something similar with [their thing]. any interest in co-streaming a build session or contributing to [specific feature]?
+      dm: `hey! working on [my project] and saw they did something similar with [their thing]. any interest in co-streaming a build session or contributing to [specific feature]?
 
 happy to structure it however - pair programming on Twitch, async PRs, co-authored blog post. totally open.
 
@@ -571,13 +573,13 @@ no pressure, repo here: [link] ♡`,
     "Guest on their podcast / VOD",
     "Open-source contribution together",
     "Shared giveaway",
-    "Art trade (your photo × their illustration)",
+    "Art trade (my photo × their illustration)",
   ];
 
   return (
     <KitSection
       id="collabs"
-      eyebrow="23 · COLLAB PLAYBOOK"
+      eyebrow="24 · COLLAB PLAYBOOK"
       title="how to reach out, without cringe"
       sub="Most DMs die because people make them about themselves. Lead with them, pitch specifically, and make the ask tiny. Templates below - steal and adapt."
     >
@@ -624,7 +626,7 @@ no pressure, repo here: [link] ♡`,
         </div>
         <p className="mb-0 mt-[14px] text-[13px] leading-[1.6] text-[var(--ink)]">
           <strong>Start tiny.</strong> A single IG story tag is a collab. A
-          full co-stream is a year-3 move. Don't skip steps.
+          full co-stream is a year-3 move. I don't skip steps.
         </p>
       </div>
     </KitSection>
@@ -641,10 +643,11 @@ export function MonetizationSection() {
       revenue: "0 Kč / month",
       actions: [
         "No ads, no affiliate links, no subs",
-        "Goal: unlock Twitch Affiliate (50 followers · 3 avg viewers · 500 min · 7 unique days)",
-        "Collect emails / Discord if you want (optional)",
+        "Goal: 3-4 IG posts per week + daily stories for 90 days – prove the rhythm before asking for money",
+        "Twitch Affiliate path: 50 followers · 3 avg viewers · 500 min · 7 unique days – expect this to take longer at 1-2 streams/month",
+        "Collect emails / Discord if I want (optional)",
       ],
-      why: 'Monetizing too early signals "me me me" and kills trust. First you give, then you ask.',
+      why: 'Monetizing too early signals "me me me" and kills trust. First I give, then I ask.',
     },
     {
       tag: "Phase 1",
@@ -653,12 +656,13 @@ export function MonetizationSection() {
       color: "var(--tw-butter)",
       revenue: "500 – 3 000 Kč / month",
       actions: [
-        "Twitch Affiliate: subs (EUR 4.99 tier), bits",
-        'Ko-fi / BuyMeCoffee page - one-time tips, "buy me a boba"',
-        "Affiliate links (Amazon, Twitch Gear) - ONLY items you own",
-        "Free Discord - builds community without $ pressure",
+        "IG Shop affiliate + LTK-style links for products I actually use",
+        "Ko-fi / BuyMeCoffee – one-time tips, \"buy me a boba\"",
+        "Twitch Affiliate: subs (EUR 4.99 tier), bits – unlocks when stream cadence + stats hit Twitch's bar",
+        "Affiliate links (Amazon, gear) – ONLY items I own",
+        "Free Discord – builds community without $ pressure",
       ],
-      why: "Small income = proof of concept. Don't quit your dev job. Don't chase any single brand deal.",
+      why: "Small income = proof of concept. I don't quit my dev job. I don't chase any single brand deal.",
     },
     {
       tag: "Phase 2",
@@ -669,7 +673,7 @@ export function MonetizationSection() {
       actions: [
         "Media kit ready (1-pager PDF: audience, reach, examples, rates)",
         "Rate card: IG post 3-8k CZK · reel 8-20k · stream mention 5-15k (CZ rates)",
-        "Only brands you actually use — gaming gear, café, stationery, dev tools",
+        "Only brands I actually use – gaming gear, café, stationery, dev tools",
         "NEVER: crypto, gambling, supplements, diet, MLM",
         "Max 1 sponsored post / month to stay authentic",
       ],
@@ -687,17 +691,17 @@ export function MonetizationSection() {
         "Paid Discord tier: exclusive streams, behind-the-scenes, Q&A",
         "Twitch Subs tier 2/3 with actual perks (custom emote, private channel)",
       ],
-      why: "Your own products = 80% margin. Brand deals = linear. Products = scalable.",
+      why: "My own products = 80% margin. Brand deals = linear. Products = scalable.",
     },
     {
       tag: "Phase 4",
       when: "Year 2+",
-      name: "full-time creator (if you want)",
+      name: "full-time creator (if I want)",
       color: "var(--py-300)",
       revenue: "30 000+ Kč / month",
       actions: [
         "Revenue mix: 40% own products · 30% subs · 20% brands · 10% ad revenue",
-        "Maybe hire: editor, mod, assistant - keeps you making, not managing",
+        "Maybe hire: editor, mod, assistant - keeps me making, not managing",
         "Longer-form: YouTube tutorials, course, book",
         "Diversify: never one platform = 100% income",
       ],
@@ -708,9 +712,9 @@ export function MonetizationSection() {
   return (
     <KitSection
       id="monetize"
-      eyebrow="24 · MONETIZATION"
+      eyebrow="25 · MONETIZATION"
       title="when & how to make money"
-      sub="The wrong revenue at the wrong time kills brands. This is a 24-month phased plan - each phase has clear unlock criteria. Don't skip ahead."
+      sub="The wrong revenue at the wrong time kills brands. This is a 24-month phased plan - each phase has clear unlock criteria. I don't skip ahead."
       bg="var(--paper-2)"
     >
       <div className="grid gap-4">
@@ -759,10 +763,10 @@ export function MonetizationSection() {
           the sacred ratio
         </div>
         <p className="m-0 max-w-[720px] text-[14px] leading-[1.6] text-[var(--ink)]">
-          <strong>Give 10× before you ask once.</strong> Every paid post /
+          <strong>I give 10× before I ask once.</strong> Every paid post /
           brand mention / "link in bio" should be preceded by 10 posts of pure
           value (teaching, entertaining, sharing). The moment that ratio flips,
-          you lose the thing you built.
+          I lose the thing I built.
         </p>
       </div>
     </KitSection>
@@ -774,43 +778,43 @@ export function CalendarRitualsSection() {
     {
       day: "Mon",
       theme: "Builder Monday",
-      what: "Dev progress, new project, code snippet, bug-fight story",
+      what: "Dev post or reel – tip, build log, code moment",
       emoji: "💻",
     },
     {
       day: "Tue",
-      theme: "Twitch night",
-      what: "Dev jam stream 20:00 · IG story countdown + post after",
-      emoji: "🎮",
+      theme: "Stories only",
+      what: "Behind the scenes, polls, what I'm working on",
+      emoji: "📱",
     },
     {
       day: "Wed",
-      theme: "Soft mid-week",
-      what: "Cozy photo (balcony, coffee, sloth, OOTD) - low-effort, high-aesthetic",
-      emoji: "🦥",
+      theme: "Cozy Wednesday",
+      what: "Lifestyle photo, yoga, balcony, aesthetic reel",
+      emoji: "🌸",
     },
     {
       day: "Thu",
-      theme: "Twitch night",
-      what: "LoL night stream 20:00 · clip the best moment for Fri reel",
-      emoji: "🎮",
+      theme: "Stories only",
+      what: "Engagement day – reply to DMs, comment on others",
+      emoji: "💬",
     },
     {
       day: "Fri",
-      theme: "Reel Friday",
-      what: "Weekly reel: recap, scenario A/B/C, stream highlight, dev tutorial",
-      emoji: "🎬",
+      theme: "Personality Friday",
+      what: "Sloth content, confession, Lego, fun post",
+      emoji: "🦥",
     },
     {
       day: "Sat",
-      theme: "Sloth Saturday",
-      what: "IRL chill post — café, puzzle, Lego, reading, sloth plushie photo",
-      emoji: "🧩",
+      theme: "Optional post",
+      what: "Photo dump or stream highlight (if I streamed this week)",
+      emoji: "✨",
     },
     {
       day: "Sun",
-      theme: "Slow Sunday",
-      what: "Week-in-review story · reflection · next week teaser · IG grid plan",
+      theme: "Batch Sunday",
+      what: "2-3h shoot + edit + schedule the week. Rest after.",
       emoji: "☕",
     },
   ];
@@ -842,21 +846,21 @@ export function CalendarRitualsSection() {
     { when: "Jan", what: "Year-in-review post · 2026 goals (vague is fine)", vibe: "reflective" },
     { when: "Feb", what: "Galentine's post (community > romance)", vibe: "soft" },
     { when: "Mar", what: "Spring reset - balcony rearrange, new preset drop?", vibe: "fresh" },
-    { when: "Apr", what: "Easter / long weekend puzzle marathon stream", vibe: "cozy" },
-    { when: "May-Jun", what: "Summer slow-down, fewer streams, more outdoor photos", vibe: "breathing" },
+    { when: "Apr", what: "Easter / long weekend – puzzle marathon content (IG + optional cozy stream)", vibe: "cozy" },
+    { when: "May-Jun", what: "Summer slow-down, fewer live events, more outdoor photos + reels", vibe: "breathing" },
     { when: "Jul-Aug", what: "Pause / travel content, pre-scheduled posts", vibe: "soft abandonment" },
     { when: "Sep", what: "Back to builder mode - new project, autumn reset", vibe: "momentum" },
     { when: "Oct", what: "Cozy aesthetic peak: pumpkin, coffee, candles, sweaters", vibe: "prime" },
-    { when: "Nov", what: "Sub-a-thon month · charity stream · year-end push", vibe: "generous" },
+    { when: "Nov", what: "Charity or sub-goal stream if it fits my calendar · year-end IG push", vibe: "generous" },
     { when: "Dec", what: "Subdued holiday posts · NYE reflection reel · quiet week", vibe: "gratitude" },
   ];
 
   return (
     <KitSection
       id="calritual"
-      eyebrow="25 · CONTENT CALENDAR"
+      eyebrow="26 · CONTENT CALENDAR"
       title="a year-long rhythm, not a grind"
-      sub="Three nested cycles: weekly (days of the week), monthly (beats that rotate), seasonal (energy shifts). Follow the shape, fill in the specifics. You'll never stare at an empty post slot again."
+      sub="Three nested cycles: weekly (days of the week), monthly (beats that rotate), seasonal (energy shifts). I follow the shape, fill in the specifics – I never have to stare at an empty post slot again."
     >
       <div className="mb-9">
         <div className="eyebrow mb-3 text-[var(--pp-500)]">WEEKLY SHAPE</div>
@@ -933,9 +937,9 @@ export function CalendarRitualsSection() {
         </div>
         <p className="m-0 text-[14px] leading-[1.6] text-[var(--pp-700)]">
           <strong>Plan 40%, improvise 60%.</strong> The calendar is scaffolding,
-          not a cage. If Monday you feel like posting a Saturday vibe, do it.
-          The weekly shape catches you when you're stuck, it doesn't dictate
-          when you're flowing.
+          not a cage. If on Monday I feel like posting a Saturday vibe, I do it.
+          The weekly shape catches me when I'm stuck – it doesn't dictate when
+          I'm flowing.
         </p>
       </div>
     </KitSection>
@@ -955,18 +959,18 @@ export function CommunityRitualsSection() {
   ];
 
   const insideJokes = [
-    { phrase: '"one game at time ✨"', origin: "stream motto", when: "anytime you're tempted to overcommit" },
+    { phrase: '"one game at time ✨"', origin: "stream motto", when: "anytime I'm tempted to overcommit" },
     { phrase: '"no backseating"', origin: "chat rules", when: "regulars self-police newcomers" },
     { phrase: '"sloth energy only"', origin: "bio + Twitch rules", when: "vibe check, low-drama mode" },
     { phrase: '"soft launch" / "princess mode"', origin: "brand doc", when: "callback to cozy content drops" },
-    { phrase: '"pookies"', origin: "your audience nickname", when: "opening streams, ending posts" },
-    { phrase: '"brb loading patience"', origin: "BRB panel", when: "anytime you need a break" },
+    { phrase: '"pookies"', origin: "my audience nickname", when: "opening streams, ending posts" },
+    { phrase: '"brb loading patience"', origin: "BRB panel", when: "anytime I need a break" },
   ];
 
   const milestones = [
     { count: 10, name: "first sloths", reward: "personal shoutout in next stream" },
     { count: 25, name: "sloth squad", reward: "custom emote name submitted by chat" },
-    { count: 50, name: "sloth colony · Twitch Affiliate unlock", reward: "first sub-only emote designed + sub-a-thon mini-stream" },
+    { count: 50, name: "sloth colony · Twitch Affiliate path", reward: "first sub-only emote + mini-celebration stream when metrics unlock (timeline depends on stream frequency)" },
     { count: 100, name: "hundred slothies", reward: "giveaway: signed sticker pack" },
     { count: 250, name: "princess court", reward: "24h special stream: puzzle + LoL + dev + Q&A" },
     { count: 500, name: "soft launch milestone", reward: "merch drop (limited, numbered)" },
@@ -978,18 +982,18 @@ export function CommunityRitualsSection() {
     "heyyy [name]! pull up a chair, we're doing [current activity] ✨",
     "[name] just joined the sloth colony 🦥 make yourself at home",
     "new face! hi [name], sloth energy only here, chat rules in panels ♡",
-    "[name] ✨ if you like cozy chaos you're in the right place",
+    "[name] ✨ I run on cozy chaos – right place if that hits",
     "chat, please welcome [name] - bring the soft vibes",
     "hi [name]! perfect timing, we're about to [next thing]",
-    "ooh [name] is here! we missed you - wait no you're new, but welcome anyway ♡",
+    "ooh [name] is here! new or back – welcome to the colony anyway ♡",
   ];
 
   return (
     <KitSection
       id="community"
-      eyebrow="26 · COMMUNITY RITUALS"
-      title="the language of your people"
-      sub="Communities form around repeatable moments - inside jokes, custom emotes, milestones that feel earned. This is the vocabulary layer. Use it consistently, let regulars teach newcomers."
+      eyebrow="27 · COMMUNITY RITUALS"
+      title="the language of my people"
+      sub="Communities form around repeatable moments – inside jokes, custom emotes, milestones that feel earned. This is my vocabulary layer. I use it consistently and let regulars teach newcomers."
     >
       <div className="mb-8">
         <div className="eyebrow mb-3 text-[var(--pp-500)]">
@@ -1042,7 +1046,7 @@ export function CommunityRitualsSection() {
           </div>
           <div className="card p-[18px]">
             <div className="mb-2.5 text-[11px] italic text-[var(--ink-soft)]">
-              Load these into your Twitch chatbot (StreamElements, Nightbot) as
+              Load these into my Twitch chatbot (StreamElements, Nightbot) as
               welcome messages. Random rotation keeps it fresh.
             </div>
             <div className="grid gap-2">
@@ -1085,14 +1089,14 @@ export function CommunityRitualsSection() {
 
       <div className="card mt-7 bg-[var(--pp-50)] p-[22px]">
         <div className="mb-2 font-script text-[30px] leading-none text-[var(--pp-700)]">
-          your community is not an audience
+          my community is not an audience
         </div>
         <p className="m-0 max-w-[720px] text-[14px] leading-[1.6] text-[var(--ink)]">
           Audiences watch; communities participate. Every ritual here is
           designed to give regulars a way to contribute - emote names they
           suggested, greetings they use on newcomers, inside jokes they carry
           from stream to stream. When they feel ownership, they stay through
-          your dry patches.
+          my dry patches.
         </p>
       </div>
     </KitSection>
@@ -1103,9 +1107,9 @@ export function PrivacySection() {
   const routes = [
     { path: "neluska.dev/", access: "public", who: "all visitors", color: "var(--pp-200)", ink: "var(--pp-700)" },
     { path: "/about  ·  /schedule  ·  /twitch-panels", access: "public", who: "all visitors", color: "var(--pp-200)", ink: "var(--pp-700)" },
-    { path: "/brand", access: "owner-only", who: "only you · password-gated", color: "var(--dr-300)", ink: "#fff" },
-    { path: "/media", access: "password-gated", who: "you + brands you DM the password", color: "var(--py-300)", ink: "var(--pp-700)" },
-    { path: "/admin (later)", access: "owner-only", who: "only you", color: "var(--dr-400)", ink: "#fff" },
+    { path: "/brand", access: "owner-only", who: "only me · password-gated", color: "var(--dr-300)", ink: "#fff" },
+    { path: "/media", access: "password-gated", who: "me + brands I DM the password", color: "var(--py-300)", ink: "var(--pp-700)" },
+    { path: "/admin (later)", access: "owner-only", who: "only me", color: "var(--dr-400)", ink: "#fff" },
   ];
 
   const neverPublish = [
@@ -1116,7 +1120,7 @@ export function PrivacySection() {
     { item: "Photos with windows, street signs, house numbers", why: "reverse-search finds location" },
     { item: "Car license plate, keys (photographed)", why: "both are trivially exploitable" },
     { item: "Birth date + birthplace (full)", why: "security-question fuel" },
-    { item: 'Exact stream start time ("20:00")', why: 'use pattern ("Tue evening") - when you\'re not live, you\'re alone' },
+    { item: 'Exact stream start time ("20:00")', why: 'use pattern ("Tue evening") - when I\'m not live, I\'m alone' },
     { item: "Screenshot of phone calendar", why: "reveals full schedule, contacts, locations" },
     { item: "Receipt / package photos", why: "QR codes & addresses survive cropping" },
   ];
@@ -1134,10 +1138,10 @@ export function PrivacySection() {
 
   const redFlags = [
     { sign: 'DM with urgent "brand deal" + video-call TODAY', action: "Delete. Real brands go email + contract." },
-    { sign: "Login / password-reset emails you didn't request", action: "Change password immediately · check active sessions · enable 2FA if not already" },
-    { sign: "Viewer in chat knows something you never said publicly", action: "Screenshot · block · audit privacy on all accounts · tell someone you trust" },
-    { sign: "Package / sticker appears at your door you didn't order", action: "Don't open near the door · photograph · report to police if suspicious" },
-    { sign: "Fake account impersonating you", action: "Report via platform · post warning from verified account · screenshot for evidence" },
+    { sign: "Login / password-reset emails I didn't request", action: "Change password immediately · check active sessions · enable 2FA if not already" },
+    { sign: "Viewer in chat knows something I never said publicly", action: "Screenshot · block · audit privacy on all accounts · tell someone I trust" },
+    { sign: "Package / sticker appears at my door that I didn't order", action: "I don't open near the door · photograph · report to police if suspicious" },
+    { sign: "Fake account impersonating me", action: "Report via platform · post warning from verified account · screenshot for evidence" },
     { sign: "New follower in all platforms at once + likes old posts", action: "Not automatically bad · but watch · block if boundary-crossing" },
   ];
 
@@ -1145,17 +1149,17 @@ export function PrivacySection() {
     { title: "Brand-deal email", body: "hi@neluska.dev · Cloudflare Email Routing (free) forwards to personal inbox · NEVER share personal email with brands" },
     { title: "P.O. Box for merch", body: "Česká pošta ~350 Kč/rok · use for fan mail, brand samples, merch return address · never home address" },
     { title: "EXIF-clean photos", body: "Before uploading directly (not via IG/Twitch): strip with exiftool or mat2 · removes GPS, device, timestamps" },
-    { title: "WHOIS privacy", body: "Cloudflare: included free · other registrars: pay extra but MUST have · without it, your name+address on your domain is public" },
+    { title: "WHOIS privacy", body: "Cloudflare: included free · other registrars: pay extra but MUST have · without it, my name+address on my domain is public" },
     { title: "Separate handles", body: "@its_neluska for public · separate personal account (nickname only, private, friends only) · NEVER cross-link" },
-    { title: "Stream setup audit", body: "Every 2 weeks: walk around your streaming spot on camera · check reflections in monitors, windows, sunglasses, TV screen · check whiteboards / notes / calendar in frame" },
+    { title: "Stream setup audit", body: "Every 2 weeks: walk around my streaming spot on camera · check reflections in monitors, windows, sunglasses, TV screen · check whiteboards / notes / calendar in frame" },
   ];
 
   return (
     <KitSection
       id="privacy"
-      eyebrow="27 · PRIVACY & SAFETY"
-      title="keeping your life yours"
-      sub="You're going to be visible. That's the job. But visibility ≠ exposure. These are the guardrails that let you stream, post, and still walk to the café without thinking about it."
+      eyebrow="28 · PRIVACY & SAFETY"
+      title="keeping my life mine"
+      sub="I'm going to be visible. That's the job. But visibility ≠ exposure. These are the guardrails that let me stream, post, and still walk to the café without thinking about it."
     >
       <div className="mb-9">
         <div className="eyebrow mb-3 text-[var(--pp-500)]">
@@ -1191,7 +1195,7 @@ export function PrivacySection() {
         <div className="mt-3 rounded-lg bg-[var(--pp-50)] px-4 py-3 text-xs leading-[1.6] text-[var(--pp-700)]">
           <strong>Current state:</strong> web live brzy na{" "}
           <span className="mono">neluska.dev</span>. Brand kit bude za HTTP
-          Basic Auth — heslo jen ty. Když budeš chtít poslat brand kit brandu,
+          Basic Auth – heslo jen ty. Když budeš chtít poslat brand kit brandu,
           (a) pošli heslo v DM, nebo (b) duplikuj jako{" "}
           <span className="mono">/media</span> s jiným heslem.
         </div>
@@ -1242,7 +1246,7 @@ export function PrivacySection() {
                 {checklist2fa.map((item, i) => (
                   <tr
                     key={item.service}
-                    className={i === 0 ? "" : "border-t border-[var(--line)]"}
+                    className={cn(i !== 0 && "border-t border-[var(--line)]")}
                   >
                     <td className="px-4 py-2.5 font-semibold text-[var(--ink)]">
                       {item.service}
@@ -1312,14 +1316,14 @@ export function PrivacySection() {
 
       <div className="card mt-7 bg-[var(--pp-50)] p-[22px]">
         <div className="mb-2 font-script text-[30px] leading-none text-[var(--pp-700)]">
-          your safety &gt; any viewer&apos;s feelings
+          my safety &gt; any viewer&apos;s feelings
         </div>
         <p className="m-0 max-w-[720px] text-[14px] leading-[1.6] text-[var(--ink)]">
-          You don&apos;t owe anyone an explanation for a block, a deleted
+          I don&apos;t owe anyone an explanation for a block, a deleted
           comment, a canceled stream, a private account. People who get it will
           understand. People who don&apos;t get it weren&apos;t going to stay
-          anyway. This is a long game - protect the person who has to wake up
-          tomorrow and do it again.
+          anyway. This is a long game – I protect the person who has to wake up
+          tomorrow and do it again (me).
         </p>
       </div>
     </KitSection>
@@ -1330,14 +1334,14 @@ export function FooterSection() {
   return (
     <footer className="border-t border-[var(--line)] bg-[var(--paper)] px-8 py-12 min-[760px]:px-16">
       <div className="mx-auto flex max-w-[1280px] flex-col gap-4 text-center">
-        <div className="eyebrow">27 · footer</div>
+        <div className="eyebrow">28 · footer</div>
         <div className="font-script text-[40px] leading-none text-[var(--pp-600)]">
           soft nerd princess, fully packed
         </div>
         <p className="mx-auto max-w-[760px] text-[15px] leading-[1.65] text-[var(--ink-soft)]">
           This kit is now the living version of the brand system: voice,
           templates, Twitch, safety, business, rituals, and the tiny details
-          that make it feel like you.
+          that make it feel like me.
         </p>
         <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
           <Link

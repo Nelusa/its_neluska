@@ -24,7 +24,7 @@ export default async function HomePage() {
         <div className="relative overflow-hidden rounded-[32px] border border-white/70 bg-[rgba(255,253,242,0.7)] p-6 shadow-[var(--sh-lg)] backdrop-blur sm:p-8">
           <HalftoneBeam className="absolute inset-y-0 right-0 w-1/2 opacity-60" />
           <div className="relative z-10 flex flex-wrap items-center gap-3">
-            <span className="pill">twitch streamer</span>
+            <span className="pill">instagram first</span>
             <span className="pill">frontend dev</span>
             <span className="pill">cozy gamer</span>
             <span className="pill">soft nerd princess</span>
@@ -42,22 +42,19 @@ export default async function HomePage() {
             </div>
 
             <p className="max-w-2xl text-base leading-7 text-[var(--ink-soft)] sm:text-lg">
-              Soft, warm, a little dreamy. Cozy streams, frontend builds,
-              puzzle brain moments, and a very committed sloth agenda.
+              Soft, warm, a little dreamy. Instagram for reels and daily cozy
+              moments, frontend builds when the brain cooperates, and Twitch
+              when there is a free evening worth turning into a little event.
             </p>
 
             <StatusPill status={status} />
 
             <div className="grid gap-3 sm:grid-cols-2">
               <LinkCard
-                href="https://twitch.tv/its_neluska"
-                label="watch live"
-                sublabel={
-                  status.isLive
-                    ? status.title ?? "live now on Twitch"
-                    : "offline — catch me next stream"
-                }
-                icon={<span aria-hidden="true">▶</span>}
+                href="https://instagram.com/its_neluska"
+                label="follow on instagram"
+                sublabel="reels, stories, the soft feed – where new friends find me"
+                icon={<span aria-hidden="true">📷</span>}
                 variant="primary"
               />
               <LinkCard
@@ -68,10 +65,10 @@ export default async function HomePage() {
                 external={false}
               />
               <LinkCard
-                href="https://instagram.com/its_neluska"
-                label="say hi on instagram"
-                sublabel="daily life, reels, little cozy things"
-                icon={<span aria-hidden="true">📷</span>}
+                href="https://twitch.tv/its_neluska"
+                label="catch me on twitch"
+                sublabel="streaming sometimes – follow for notifications"
+                icon={<span aria-hidden="true">▶</span>}
               />
               <LinkCard
                 href="https://github.com/Nelusa"
@@ -123,8 +120,8 @@ export default async function HomePage() {
         <div className="grid gap-4 md:grid-cols-3">
           <LinkCard
             href="/schedule"
-            label="stream schedule"
-            sublabel="usually Tue / Thu / Sun, Prague timezone"
+            label="when i go live"
+            sublabel="events, not a weekly grind – Prague timezone"
             icon={<span aria-hidden="true">☾</span>}
             external={false}
           />

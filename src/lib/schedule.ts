@@ -7,29 +7,14 @@ export type StreamSlot = {
   emoji: string;
 };
 
+/** Placeholder row – swap for real slots when I schedule a stream (IG stories are the announcement layer). */
 export const schedule: StreamSlot[] = [
   {
-    day: "tue",
+    day: "sat",
     time: "20:00",
-    duration: 180,
-    category: "dev",
-    title: "dev jam",
-    emoji: "💻",
-  },
-  {
-    day: "thu",
-    time: "20:00",
-    duration: 180,
-    category: "lol",
-    title: "LoL night",
-    emoji: "🎮",
-  },
-  {
-    day: "sun",
-    time: "19:00",
     duration: 120,
-    category: "irl",
-    title: "občas IRL",
-    emoji: "🧩",
+    category: "chill",
+    title: "next live – date TBA (watch IG)",
+    emoji: "✨",
   },
 ];

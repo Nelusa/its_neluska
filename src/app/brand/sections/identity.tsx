@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import { cn } from "@/lib/cn";
+
 import {
   BrandMark,
   DotDivider,
@@ -65,7 +67,7 @@ export function HeroSection() {
       <div className="relative mx-auto max-w-[1280px]">
         <div className="grid grid-cols-[minmax(0,1fr)] items-end gap-10 min-[980px]:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] min-[980px]:gap-[60px]">
           <div className="min-w-0">
-            <div className="chip mb-6">★ Personal brand · Instagram · Twitch</div>
+            <div className="chip mb-6">★ Personal brand · Instagram first · Twitch when it fits</div>
             <div className="section-x-scroll w-full max-w-full pb-2">
               <h1 className="h-display m-0 whitespace-nowrap text-[clamp(36px,8vw,140px)] leading-[0.88] text-[var(--pp-700)]">
                 its_neluska
@@ -75,12 +77,12 @@ export function HeroSection() {
               a soft nerd princess brand kit
             </div>
             <p className="m-0 mt-7 max-w-[560px] text-[17px] leading-[1.6] text-[var(--ink-soft)]">
-              Dev by day, sloth at heart. Three modes —{" "}
+              Dev by day, sloth at heart. Three modes –{" "}
               <strong className="text-[var(--pp-600)]">princess</strong>,{" "}
               <strong className="text-[var(--pp-600)]">nerd</strong>,{" "}
-              <strong className="text-[var(--pp-600)]">funny</strong> — share
+              <strong className="text-[var(--pp-600)]">funny</strong> – share
               one palette and one voice, but pull different content pillars.
-              This document is the operating system for everything you post.
+              This document is the operating system for everything I post.
             </p>
             <div className="mt-7 flex flex-wrap gap-2.5">
               <span
@@ -91,7 +93,7 @@ export function HeroSection() {
                   borderColor: "transparent",
                 }}
               >
-                ✦ princess — 40% of output
+                ✦ princess – 45% of output
               </span>
               <span
                 className="chip"
@@ -101,7 +103,7 @@ export function HeroSection() {
                   borderColor: "transparent",
                 }}
               >
-                &lt;/&gt; nerd — 35%
+                &lt;/&gt; nerd – 35%
               </span>
               <span
                 className="chip"
@@ -111,7 +113,7 @@ export function HeroSection() {
                   borderColor: "transparent",
                 }}
               >
-                🦥 funny — 25%
+                🦥 funny – 20%
               </span>
             </div>
           </div>
@@ -134,7 +136,7 @@ const voiceCards = [
   },
   {
     label: "the nerd",
-    body: 'show the work. show the bug. show the "aha". explain things like you\'re texting a younger sister who wants to learn.',
+    body: 'show the work. show the bug. show the "aha". explain things like I\'m texting a younger sister who wants to learn.',
   },
   {
     label: "the vulnerability",
@@ -175,8 +177,8 @@ export function VoiceSection() {
     <KitSection
       id="voice"
       eyebrow="01 · VOICE"
-      title="how you sound"
-      sub="One voice across all three modes — only the props change. Write captions like you'd send a 2am voice memo to a friend: specific, soft, a little weird."
+      title="how I sound"
+      sub="One voice across all three modes – only the props change. I write captions like I'd send a 2am voice memo to a friend: specific, soft, a little weird."
     >
       <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-5">
         {voiceCards.map((card) => (
@@ -281,7 +283,7 @@ export function ColorsSection() {
       id="colors"
       eyebrow="02 · PALETTE"
       title="colors"
-      sub="Four families — Princess Purple as primary, Mauve & Dusty Rose for the soft side, Pastel Yellow as the single bright accent. Warm neutrals only; never cold greys."
+      sub="Four families – Princess Purple as primary, Mauve & Dusty Rose for the soft side, Pastel Yellow as the single bright accent. Warm neutrals only; never cold greys."
     >
       <div className="grid gap-8">
         {colorRows.map((row) => (
@@ -297,7 +299,7 @@ export function ColorsSection() {
           eyebrowColor="#ffe875"
           className="border-transparent bg-[#2a1d3d] text-[#fff9d8]"
         >
-          Dark purple (<span className="mono">#2a1d3d</span>) is your "dev
+          Dark purple (<span className="mono">#2a1d3d</span>) is my "dev
           mode" background. Always pair with pastel yellow accents.
         </RuleCard>
         <RuleCard eyebrow="RULE 02" className="border-transparent bg-[var(--mp-50)]">
@@ -305,14 +307,14 @@ export function ColorsSection() {
           lifestyle, food, balcony.
         </RuleCard>
         <RuleCard eyebrow="RULE 03" className="border-transparent bg-[var(--py-100)]">
-          Yellow is <strong>only</strong> an accent — never a dominant
+          Yellow is <strong>only</strong> an accent – never a dominant
           background unless it's a "vibe" post with stickers.
         </RuleCard>
         <RuleCard eyebrow="RULE 04">
           Never use pure <span className="mono">#000</span> or{" "}
           <span className="mono">#fff</span>. Use{" "}
           <span className="mono">#2a1d3d</span> and{" "}
-          <span className="mono">#fffdf2</span> — warm ink & paper.
+          <span className="mono">#fffdf2</span> – warm ink & paper.
         </RuleCard>
       </div>
     </KitSection>
@@ -353,7 +355,7 @@ const typeCards = [
         little things
       </div>
     ),
-    body: 'The "whisper" — captions, CTAs, handwritten moments. Use sparingly, max 1 per composition.',
+    body: 'The "whisper" – captions, CTAs, handwritten moments. Use sparingly, max 1 per composition.',
     footer: "DEFAULT: Moontime",
     className: "border-transparent bg-[#fbe9ee]",
     footerClassName: "text-[var(--dr-500)]",
@@ -379,12 +381,12 @@ export function TypeSection() {
       id="type"
       eyebrow="03 · TYPOGRAPHY"
       title="type system"
-      sub="Three typefaces, clear roles. Blanka for impact display, Agrandir for body & UI, Moontime for handwritten accents. This kit is wired to your local font files."
+      sub="Three typefaces, clear roles. Blanka for impact display, Agrandir for body & UI, Moontime for handwritten accents. This kit is wired to my local font files."
     >
       <div className="grid grid-cols-1 gap-5 min-[900px]:grid-cols-[1.2fr_1fr_1fr]">
         {typeCards.map((card) => (
-          <div key={card.eyebrow} className={`card p-8 ${card.className || ""}`}>
-            <div className={`eyebrow ${card.eyebrowClassName || ""}`}>
+          <div key={card.eyebrow} className={cn("card p-8", card.className)}>
+            <div className={cn("eyebrow", card.eyebrowClassName)}>
               {card.eyebrow}
             </div>
             {card.sample}
@@ -392,7 +394,10 @@ export function TypeSection() {
               {card.body}
             </div>
             <div
-              className={`mt-3 font-mono text-[11px] tracking-[0.1em] ${card.footerClassName || ""}`}
+              className={cn(
+                "mt-3 font-mono text-[11px] tracking-[0.1em]",
+                card.footerClassName,
+              )}
             >
               {card.footer}
             </div>
@@ -434,8 +439,8 @@ export function MotifsSection() {
     <KitSection
       id="motifs"
       eyebrow="04 · SIGNATURE VISUAL MOTIFS"
-      title="the things that make it look like you"
-      sub="Every brand needs 2-3 repeatable visual moves that become instantly recognizable. Yours are already on your Twitch overlays — we just need to name them and use them everywhere."
+      title="the things that make it look like me"
+      sub="Every brand needs 2-3 repeatable visual moves that become instantly recognizable. Mine are already on my Twitch overlays – I name them here and use them everywhere."
     >
       <div className="grid grid-cols-1 gap-5 min-[900px]:grid-cols-3">
         <MotifCard
@@ -447,7 +452,7 @@ export function MotifsSection() {
             </div>
           }
           title="TOPOGRAPHIC WAVES"
-          body="Soft, flowing contour lines in a corner — never centered, never symmetric. Works on dark (purple) and light (lavender) backgrounds. Keep opacity low (5-10%) so it whispers, never shouts."
+          body="Soft, flowing contour lines in a corner – never centered, never symmetric. Works on dark (purple) and light (lavender) backgrounds. Keep opacity low (5-10%) so it whispers, never shouts."
           use="use: Twitch panels · post backgrounds · story base"
         />
 
@@ -461,7 +466,7 @@ export function MotifsSection() {
             </div>
           }
           title="DOT-FIELD SPOTLIGHT"
-          body={'Diagonal dotted halftone — the "spotlight beam" from your Starting-Soon panel. Use behind titles on hero posts, or as a texture on carousel covers. Pairs with contour lines.'}
+          body={'Diagonal dotted halftone – the "spotlight beam" from my Starting-Soon panel. I use it behind titles on hero posts, or as a texture on carousel covers. Pairs with contour lines.'}
           use="use: hero posts · carousel covers · reel thumbs"
         />
 
@@ -483,9 +488,9 @@ export function MotifsSection() {
           title="TARGET-O CUTOUT"
           body={
             <>
-              The "O" in OFFLINE with a crosshair target inside it — from your
-              Twitch panel. This is your{" "}
-              <strong>signature letterform detail</strong>. Use sparingly: only
+              The "O" in OFFLINE with a crosshair target inside it – from my
+              Twitch panel. This is my{" "}
+              <strong>signature letterform detail</strong>. I use it sparingly: only
               in big display type on dark backgrounds.
             </>
           }
@@ -499,7 +504,7 @@ export function MotifsSection() {
         </div>
         <p className="m-0 text-sm leading-[1.6] text-[var(--ink)]">
           <strong>Use max 2 motifs per asset.</strong> Contour + halftone = yes.
-          Contour + halftone + target-O = too much. The target-O is rare — save
+          Contour + halftone + target-O = too much. The target-O is rare – save
           it for moments that deserve a signature.
         </p>
       </div>
@@ -512,7 +517,7 @@ const modes = [
     key: "princess",
     title: "the princess",
     tagline: "soft life, high res",
-    pct: 40,
+    pct: 45,
     bg: "linear-gradient(135deg, var(--mp-50), var(--mp-100))",
     ink: "var(--dr-500)",
     does: "cozy setup, cafe, yoga, skincare, balcony, slow mornings, pretty food",
@@ -534,10 +539,10 @@ const modes = [
     key: "funny",
     title: "the funny one",
     tagline: "mostly sloth",
-    pct: 25,
+    pct: 20,
     bg: "var(--py-100)",
     ink: "var(--pp-700)",
-    does: "LOL clips, sloth memes, confession posts, chaotic wins, twitch bait",
+    does: "sloth memes, confession posts, tiny disasters, Lego fails, playful chaos – stream highlights when I have them",
     feels: "slightly dissociating, mostly loving, has sent this as a reel",
     visual: "pastel yellow + sticker energy + chunky display",
   },
@@ -548,8 +553,8 @@ export function ModesSection() {
     <KitSection
       id="modes"
       eyebrow="05 · BRAND MODES"
-      title="three modes, one you"
-      sub="Your differentiator is the mix. Each mode has its own visual recipe so the grid reads like a rhythm, not a blur. Rotate diagonally across the 3-column feed (see below)."
+      title="three modes, one me"
+      sub="My differentiator is the mix. Each mode has its own visual recipe so the grid reads like a rhythm, not a blur. I rotate diagonally across the 3-column feed (see below)."
     >
       <div className="grid grid-cols-1 gap-5 min-[900px]:grid-cols-3">
         {modes.map((mode) => (

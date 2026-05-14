@@ -1,6 +1,6 @@
-/* its_neluska — design tokens */
+/* its_neluska – design tokens */
 :root {
-  /* Princess Purple — exact hex */
+  /* Princess Purple – exact hex */
   --pp-50: #EEE6F4;
   --pp-100: #DCCDE8;
   --pp-200: #BCA3CC;
@@ -64,7 +64,7 @@
   --r-xl: 32px;
   --r-2xl: 48px;
 
-  /* shadows — soft, low-sat */
+  /* shadows – soft, low-sat */
   --sh-sm: 0 1px 2px oklch(0.3 0.03 310 / 0.06), 0 1px 1px oklch(0.3 0.03 310 / 0.04);
   --sh-md: 0 6px 16px oklch(0.3 0.05 310 / 0.08), 0 2px 4px oklch(0.3 0.03 310 / 0.04);
   --sh-lg: 0 18px 40px oklch(0.3 0.06 310 / 0.12), 0 6px 12px oklch(0.3 0.03 310 / 0.06);

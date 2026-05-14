@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
+import { cn } from "@/lib/cn";
 import "@/styles/globals.css";
 
 const display = localFont({
@@ -69,7 +70,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${display.variable} ${body.variable} ${script.variable}`}
+      className={cn(display.variable, body.variable, script.variable)}
     >
       <body>{children}</body>
     </html>

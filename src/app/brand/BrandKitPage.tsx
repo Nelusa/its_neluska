@@ -9,6 +9,8 @@ import {
   VoiceSection,
 } from "./sections/identity";
 import {
+  CalendarSection,
+  DailyWorkflowSection,
   FeedSection,
   HighlightsSection,
   HooksSection,
@@ -18,10 +20,9 @@ import {
   RealPhotoSection,
   ReelScriptsSection,
   ReelsSection,
+  RhythmSection,
   StoriesSection,
   StrategySection,
-  RhythmSection,
-  CalendarSection,
   TwitchSection,
 } from "./sections/content";
 import {
@@ -56,6 +57,7 @@ export default function BrandKitPage() {
       <ReelScriptsSection />
       <StrategySection />
       <RhythmSection />
+      <DailyWorkflowSection />
       <CalendarSection />
       <LaunchSection />
       <RealPhotoSection />

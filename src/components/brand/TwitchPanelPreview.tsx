@@ -174,7 +174,7 @@ export function TwitchPanelPreview({ panel }: TwitchPanelPreviewProps) {
                 {panel.body}
               </p>
               <p className="mt-2 font-script text-lg text-[var(--py-300)]">
-                thank you pookies
+                thanks pookies
               </p>
             </div>
             <Sloth variant="balloons" size={76} rotate={-8} className="shrink-0" />

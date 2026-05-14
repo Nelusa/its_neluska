@@ -56,7 +56,7 @@ export default function TwitchPanelsPage() {
                 schedule, rules, setup, socials, support.
               </p>
               <p>
-                If you want final PNG exports later, the cleanest next step is
+                If I want final PNG exports later, the cleanest next step is
                 to either render these component previews to images or add a
                 small export endpoint. Right now this page works as the canonical
                 visual reference.

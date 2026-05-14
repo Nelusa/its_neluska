@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { cn } from "@/lib/cn";
+
 export type SlothVariant =
   | "balloons"
   | "peek"
@@ -59,7 +61,7 @@ export function Sloth({
 }: SlothProps) {
   return (
     <div
-      className={`relative shrink-0 ${className}`.trim()}
+      className={cn("relative shrink-0", className)}
       style={{ width: size, height: size }}
     >
       <Image

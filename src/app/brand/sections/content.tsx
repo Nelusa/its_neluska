@@ -5,6 +5,7 @@ import {
   HooksGrid,
   LaunchWeek,
   Pillars,
+  QuickDevTipReel,
   ReelsRow,
   Rhythm,
   SlothASMR,
@@ -23,8 +24,8 @@ export function IGRealSection() {
     <KitSection
       id="ig-real"
       eyebrow="06 · PROFILE MOCKUP"
-      title="your profile, previewed"
-      sub="Three views of a fully-branded profile: feed grid, opened post, fullscreen story — all using the templates from this kit. This is what a new follower will see in the first 10 seconds."
+      title="my profile, previewed"
+      sub="Three views of a fully branded profile: feed grid, opened post, fullscreen story – all using the templates from this kit. This is what a new follower sees from me in the first 10 seconds."
     >
       <IGShowcase />
     </KitSection>
@@ -36,8 +37,8 @@ export function PostsSection() {
     <KitSection
       id="posts"
       eyebrow="07 · POST TEMPLATES"
-      title="nine recipes"
-      sub="Three templates per mode. Each one is a reusable structure — same layout, different words. Rotate these and your feed will breathe."
+      title="ten recipes"
+      sub="Three templates per mode, plus a reel cover mock and an event card – reusable structures. I rotate these so my feed can breathe."
     >
       <PostGrid9 />
     </KitSection>
@@ -91,7 +92,7 @@ export function ReelsSection() {
       id="reels"
       eyebrow="11 · REEL COVERS"
       title="cover templates"
-      sub="Your reel cover lives in the grid forever. Four archetypes: tutorial, day-in-life, stream highlight, aesthetic. Title + mode-specific background is all you need."
+      sub="My reel cover lives in the grid forever. Four archetypes: tutorial, day-in-life, stream highlight, aesthetic. Title + mode-specific background is all I need."
     >
       <ReelsRow />
     </KitSection>
@@ -103,8 +104,8 @@ export function ReelScriptsSection() {
     <KitSection
       id="reelscripts"
       eyebrow="12 · REEL SCRIPTS"
-      title="two ready-to-shoot scripts"
-      sub="Shot-by-shot timelines for two signature reel formats. Day-in-the-Life for cozy-aesthetic reach, Sloth ASMR for silent-scroll virality. Clone the structure, swap the content."
+      title="three ready-to-shoot scripts"
+      sub="Shot-by-shot timelines: Day-in-the-Life for cozy reach, Sloth ASMR for silent-scroll virality, Quick Dev Tip for batchable nerd growth. I clone the structure and swap the content."
     >
       <div className="mb-9">
         <div className="mb-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--pp-500)]">
@@ -112,11 +113,17 @@ export function ReelScriptsSection() {
         </div>
         <DayInLife />
       </div>
-      <div>
+      <div className="mb-9">
         <div className="mb-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--pp-500)]">
           SCRIPT B · SLOTH COLLECTION ASMR · 58s · silent
         </div>
         <SlothASMR />
+      </div>
+      <div>
+        <div className="mb-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--pp-500)]">
+          SCRIPT C · QUICK DEV TIP · 30s · screen recording
+        </div>
+        <QuickDevTipReel />
       </div>
     </KitSection>
   );
@@ -127,8 +134,8 @@ export function StrategySection() {
     <KitSection
       id="strategy"
       eyebrow="13 · CONTENT PILLARS"
-      title="what you post"
-      sub="Five pillars, weighted. Don't chase trends outside these - every post should fit one (or two at the intersection)."
+      title="what I post"
+      sub="Four pillars, weighted. I don't chase trends outside these – every post I ship should fit one (or two at the intersection)."
     >
       <Pillars />
     </KitSection>
@@ -139,23 +146,33 @@ export function RhythmSection() {
   const stats = [
     {
       k: "time",
-      v: "2h / day",
-      s: "split: 30m capture · 60m edit · 30m community",
+      v: "1h / day",
+      s: "20min create/edit · 20min schedule+caption · 20min engagement",
     },
     {
       k: "batch",
-      v: "sunday eve",
-      s: "shoot photos & film reels for the week in one session",
+      v: "sunday",
+      s: "2-3h shoot + edit session – content for the entire week",
+    },
+    {
+      k: "posts",
+      v: "3-4 / week",
+      s: "quality > quantity – algorithm rewards engagement, not volume",
     },
     {
       k: "stream",
-      v: "thursday · 20-22",
-      s: "consistent time = audience habit loop",
+      v: "1-2× / month",
+      s: "event format – drives IG content for days after",
     },
     {
-      k: "community",
-      v: "30m daily",
-      s: "reply to every DM & comment from the day - non-negotiable",
+      k: "stories",
+      v: "2-3 daily",
+      s: "low-effort, real-time – behind the scenes, polls, quick moments",
+    },
+    {
+      k: "engagement",
+      v: "20min daily",
+      s: "reply to comments + DMs, comment on 10 similar accounts",
     },
   ];
 
@@ -163,8 +180,8 @@ export function RhythmSection() {
     <KitSection
       id="rhythm"
       eyebrow="14 · WEEKLY RHYTHM"
-      title="2 hours a day, sustainably"
-      sub="Monday = nerd post. Wednesday = reel. Thursday = stream. Saturday = photo dump. Sunday = rest & batch. 4 posts + 1 reel + 1 stream + daily stories."
+      title="one hour a day, sustainably"
+      sub="Monday = dev content. Wednesday = cozy or reel. Friday = personality post. Sunday = batch & rest. 3-4 posts per week + daily stories. Stream when it feels right, not because the calendar says so."
       bg="var(--paper-2)"
     >
       <Rhythm />
@@ -186,13 +203,69 @@ export function RhythmSection() {
   );
 }
 
+export function DailyWorkflowSection() {
+  const blocks = [
+    {
+      range: "0–20 min",
+      title: "Create or edit",
+      body: "Today's scheduled content from my Sunday batch – polish cuts, captions-ready.",
+    },
+    {
+      range: "20–40 min",
+      title: "Caption + schedule + stories",
+      body: "Write the caption, schedule the post, publish 2–3 light stories.",
+    },
+    {
+      range: "40–60 min",
+      title: "Engagement",
+      body: "Reply to all comments and DMs; leave thoughtful comments on ~10 accounts in my niche.",
+    },
+  ];
+
+  return (
+    <KitSection
+      id="daily-workflow"
+      eyebrow="15 · 1-HOUR DAILY WORKFLOW"
+      title="where the hour goes"
+      sub="A realistic split when I actually have sixty minutes. Batch day is where heavy lifting lives; weekdays are ship + show up."
+    >
+      <div className="grid gap-4 min-[760px]:grid-cols-3">
+        {blocks.map((b) => (
+          <div key={b.range} className="card border border-[var(--line)] bg-white p-6">
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--pp-500)]">
+              {b.range}
+            </div>
+            <div className="h-display mt-2 text-xl leading-[1.1] text-[var(--pp-700)]">
+              {b.title}
+            </div>
+            <p className="mb-0 mt-2 text-[13px] leading-[1.55] text-[var(--ink-soft)]">
+              {b.body}
+            </p>
+          </div>
+        ))}
+      </div>
+      <DotDivider />
+      <div className="grid gap-3 rounded-[var(--r-md)] bg-[var(--pp-50)] p-5 text-[13px] leading-[1.6] text-[var(--ink)]">
+        <p className="m-0">
+          <strong className="text-[var(--pp-700)]">If I only have 30 minutes,</strong> I do engagement
+          only. Engagement beats posting when time is tight.
+        </p>
+        <p className="m-0">
+          <strong className="text-[var(--pp-700)]">If I have 0 minutes,</strong> that is ok.
+          Consistency is measured in months, not in single days.
+        </p>
+      </div>
+    </KitSection>
+  );
+}
+
 export function CalendarSection() {
   return (
     <KitSection
       id="calendar"
-      eyebrow="15 · MONTH 1 CALENDAR"
+      eyebrow="16 · MONTH 1 CALENDAR"
       title="first 28 days"
-      sub="A soft launch → builder → open up → community arc. Don't ship to everything; ship to this."
+      sub="A soft launch → builder → open up → community arc. I don't ship to everything; I ship to this."
     >
       <Calendar />
     </KitSection>
@@ -203,9 +276,9 @@ export function LaunchSection() {
   return (
     <KitSection
       id="launch"
-      eyebrow="16 · LAUNCH WEEK"
-      title="7 days, scripted"
-      sub="First week is a whole vibe. Each day has a post type, caption, shot list, and hashtags. Follow it, then remix for week 2+."
+      eyebrow="17 · LAUNCH WEEK"
+      title="soft launch week"
+      sub="Five feed-worthy pieces in seven days – stories fill the gaps. No mandatory stream: I add a bonus go-live in week 2–3 when I have energy."
       bg="var(--paper-2)"
     >
       <LaunchWeek />
@@ -233,7 +306,7 @@ export function RealPhotoSection() {
       src: "/assets/photos/yoga-mat.jpg",
       label: "yoga mat",
       mood: "princess",
-      note: "Magenta is YOUR brand color - let it pop; desaturate floor only",
+      note: "Magenta is MY brand color - let it pop; desaturate floor only",
       fallback: "YOGA MAT PHOTO MISSING",
     },
     {
@@ -271,9 +344,9 @@ export function RealPhotoSection() {
   return (
     <KitSection
       id="realphoto"
-      eyebrow="17 · YOUR PHOTOS — BEFORE/AFTER"
+      eyebrow="18 · MY PHOTOS – BEFORE/AFTER"
       title="one filter across everything"
-      sub="Your raw photos are gorgeous but inconsistent - yoga mat is sultry-magenta, cherry blossom is pastel-sky, breakfast is woodsy-warm. One preset unifies them into a single feed language."
+      sub="My raw photos are gorgeous but inconsistent - yoga mat is sultry-magenta, cherry blossom is pastel-sky, breakfast is woodsy-warm. One preset unifies them into a single feed language."
       bg="var(--paper-2)"
     >
       <div className="mb-7 grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4">
@@ -397,7 +470,7 @@ export function HooksSection() {
   return (
     <KitSection
       id="hooks"
-      eyebrow="18 · HOOKS LIBRARY"
+      eyebrow="19 · HOOKS LIBRARY"
       title="captions & openers"
       sub="Twelve ready-to-steal hooks - four per mode. Remix freely."
     >
@@ -432,7 +505,7 @@ export function TwitchSection() {
     {
       title: "Scene frame - JUST CHATTING",
       spec: "1920×1080 · full-screen cam, contour border, handle bottom-left",
-      why: "Used when you're just talking, reviewing a puzzle piece, or doing IRL segments.",
+      why: "Used when I'm just talking, reviewing a puzzle piece, or doing IRL segments.",
     },
     {
       title: "Scene frame - GAMING",
@@ -442,7 +515,7 @@ export function TwitchSection() {
     {
       title: "BRB / Pee break panel",
       spec: '1920×1080 · sloth with a tea cup · "brb - loading patience"',
-      why: "You'll need this every stream. Makes the pause on-brand instead of awkward.",
+      why: "I need this every stream. Makes the pause on-brand instead of awkward.",
     },
     {
       title: "Stream-ending panel",
@@ -457,20 +530,20 @@ export function TwitchSection() {
     {
       title: "Info panels (under stream)",
       spec: "6× panels · about, schedule, rules, socials, setup, donate",
-      why: "Fills the offline-profile area. Uses contour pattern + your headshot.",
+      why: "Fills the offline-profile area. Uses contour pattern + my headshot.",
     },
     {
       title: "Chatbot greeting messages",
       spec: "Text only · 8-10 variants",
-      why: "Bot welcomes new chatters in your voice. Write them yourself.",
+      why: "Bot welcomes new chatters in my voice. I write them myself.",
     },
   ];
 
   const funnel = [
-    ["1", "Stream live", "LoL / cozy puzzle / Lego / dev - 2-3× week"],
-    ["2", "Record highlights", "Funny moments, reactions, builds - 15-60s"],
-    ["3", "Cut reels from VOD", "1 reel = 1 stream moment, posted next day"],
-    ["4", "Drive IG → Twitch", 'Link in bio + stories "LIVE NOW" → follower funnel'],
+    ["1", "I post on IG consistently", "3-4 posts/week + daily stories – this is where new people find me"],
+    ["2", "Stream as an event", "1-2× per month – announce via IG stories, make it feel special"],
+    ["3", "Mine stream for reels", "OpusClip or CapCut: auto-clip best moments into 15-60s vertical reels"],
+    ["4", "Cross-post everywhere", "Same reel → IG Reels + TikTok + YouTube Shorts – zero extra work"],
   ];
 
   return (
@@ -485,15 +558,13 @@ export function TwitchSection() {
             className="eyebrow mb-2.5"
             style={{ color: "var(--tw-butter)" }}
           >
-            19 · TWITCH PACKAGE
+            20 · TWITCH PACKAGE
           </div>
           <h2 className="h-display m-0 text-[clamp(40px,6vw,72px)] text-white">
             the stream, wrapped
           </h2>
           <p className="mb-0 mt-4 max-w-[560px] text-[15px] leading-[1.55] text-[var(--tw-lav)]">
-            Your Twitch overlays are already on brand. Here's the full package
-            you need - what's done, what's still missing, and how IG + Twitch
-            feed each other.
+            Twitch is my community space and content source. I stream when I can – every session feeds my Instagram for days.
           </p>
         </div>
 
@@ -547,7 +618,7 @@ export function TwitchSection() {
 
         <div className="rounded-[var(--r-lg)] border border-[rgba(245,229,116,0.2)] bg-[rgba(245,229,116,0.08)] p-6">
           <div className="mb-3 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--tw-butter)]">
-            Twitch-to-Instagram funnel
+            IG-first funnel
           </div>
           <div className="grid gap-4 min-[760px]:grid-cols-2 min-[1120px]:grid-cols-4">
             {funnel.map(([n, title, desc]) => (

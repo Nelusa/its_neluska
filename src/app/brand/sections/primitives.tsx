@@ -1,5 +1,7 @@
 import type { CSSProperties, ReactNode } from "react";
 
+import { cn } from "@/lib/cn";
+
 const POST_W = 540;
 const POST_H = 675;
 
@@ -51,6 +53,7 @@ export function KitSection({
   sub,
   children,
   bg = "var(--paper)",
+  className,
 }: {
   id: string;
   eyebrow: string;
@@ -58,11 +61,15 @@ export function KitSection({
   sub?: string;
   children: ReactNode;
   bg?: string;
+  className?: string;
 }) {
   return (
     <section
       id={id}
-      className="border-t border-[var(--line)] px-8 py-[100px] text-[var(--ink)] min-[760px]:px-16"
+      className={cn(
+        "border-t border-[var(--line)] px-8 py-[100px] text-[var(--ink)] min-[760px]:px-16",
+        className,
+      )}
       style={{ background: bg }}
     >
       <div className="mx-auto max-w-[1280px]">
@@ -150,7 +157,7 @@ export function RuleCard({
   children: ReactNode;
 }) {
   return (
-    <div className={`card p-[18px] ${className}`}>
+    <div className={cn("card p-[18px]", className)}>
       <div className="eyebrow" style={{ color: eyebrowColor }}>
         {eyebrow}
       </div>
@@ -565,7 +572,7 @@ function IGPostDetail() {
           />
         </div>
         <div className="absolute left-5 top-[60px] font-mono text-[10px] tracking-[0.2em] opacity-90 min-[340px]:text-[10px]">
-          20:00 — 22:00 / 20.04.2026
+          20:00 – 22:00 / 20.04.2026
         </div>
         <div className="h-display absolute left-5 right-5 top-[100px] text-[44px] leading-[0.9]">
           first
@@ -578,7 +585,7 @@ function IGPostDetail() {
           <ClaudeSloth size={90} variant="heart" />
         </div>
         <div className="absolute bottom-5 left-5 font-script text-[22px] text-[#FCEB86]">
-          see you there ✿
+          catch me there ✿
         </div>
         <div className="absolute right-[14px] top-[14px] rounded-[10px] bg-[rgba(0,0,0,0.5)] px-2 py-[3px] text-[10px] text-white">
           1/4
@@ -761,7 +768,7 @@ function PostSoftAnnounce() {
   return (
     <PostFrame
       mode="princess"
-      label="soft announce · launches, streams, updates"
+      label="soft announce · launches, drops, events"
       bg="linear-gradient(180deg,#8057a8 0%, #624283 100%)"
       style={{ color: "#fff9d8" }}
     >
@@ -777,12 +784,12 @@ function PostSoftAnnounce() {
         />
       </div>
       <div className="absolute left-9 top-[130px] font-mono text-[13px] tracking-[0.2em] opacity-80">
-        20:00 — 22:00 / 20.04.2026
+        20:00 – 22:00 / 20.04.2026
       </div>
       <div className="h-display absolute left-9 right-9 top-[180px] text-[78px] leading-[0.9] text-[#fff9d8]">
-        first
+        new
         <br />
-        stream
+        reel
         <br />
         today
       </div>
@@ -790,7 +797,7 @@ function PostSoftAnnounce() {
         <ClaudeSloth size={165} variant="heart" />
       </div>
       <div className="absolute bottom-10 left-9 font-script text-[28px] text-[#ffe875]">
-        see you there ✿
+        catch me there ✿
       </div>
     </PostFrame>
   );
@@ -815,7 +822,7 @@ function PostSoftPhoto() {
         }}
       >
         <div className="font-mono text-[11px] tracking-[0.1em] text-[var(--dr-400)]">
-          [ PHOTO — balcony morning ]
+          [ PHOTO – balcony morning ]
         </div>
       </div>
       <Washi
@@ -1064,24 +1071,24 @@ function PostStream() {
   return (
     <PostFrame
       mode="funny"
-      label="stream ad · twitch live announcement"
+      label="event announcement · stream, collab, or drop"
       bg="#45305d"
       style={{ color: "#fff9d8" }}
     >
       <div className="absolute left-9 top-9 flex items-center gap-2">
         <div className="h-2.5 w-2.5 rounded-full bg-[#ff6b6b] shadow-[0_0_0_6px_rgba(255,107,107,0.25)]" />
         <div className="font-mono text-[11px] tracking-[0.2em] text-[#ffe875]">
-          LIVE NOW · TWITCH
+          SPECIAL EVENT
         </div>
       </div>
       <div className="h-display absolute left-9 right-9 top-[90px] text-[68px] leading-[0.9] text-[#ffe875]">
-        losing at
+        live
         <br />
-        lol so you
+        tonight
         <br />
-        don't have
+        20:00
         <br />
-        to ❦
+        ✿
       </div>
       <div className="absolute bottom-9 left-9 right-9 flex items-end justify-between">
         <div>
@@ -1094,6 +1101,37 @@ function PostStream() {
         </div>
         <ClaudeSloth size={148} variant="gaming" />
         <div className="font-script text-[28px] text-[#f0cfd7]">tune in ✿</div>
+      </div>
+    </PostFrame>
+  );
+}
+
+function PostReelCover() {
+  return (
+    <PostFrame
+      mode="nerd"
+      label="reel cover · 9:16 title safe for grid"
+      bg="linear-gradient(180deg,#2a1d3d 0%,#45305d 100%)"
+      style={{ color: "#fff9d8" }}
+    >
+      <div
+        className="absolute left-1/2 top-1/2 w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-xl border-2 border-[#ffe875] bg-[#1a0f28] p-3 shadow-[var(--sh-md)]"
+        style={{ aspectRatio: "9 / 16" }}
+      >
+        <div className="font-mono text-[9px] tracking-[0.2em] text-[#c3a9d7]">
+          REEL COVER
+        </div>
+        <div className="mt-10 h-display text-center text-[34px] leading-[0.95] text-[#ffe875]">
+          60s
+          <br />
+          dev tip
+        </div>
+        <div className="absolute bottom-3 left-0 right-0 text-center font-mono text-[10px] text-[#c3a9d7]">
+          @its_neluska
+        </div>
+      </div>
+      <div className="absolute right-6 top-6 max-w-[120px] text-right font-mono text-[10px] leading-snug text-[#c3a9d7]">
+        safe zone · thumbs
       </div>
     </PostFrame>
   );
@@ -1154,6 +1192,7 @@ export function PostGrid9() {
     <PostSoftPhoto key="soft-photo" />,
     <PostBuildLog key="build-log" />,
     <PostStream key="stream" />,
+    <PostReelCover key="reel-cover" />,
     <PostQuote key="quote" />,
     <PostCompare key="compare" />,
     <PostVibe key="vibe" />,
@@ -1305,7 +1344,7 @@ export function FeedPreview() {
         </div>
       </div>
       <div className="mt-2.5 text-center font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--ink-soft)]">
-        Feed rhythm — Princess / Nerd / Funny rotating diagonally
+        Feed rhythm – Princess / Nerd / Funny rotating diagonally
       </div>
     </div>
   );

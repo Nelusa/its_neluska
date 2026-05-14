@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 
 import { SectionLabel } from "@/components/SectionLabel";
+import { cn } from "@/lib/cn";
 
 export interface SectionProps {
   label?: string;
@@ -22,7 +23,10 @@ export function Section({
 
   return (
     <section
-      className={`rounded-[32px] border border-[rgba(78,52,100,0.1)] p-6 shadow-[var(--sh-md)] sm:p-8 ${surface}`}
+      className={cn(
+        "rounded-[32px] border border-[rgba(78,52,100,0.1)] p-6 shadow-[var(--sh-md)] sm:p-8",
+        surface,
+      )}
     >
       {(label || title) && (
         <div className="mb-6">

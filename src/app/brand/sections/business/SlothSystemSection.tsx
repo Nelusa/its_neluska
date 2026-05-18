@@ -130,14 +130,14 @@ export function SlothSystemSection() {
       <div className="mb-8 grid gap-3 min-[640px]:grid-cols-2 min-[980px]:grid-cols-3">
         {slothGallery.map((sloth) => (
           <div key={sloth.name} className="card grid grid-cols-[132px_1fr] items-center gap-4 p-4 max-[520px]:grid-cols-[112px_1fr]">
-            <div className="flex aspect-square items-center justify-center overflow-hidden rounded-xl bg-[var(--pp-50)] p-0.5">
+            <div className="flex aspect-square items-center justify-center overflow-hidden rounded-xl bg-brand-purple-50 p-0.5">
               <img src={sloth.src} alt="" className="h-[150%] w-[150%] max-w-none object-contain" />
             </div>
             <div>
-              <div className="h-display mb-1.5 text-[14px] leading-[1.15] text-[var(--pp-700)]">
+              <div className="h-display mb-1.5 text-[14px] leading-[1.15] text-brand-purple-700">
                 {sloth.name}
               </div>
-              <div className="text-xs leading-[1.45] text-[var(--ink-soft)]">
+              <div className="text-xs leading-[1.45] text-ink-soft">
                 {sloth.use}
               </div>
             </div>
@@ -146,25 +146,25 @@ export function SlothSystemSection() {
       </div>
 
       <div className="card p-7">
-        <div className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--pp-500)]">
+        <div className="mb-4 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple-500">
           Canva → IG workflow (the 4-step ritual)
         </div>
         <div className="grid gap-5 min-[760px]:grid-cols-2 min-[1120px]:grid-cols-4">
           {workflow.map((step) => (
             <div
               key={step.n}
-              className="border-l-2 border-[var(--pp-200)] pl-[14px]"
+              className="border-l-2 border-brand-purple-200 pl-[14px]"
             >
-              <div className="mb-1.5 font-mono text-[11px] tracking-[0.15em] text-[var(--pp-400)]">
+              <div className="mb-1.5 font-mono text-[11px] tracking-[0.15em] text-brand-purple-400">
                 STEP {step.n}
               </div>
-              <div className="h-display mb-2 text-base text-[var(--pp-700)]">
+              <div className="h-display mb-2 text-base text-brand-purple-700">
                 {step.title}
               </div>
-              <p className="mb-2.5 text-[12.5px] leading-[1.55] text-[var(--ink-soft)]">
+              <p className="mb-2.5 text-[12.5px] leading-[1.55] text-ink-soft">
                 {step.body}
               </p>
-              <div className="font-mono text-[10px] tracking-[0.05em] text-[var(--dr-400)]">
+              <div className="font-mono text-[10px] tracking-[0.05em] text-brand-rose-400">
                 ↳ {step.tag}
               </div>
             </div>
@@ -174,20 +174,20 @@ export function SlothSystemSection() {
 
       <div className="mt-6 grid gap-4 min-[880px]:grid-cols-2">
         <div className="rounded-[var(--r-lg)] bg-[rgba(245,229,116,0.15)] p-5">
-          <div className="h-display mb-2.5 text-sm text-[var(--pp-700)]">
+          <div className="h-display mb-2.5 text-sm text-brand-purple-700">
             SLOTH RULES · DO
           </div>
-          <ul className="m-0 list-disc pl-[18px] text-[13px] leading-[1.7] text-[var(--ink)]">
+          <ul className="m-0 list-disc pl-[18px] text-[13px] leading-[1.7] text-ink">
             {dos.map((item) => (
               <li key={item}>{item}</li>
             ))}
           </ul>
         </div>
         <div className="rounded-[var(--r-lg)] bg-[rgba(244,168,192,0.15)] p-5">
-          <div className="h-display mb-2.5 text-sm text-[var(--pp-700)]">
+          <div className="h-display mb-2.5 text-sm text-brand-purple-700">
             SLOTH RULES · DON'T
           </div>
-          <ul className="m-0 list-disc pl-[18px] text-[13px] leading-[1.7] text-[var(--ink)]">
+          <ul className="m-0 list-disc pl-[18px] text-[13px] leading-[1.7] text-ink">
             {donts.map((item) => (
               <li key={item}>{item}</li>
             ))}

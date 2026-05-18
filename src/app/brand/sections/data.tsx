@@ -587,9 +587,9 @@ export function Rhythm() {
         {days.map((day) => (
           <div
             key={day.d}
-            className="rounded-[14px] border border-[var(--line)] bg-white p-[14px]"
+            className="rounded-[14px] border border-line bg-white p-[14px]"
           >
-            <div className="mb-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--ink-soft)]">
+            <div className="mb-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-soft">
               {day.d}
             </div>
             {day.items.map((item, i) => {
@@ -616,13 +616,13 @@ export function Rhythm() {
 
 export function Calendar() {
   return (
-    <div className="rounded-[20px] border border-[var(--line)] bg-white p-6 shadow-[var(--sh-md)]">
+    <div className="rounded-[20px] border border-line bg-white p-6 shadow-sh-md">
       <div className="section-x-scroll pb-2">
         <div className="grid min-w-[900px] grid-cols-7 gap-2.5">
           {["mon", "tue", "wed", "thu", "fri", "sat", "sun"].map((day) => (
             <div
               key={day}
-              className="px-1 pb-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--ink-soft)]"
+              className="px-1 pb-2.5 font-mono text-[10px] uppercase tracking-[0.2em] text-ink-soft"
             >
               {day}
             </div>
@@ -634,8 +634,8 @@ export function Calendar() {
                 key={i}
                 className={cn(
                   "flex min-h-[130px] flex-col gap-1.5 rounded-[10px] p-3",
-                  entry.t === "rest" && "border border-dashed border-[var(--line)]",
-                  entry.t === "stories" && "border border-solid border-[var(--line)]",
+                  entry.t === "rest" && "border border-dashed border-line",
+                  entry.t === "stories" && "border border-solid border-line",
                 )}
                 style={{
                   background: entry.t === "rest" ? "var(--paper-2)" : k.color,
@@ -667,21 +667,21 @@ export function Calendar() {
         </div>
       </div>
 
-      <div className="mt-5 flex flex-wrap gap-4 font-mono text-[10px] uppercase tracking-[0.12em] text-[var(--ink-soft)]">
+      <div className="mt-5 flex flex-wrap gap-4 font-mono text-[10px] uppercase tracking-[0.12em] text-ink-soft">
         <span>
-          <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full bg-[var(--mp-100)] align-[-1px]" />
+          <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full bg-brand-pink-100 align-[-1px]" />
           princess
         </span>
         <span>
-          <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full bg-[var(--pp-100)] align-[-1px]" />
+          <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full bg-brand-purple-100 align-[-1px]" />
           nerd
         </span>
         <span>
-          <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full bg-[var(--py-200)] align-[-1px]" />
+          <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full bg-brand-yellow-200 align-[-1px]" />
           funny
         </span>
         <span>
-          <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full bg-[var(--mp-50)] align-[-1px] ring-1 ring-[var(--line)]" />
+          <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full bg-brand-pink-50 align-[-1px] ring-1 ring-line" />
           stories only
         </span>
         <span>
@@ -689,7 +689,7 @@ export function Calendar() {
           live event
         </span>
         <span>
-          <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full border border-dashed border-[var(--line)] bg-[var(--paper-2)] align-[-1px]" />
+          <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full border border-dashed border-line bg-paper-2 align-[-1px]" />
           rest
         </span>
       </div>
@@ -763,7 +763,7 @@ export function HooksGrid() {
         return (
           <div
             key={i}
-            className="flex items-start gap-3 rounded-[14px] border border-[var(--line)] bg-white px-5 py-[18px]"
+            className="flex items-start gap-3 rounded-[14px] border border-line bg-white px-5 py-[18px]"
           >
             <span
               className="mt-0.5 shrink-0 rounded px-2 py-[3px] font-mono text-[9px] uppercase tracking-[0.16em]"
@@ -771,7 +771,7 @@ export function HooksGrid() {
             >
               {hook.mode}
             </span>
-            <div className="font-display text-[15px] font-bold leading-[1.25] text-[var(--pp-700)]">
+            <div className="font-display text-[15px] font-bold leading-[1.25] text-brand-purple-700">
               "{hook.h}"
             </div>
           </div>
@@ -795,7 +795,7 @@ function StoryFrame({
   return (
     <figure className="m-0 flex flex-col gap-2">
       <div
-        className="relative overflow-hidden rounded-[24px] shadow-[var(--sh-md)]"
+        className="relative overflow-hidden rounded-[24px] shadow-sh-md"
         style={{
           width: STORY_W,
           height: STORY_H,
@@ -820,7 +820,7 @@ function StoryFrame({
         </div>
         {children}
       </div>
-      <figcaption className="font-mono text-[10px] tracking-[0.06em] text-[var(--ink-soft)]">
+      <figcaption className="font-mono text-[10px] tracking-[0.06em] text-ink-soft">
         {label}
       </figcaption>
     </figure>
@@ -843,16 +843,16 @@ function StoryGM() {
         <br />
         friends
       </div>
-      <div className="font-script absolute left-6 right-6 top-[330px] text-4xl leading-none text-[var(--dr-400)]">
+      <div className="font-script absolute left-6 right-6 top-[330px] text-4xl leading-none text-brand-rose-400">
         coffee first ·
         <br />
         then chaos
       </div>
       <div className="absolute bottom-10 left-6 right-6 flex items-center justify-between rounded-2xl bg-[rgba(255,255,255,0.7)] px-4 py-[14px] backdrop-blur-[8px]">
-        <div className="font-mono text-[11px] tracking-[0.12em] text-[var(--pp-600)]">
+        <div className="font-mono text-[11px] tracking-[0.12em] text-brand-purple-600">
           HOW ARE YOU?
         </div>
-        <div className="font-body text-[11px] text-[var(--ink-soft)]">
+        <div className="font-body text-[11px] text-ink-soft">
           tap to reply
         </div>
       </div>
@@ -904,31 +904,31 @@ function StoryLiveNow() {
     <StoryFrame label="live now · ping followers" bg="var(--py-100)">
       <div className="absolute left-6 top-9 flex items-center gap-2">
         <div className="h-2.5 w-2.5 rounded-full bg-[#d14a6a] shadow-[0_0_0_6px_rgba(209,74,106,0.2)]" />
-        <div className="font-mono text-[10px] tracking-[0.24em] text-[var(--dr-500)]">
+        <div className="font-mono text-[10px] tracking-[0.24em] text-brand-rose-500">
           LIVE · TWITCH
         </div>
       </div>
-      <div className="h-display absolute left-6 right-6 top-[100px] text-[56px] leading-[0.88] text-[var(--pp-700)]">
+      <div className="h-display absolute left-6 right-6 top-[100px] text-[56px] leading-[0.88] text-brand-purple-700">
         losing
         <br />
         ranked
         <br />
         again
       </div>
-      <div className="absolute left-6 right-6 top-[380px] flex items-center justify-between rounded-[14px] bg-white px-4 py-[14px] shadow-[var(--sh-md)]">
+      <div className="absolute left-6 right-6 top-[380px] flex items-center justify-between rounded-[14px] bg-white px-4 py-[14px] shadow-sh-md">
         <div>
-          <div className="font-mono text-[9px] tracking-[0.2em] text-[var(--dr-400)]">
+          <div className="font-mono text-[9px] tracking-[0.2em] text-brand-rose-400">
             TWITCH.TV
           </div>
-          <div className="h-display text-[20px] text-[var(--pp-700)]">
+          <div className="h-display text-[20px] text-brand-purple-700">
             its_neluska
           </div>
         </div>
-        <div className="rounded-full bg-[var(--pp-500)] px-[14px] py-2 font-mono text-[11px] tracking-[0.12em] text-[#fff9d8]">
+        <div className="rounded-full bg-brand-purple-500 px-[14px] py-2 font-mono text-[11px] tracking-[0.12em] text-[#fff9d8]">
           JOIN →
         </div>
       </div>
-      <div className="font-script absolute bottom-[60px] left-1/2 -translate-x-1/2 text-[26px] text-[var(--pp-500)]">
+      <div className="font-script absolute bottom-[60px] left-1/2 -translate-x-1/2 text-[26px] text-brand-purple-500">
         come be silly ✿
       </div>
     </StoryFrame>
@@ -938,16 +938,16 @@ function StoryLiveNow() {
 function StoryPhotoDump() {
   return (
     <StoryFrame label="photo dump · recap" bg="#fbe9ee">
-      <div className="absolute left-6 right-6 top-9 font-mono text-[10px] tracking-[0.2em] text-[var(--dr-400)]">
+      <div className="absolute left-6 right-6 top-9 font-mono text-[10px] tracking-[0.2em] text-brand-rose-400">
         ✦ WEEK 16 DUMP
       </div>
-      <div className="h-display absolute left-6 right-6 top-16 text-[32px] leading-[0.95] text-[var(--dr-500)]">
+      <div className="h-display absolute left-6 right-6 top-16 text-[32px] leading-[0.95] text-brand-rose-500">
         little
         <br />
         things
       </div>
       <div
-        className="absolute left-5 top-[180px] flex h-[220px] w-40 items-center justify-center rounded-[10px] font-mono text-[9px] text-[var(--dr-400)] shadow-[var(--sh-md)]"
+        className="absolute left-5 top-[180px] flex h-[220px] w-40 items-center justify-center rounded-[10px] font-mono text-[9px] text-brand-rose-400 shadow-sh-md"
         style={{
           background:
             "repeating-linear-gradient(45deg, #f0cfd7 0 8px, #fbe9ee 8px 16px)",
@@ -957,7 +957,7 @@ function StoryPhotoDump() {
         [ IMG 1 ]
       </div>
       <div
-        className="absolute right-[14px] top-[220px] flex h-[200px] w-[140px] items-center justify-center rounded-[10px] font-mono text-[9px] text-[var(--dr-400)] shadow-[var(--sh-md)]"
+        className="absolute right-[14px] top-[220px] flex h-[200px] w-[140px] items-center justify-center rounded-[10px] font-mono text-[9px] text-brand-rose-400 shadow-sh-md"
         style={{
           background:
             "repeating-linear-gradient(135deg, var(--mp-100) 0 8px, var(--mp-50) 8px 16px)",
@@ -978,7 +978,7 @@ function StoryPhotoDump() {
         style={{ top: 212, right: 30 }}
         color="var(--pp-200)"
       />
-      <div className="font-script absolute bottom-10 left-6 right-6 text-center text-[28px] text-[var(--dr-400)]">
+      <div className="font-script absolute bottom-10 left-6 right-6 text-center text-[28px] text-brand-rose-400">
         no thoughts, just vibes
       </div>
     </StoryFrame>
@@ -988,10 +988,10 @@ function StoryPhotoDump() {
 function StoryCodeTip() {
   return (
     <StoryFrame label="code tip · quick win" bg="var(--paper-2)">
-      <div className="absolute left-6 top-10 font-mono text-[10px] tracking-[0.2em] text-[var(--pp-500)]">
+      <div className="absolute left-6 top-10 font-mono text-[10px] tracking-[0.2em] text-brand-purple-500">
         TIP · 60s
       </div>
-      <div className="h-display absolute left-6 right-6 top-[70px] text-[32px] leading-[0.95] text-[var(--pp-700)]">
+      <div className="h-display absolute left-6 right-6 top-[70px] text-[32px] leading-[0.95] text-brand-purple-700">
         one line
         <br />
         of svelte
@@ -1016,7 +1016,7 @@ function StoryCodeTip() {
           <span className="text-[#ffe875]">{"{/await}"}</span>
         </div>
       </div>
-      <div className="absolute bottom-10 left-6 right-6 rounded-[14px] bg-[rgba(255,255,255,0.8)] px-4 py-3 text-center font-body text-[13px] text-[var(--pp-600)]">
+      <div className="absolute bottom-10 left-6 right-6 rounded-[14px] bg-[rgba(255,255,255,0.8)] px-4 py-3 text-center font-body text-[13px] text-brand-purple-600">
         save this for my next svelte project ✦
       </div>
     </StoryFrame>
@@ -1097,7 +1097,7 @@ function HighlightCover({
       >
         {children}
       </div>
-      <div className="font-mono text-[11px] lowercase tracking-[0.12em] text-[var(--ink-soft)]">
+      <div className="font-mono text-[11px] lowercase tracking-[0.12em] text-ink-soft">
         {label}
       </div>
     </div>
@@ -1175,7 +1175,7 @@ function ReelsCover({
   return (
     <figure className="m-0 flex flex-col gap-2">
       <div
-        className="relative overflow-hidden rounded-[14px] shadow-[var(--sh-md)]"
+        className="relative overflow-hidden rounded-[14px] shadow-sh-md"
         style={{
           width: REEL_W,
           height: REEL_H,
@@ -1185,7 +1185,7 @@ function ReelsCover({
       >
         {children}
       </div>
-      <figcaption className="font-mono text-[10px] tracking-[0.08em] text-[var(--ink-soft)]">
+      <figcaption className="font-mono text-[10px] tracking-[0.08em] text-ink-soft">
         {label}
       </figcaption>
     </figure>
@@ -1216,10 +1216,10 @@ export function ReelsRow() {
           label="day in life"
           bg="linear-gradient(180deg,#fbe9ee,#f0cfd7)"
         >
-          <div className="absolute left-4 top-4 font-mono text-[9px] tracking-[0.2em] text-[var(--dr-500)]">
+          <div className="absolute left-4 top-4 font-mono text-[9px] tracking-[0.2em] text-brand-rose-500">
             VLOG
           </div>
-          <div className="h-display absolute left-4 right-4 top-[60px] text-[30px] leading-[0.9] text-[var(--dr-500)]">
+          <div className="h-display absolute left-4 right-4 top-[60px] text-[30px] leading-[0.9] text-brand-rose-500">
             a day as a
             <br />
             soft nerd
@@ -1251,10 +1251,10 @@ export function ReelsRow() {
         </ReelsCover>
 
         <ReelsCover label="aesthetic" bg="var(--py-100)">
-          <div className="absolute left-4 top-4 font-mono text-[9px] tracking-[0.2em] text-[var(--pp-500)]">
+          <div className="absolute left-4 top-4 font-mono text-[9px] tracking-[0.2em] text-brand-purple-500">
             ASMR · SILENT
           </div>
-          <div className="h-display absolute left-4 right-4 top-[60px] text-[30px] leading-[0.9] text-[var(--pp-700)]">
+          <div className="h-display absolute left-4 right-4 top-[60px] text-[30px] leading-[0.9] text-brand-purple-700">
             unboxing
             <br />
             1000-piece

@@ -24,13 +24,13 @@ export function LegacyTopNav() {
   ];
 
   return (
-    <nav className="border-b border-[var(--line)] bg-[oklch(0.985_0.006_80_/_0.8)] backdrop-blur-[14px]">
+    <nav className="border-b border-line bg-[oklch(0.985_0.006_80_/_0.8)] backdrop-blur-[14px]">
       <div className="mx-auto flex max-w-[1280px] items-center justify-between gap-4 px-8 py-[14px] max-[760px]:flex-col max-[760px]:items-start">
         <div className="flex items-center gap-2.5">
           <BrandMark />
           <div>
             <div className="font-mono text-xs tracking-[0.14em]">@its_neluska</div>
-            <div className="font-script text-sm leading-none text-[var(--pp-500)]">
+            <div className="font-script text-sm leading-none text-brand-purple-500">
               brand kit
             </div>
           </div>
@@ -50,7 +50,7 @@ export function LegacyTopNav() {
             ))}
             <Link
               href="/"
-              className="nav-link bg-[var(--pp-50)] text-[var(--pp-600)]"
+              className="nav-link bg-brand-purple-50 text-brand-purple-600"
             >
               ↗ live site
             </Link>
@@ -69,18 +69,18 @@ export function HeroSection() {
           <div className="min-w-0">
             <div className="chip mb-6">★ Personal brand · Instagram first · Twitch when it fits</div>
             <div className="section-x-scroll w-full max-w-full pb-2">
-              <h1 className="h-display m-0 whitespace-nowrap text-[clamp(36px,8vw,140px)] leading-[0.88] text-[var(--pp-700)]">
+              <h1 className="h-display m-0 whitespace-nowrap text-[clamp(36px,8vw,140px)] leading-[0.88] text-brand-purple-700">
                 its_neluska
               </h1>
             </div>
-            <div className="mt-3 font-script text-[clamp(36px,4vw,56px)] leading-none text-[var(--dr-400)]">
+            <div className="mt-3 font-script text-[clamp(36px,4vw,56px)] leading-none text-brand-rose-400">
               a soft nerd princess brand kit
             </div>
-            <p className="m-0 mt-7 max-w-[560px] text-[17px] leading-[1.6] text-[var(--ink-soft)]">
+            <p className="m-0 mt-7 max-w-[560px] text-[17px] leading-[1.6] text-ink-soft">
               Dev by day, sloth at heart. Three modes –{" "}
-              <strong className="text-[var(--pp-600)]">princess</strong>,{" "}
-              <strong className="text-[var(--pp-600)]">nerd</strong>,{" "}
-              <strong className="text-[var(--pp-600)]">funny</strong> – share
+              <strong className="text-brand-purple-600">princess</strong>,{" "}
+              <strong className="text-brand-purple-600">nerd</strong>,{" "}
+              <strong className="text-brand-purple-600">funny</strong> – share
               one palette and one voice, but pull different content pillars.
               This document is the operating system for everything I post.
             </p>
@@ -192,13 +192,13 @@ export function VoiceSection() {
       <DotDivider />
 
       <div className="grid grid-cols-1 gap-8 min-[820px]:grid-cols-2">
-        <div className="card border-transparent bg-[var(--pp-50)] p-7">
-          <div className="eyebrow text-[var(--pp-600)]">✓ SAY THIS</div>
+        <div className="card border-transparent bg-brand-purple-50 p-7">
+          <div className="eyebrow text-brand-purple-600">✓ SAY THIS</div>
           <div className="mt-4 flex flex-wrap gap-2">
             {voiceWords.do.map((word) => (
               <span
                 key={word}
-                className="rounded-full bg-white px-3 py-1.5 font-body text-[13px] text-[var(--pp-600)]"
+                className="rounded-full bg-white px-3 py-1.5 font-body text-[13px] text-brand-purple-600"
               >
                 {word}
               </span>
@@ -207,12 +207,12 @@ export function VoiceSection() {
         </div>
 
         <div className="card border-transparent bg-[#fbe9ee] p-7">
-          <div className="eyebrow text-[var(--dr-400)]">✗ NEVER</div>
+          <div className="eyebrow text-brand-rose-400">✗ NEVER</div>
           <div className="mt-4 flex flex-wrap gap-2">
             {voiceWords.dont.map((word) => (
               <span
                 key={word}
-                className="rounded-full bg-white px-3 py-1.5 font-body text-[13px] text-[var(--dr-400)] line-through decoration-[var(--dr-300)]"
+                className="rounded-full bg-white px-3 py-1.5 font-body text-[13px] text-brand-rose-400 line-through decoration-brand-rose-300"
               >
                 {word}
               </span>
@@ -302,11 +302,11 @@ export function ColorsSection() {
           Dark purple (<span className="mono">#2a1d3d</span>) is my "dev
           mode" background. Always pair with pastel yellow accents.
         </RuleCard>
-        <RuleCard eyebrow="RULE 02" className="border-transparent bg-[var(--mp-50)]">
+        <RuleCard eyebrow="RULE 02" className="border-transparent bg-brand-pink-50">
           Dusty rose + pastel yellow is the "cozy morning" combo. Use for
           lifestyle, food, balcony.
         </RuleCard>
-        <RuleCard eyebrow="RULE 03" className="border-transparent bg-[var(--py-100)]">
+        <RuleCard eyebrow="RULE 03" className="border-transparent bg-brand-yellow-100">
           Yellow is <strong>only</strong> an accent – never a dominant
           background unless it's a "vibe" post with stickers.
         </RuleCard>
@@ -325,7 +325,7 @@ const typeCards = [
   {
     eyebrow: "DISPLAY · BLANKA",
     sample: (
-      <div className="h-display mt-2 text-[84px] leading-[0.88] text-[var(--pp-700)]">
+      <div className="h-display mt-2 text-[84px] leading-[0.88] text-brand-purple-700">
         SOFT
         <br />
         NERD
@@ -333,32 +333,32 @@ const typeCards = [
     ),
     body: "Headlines, post titles, reel covers. Always uppercase, tight line-height (0.9). Never for body.",
     footer: "DEFAULT: Blanka",
-    className: "border-transparent bg-[var(--pp-50)]",
-    footerClassName: "text-[var(--pp-500)]",
+    className: "border-transparent bg-brand-purple-50",
+    footerClassName: "text-brand-purple-500",
   },
   {
     eyebrow: "BODY · AGRANDIR",
     sample: (
-      <div className="mt-2 font-body text-[40px] font-semibold leading-none text-[var(--pp-700)]">
+      <div className="mt-2 font-body text-[40px] font-semibold leading-none text-brand-purple-700">
         Aa Gg Qq
       </div>
     ),
     body: "Captions, UI, longer reads. Weights 300 / 500 / 700. Always regular-case.",
     footer: "DEFAULT: Agrandir",
-    footerClassName: "text-[var(--pp-500)]",
+    footerClassName: "text-brand-purple-500",
   },
   {
     eyebrow: "SCRIPT · MOONTIME",
-    eyebrowClassName: "text-[var(--dr-500)]",
+    eyebrowClassName: "text-brand-rose-500",
     sample: (
-      <div className="mt-2 font-script text-[64px] leading-[0.9] text-[var(--dr-400)]">
+      <div className="mt-2 font-script text-[64px] leading-[0.9] text-brand-rose-400">
         little things
       </div>
     ),
     body: 'The "whisper" – captions, CTAs, handwritten moments. Use sparingly, max 1 per composition.',
     footer: "DEFAULT: Moontime",
     className: "border-transparent bg-[#fbe9ee]",
-    footerClassName: "text-[var(--dr-500)]",
+    footerClassName: "text-brand-rose-500",
   },
 ];
 
@@ -390,7 +390,7 @@ export function TypeSection() {
               {card.eyebrow}
             </div>
             {card.sample}
-            <div className="mt-4 text-[13px] leading-[1.6] text-[var(--ink-soft)]">
+            <div className="mt-4 text-[13px] leading-[1.6] text-ink-soft">
               {card.body}
             </div>
             <div
@@ -446,7 +446,7 @@ export function MotifsSection() {
         <MotifCard
           preview={
             <div className="contour-dark relative h-[200px]">
-              <div className="absolute bottom-3 left-4 z-[1] font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--tw-butter)]">
+              <div className="absolute bottom-3 left-4 z-[1] font-mono text-[10px] uppercase tracking-[0.18em] text-brand-twitch-butter">
                 01 · contour lines
               </div>
             </div>
@@ -458,9 +458,9 @@ export function MotifsSection() {
 
         <MotifCard
           preview={
-            <div className="relative h-[200px] bg-[var(--tw-lav)]">
+            <div className="relative h-[200px] bg-brand-twitch-lav">
               <div className="halftone-beam absolute inset-0" />
-              <div className="absolute bottom-3 left-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--pp-700)]">
+              <div className="absolute bottom-3 left-4 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-purple-700">
                 02 · halftone beam
               </div>
             </div>
@@ -472,15 +472,15 @@ export function MotifsSection() {
 
         <MotifCard
           preview={
-            <div className="relative flex h-[200px] items-center justify-center bg-[var(--tw-deep)]">
-              <div className="flex items-center font-display text-[84px] font-extrabold leading-none text-[var(--tw-butter)]">
+            <div className="relative flex h-[200px] items-center justify-center bg-brand-twitch-deep">
+              <div className="flex items-center font-display text-[84px] font-extrabold leading-none text-brand-twitch-butter">
                 <span className="relative">
                   O
-                  <span className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-[var(--tw-deep)]" />
-                  <span className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--tw-deep)]" />
+                  <span className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-brand-twitch-deep" />
+                  <span className="absolute left-1/2 top-1/2 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-twitch-deep" />
                 </span>
               </div>
-              <div className="absolute bottom-3 left-4 font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--tw-butter)]">
+              <div className="absolute bottom-3 left-4 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-twitch-butter">
                 03 · target-O
               </div>
             </div>
@@ -498,11 +498,11 @@ export function MotifsSection() {
         />
       </div>
 
-      <div className="mt-6 flex items-start gap-4 rounded-[var(--r-lg)] bg-[var(--paper-2)] p-5">
-        <div className="font-script text-[44px] leading-[0.9] text-[var(--pp-600)]">
+      <div className="mt-6 flex items-start gap-4 rounded-[var(--r-lg)] bg-paper-2 p-5">
+        <div className="font-script text-[44px] leading-[0.9] text-brand-purple-600">
           rule
         </div>
-        <p className="m-0 text-sm leading-[1.6] text-[var(--ink)]">
+        <p className="m-0 text-sm leading-[1.6] text-ink">
           <strong>Use max 2 motifs per asset.</strong> Contour + halftone = yes.
           Contour + halftone + target-O = too much. The target-O is rare – save
           it for moments that deserve a signature.

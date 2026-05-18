@@ -43,7 +43,7 @@ function PostFrame({
       >
         {children}
       </div>
-      <figcaption className="flex items-center gap-2 font-mono text-[11px] tracking-[0.04em] text-[var(--ink-soft)]">
+      <figcaption className="flex items-center gap-2 font-mono text-[11px] tracking-[0.04em] text-ink-soft">
         <span
           className="rounded px-2 py-0.5 text-[9px] uppercase tracking-[0.18em] text-white"
           style={{
@@ -120,7 +120,7 @@ function PostSoftPhoto() {
           justifyContent: "center",
         }}
       >
-        <div className="font-mono text-[11px] tracking-[0.1em] text-[var(--dr-400)]">
+        <div className="font-mono text-[11px] tracking-[0.1em] text-brand-rose-400">
           [ PHOTO – balcony morning ]
         </div>
       </div>
@@ -138,10 +138,10 @@ function PostSoftPhoto() {
       />
       <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between rounded-[10px] bg-white px-5 py-4 shadow-[0_6px_14px_rgba(100,60,100,0.08)]">
         <div>
-          <div className="font-script text-[32px] leading-none text-[var(--pp-500)]">
+          <div className="font-script text-[32px] leading-none text-brand-purple-500">
             saturday, slow
           </div>
-          <div className="mt-1 font-mono text-[10px] tracking-[0.18em] text-[var(--dr-400)]">
+          <div className="mt-1 font-mono text-[10px] tracking-[0.18em] text-brand-rose-400">
             NO THOUGHTS · ONLY LATTE
           </div>
         </div>
@@ -161,11 +161,11 @@ function PostQuote() {
       label="quote · feelings, mantras, soft wisdom"
       bg="#e0d3ec"
     >
-      <div className="absolute left-10 top-10 font-mono text-[11px] tracking-[0.2em] text-[var(--pp-500)]">
+      <div className="absolute left-10 top-10 font-mono text-[11px] tracking-[0.2em] text-brand-purple-500">
         ☾ a note to self
       </div>
       <div className="absolute left-10 right-10 top-[130px]">
-        <div className="h-display text-[50px] leading-[0.95] text-[var(--pp-700)]">
+        <div className="h-display text-[50px] leading-[0.95] text-brand-purple-700">
           being soft
           <br />
           is not the
@@ -173,14 +173,14 @@ function PostQuote() {
           opposite of
           <br />
           being{" "}
-          <span className="font-script font-normal normal-case text-[var(--dr-400)]">
+          <span className="font-script font-normal normal-case text-brand-rose-400">
             strong
           </span>
           .
         </div>
       </div>
       <div className="absolute bottom-9 left-10 right-10 flex items-end justify-between">
-        <div className="font-mono text-[10px] tracking-[0.2em] text-[var(--pp-500)]">
+        <div className="font-mono text-[10px] tracking-[0.2em] text-brand-purple-500">
           @its_neluska
         </div>
         <ClaudeSloth size={128} variant="glasses" />
@@ -253,11 +253,11 @@ function PostBuildLog() {
     >
       <div className="absolute left-9 right-9 top-8 flex items-center justify-between">
         <div className="pill">BUILD LOG #04</div>
-        <div className="font-mono text-[11px] text-[var(--pp-500)]">
+        <div className="font-mono text-[11px] text-brand-purple-500">
           20.04.26
         </div>
       </div>
-      <div className="h-display absolute left-9 right-9 top-[72px] text-[40px] leading-[0.95] text-[var(--pp-700)]">
+      <div className="h-display absolute left-9 right-9 top-[72px] text-[40px] leading-[0.95] text-brand-purple-700">
         three.js
         <br />
         portfolio
@@ -270,10 +270,10 @@ function PostBuildLog() {
         </div>
         <div className="absolute h-20 w-20 rounded-full border border-dashed border-[rgba(255,249,216,0.3)]" />
       </div>
-      <div className="absolute bottom-9 left-9 right-9 font-mono text-[13px] leading-[1.8] text-[var(--pp-600)]">
+      <div className="absolute bottom-9 left-9 right-9 font-mono text-[13px] leading-[1.8] text-brand-purple-600">
         <div>✓ scene + lights</div>
         <div>✓ custom shader (it's glittery)</div>
-        <div className="text-[var(--ink-soft)]">☐ mobile performance</div>
+        <div className="text-ink-soft">☐ mobile performance</div>
       </div>
       <div className="absolute right-8 top-8">
         <ClaudeSloth size={130} variant="painting" />
@@ -289,10 +289,10 @@ function PostCompare() {
       label="carousel intro · edu, hot takes"
       bg="var(--py-100)"
     >
-      <div className="absolute left-9 top-9 font-mono text-[11px] tracking-[0.2em] text-[var(--pp-500)]">
+      <div className="absolute left-9 top-9 font-mono text-[11px] tracking-[0.2em] text-brand-purple-500">
         CAROUSEL · 7 SLIDES →
       </div>
-      <div className="h-display absolute left-9 right-9 top-[90px] text-[52px] leading-[0.92] text-[var(--pp-700)]">
+      <div className="h-display absolute left-9 right-9 top-[90px] text-[52px] leading-[0.92] text-brand-purple-700">
         svelte vs
         <br />
         react
@@ -300,30 +300,30 @@ function PostCompare() {
         for 3d web
       </div>
       <div className="absolute left-9 right-9 top-80 grid grid-cols-2 gap-3">
-        <div className="rounded-[10px] bg-[var(--pp-100)] px-[14px] py-4">
-          <div className="font-mono text-[10px] tracking-[0.16em] text-[var(--pp-500)]">
+        <div className="rounded-[10px] bg-brand-purple-100 px-[14px] py-4">
+          <div className="font-mono text-[10px] tracking-[0.16em] text-brand-purple-500">
             SVELTE
           </div>
-          <div className="h-display mt-1.5 text-[28px] text-[var(--pp-700)]">
+          <div className="h-display mt-1.5 text-[28px] text-brand-purple-700">
             reactive ♡
           </div>
         </div>
         <div className="rounded-[10px] bg-white px-[14px] py-4">
-          <div className="font-mono text-[10px] tracking-[0.16em] text-[var(--dr-400)]">
+          <div className="font-mono text-[10px] tracking-[0.16em] text-brand-rose-400">
             REACT
           </div>
-          <div className="h-display mt-1.5 text-[28px] text-[var(--dr-500)]">
+          <div className="h-display mt-1.5 text-[28px] text-brand-rose-500">
             battle-tested
           </div>
         </div>
       </div>
-      <div className="absolute bottom-[30px] right-[30px] font-script text-[28px] text-[var(--pp-500)]">
+      <div className="absolute bottom-[30px] right-[30px] font-script text-[28px] text-brand-purple-500">
         swipe →
       </div>
       <div className="absolute bottom-16 right-9">
         <ClaudeSloth size={126} variant="writing" />
       </div>
-      <div className="absolute bottom-9 left-9 font-mono text-[11px] tracking-[0.16em] text-[var(--pp-500)]">
+      <div className="absolute bottom-9 left-9 font-mono text-[11px] tracking-[0.16em] text-brand-purple-500">
         @its_neluska
       </div>
     </PostFrame>
@@ -337,17 +337,17 @@ function PostChaos() {
       label="confession · relatable chaos, sloth energy"
       bg="var(--dr-100)"
     >
-      <div className="absolute left-10 top-10 font-mono text-[11px] tracking-[0.18em] text-[var(--dr-400)]">
+      <div className="absolute left-10 top-10 font-mono text-[11px] tracking-[0.18em] text-brand-rose-400">
         CONFESSION #17
       </div>
-      <div className="h-display absolute left-10 right-10 top-20 text-[58px] leading-[0.92] text-[var(--dr-500)]">
+      <div className="h-display absolute left-10 right-10 top-20 text-[58px] leading-[0.92] text-brand-rose-500">
         told myself
         <br />
         "just 1 more
         <br />
         puzzle piece"
       </div>
-      <div className="h-display absolute left-10 right-10 top-[340px] text-4xl leading-[0.95] text-[var(--pp-600)]">
+      <div className="h-display absolute left-10 right-10 top-[340px] text-4xl leading-[0.95] text-brand-purple-600">
         3 hours ago.
         <br />
         have not moved.
@@ -414,7 +414,7 @@ function PostReelCover() {
       style={{ color: "#fff9d8" }}
     >
       <div
-        className="absolute left-1/2 top-1/2 w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-xl border-2 border-[#ffe875] bg-[#1a0f28] p-3 shadow-[var(--sh-md)]"
+        className="absolute left-1/2 top-1/2 w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-xl border-2 border-[#ffe875] bg-[#1a0f28] p-3 shadow-sh-md"
         style={{ aspectRatio: "9 / 16" }}
       >
         <div className="font-mono text-[9px] tracking-[0.2em] text-[#c3a9d7]">
@@ -476,7 +476,7 @@ function PostVibe() {
           </div>
         ))}
       </div>
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-white px-[18px] py-[10px] font-script text-[26px] text-[var(--pp-500)] shadow-[var(--sh-md)]">
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-white px-[18px] py-[10px] font-script text-[26px] text-brand-purple-500 shadow-sh-md">
         the collection
       </div>
     </PostFrame>
@@ -535,7 +535,7 @@ export function FeedPreview() {
     {
       bg: "var(--dr-100)",
       el: (
-        <div className="h-display p-[14px] text-lg leading-[0.95] text-[var(--dr-500)]">
+        <div className="h-display p-[14px] text-lg leading-[0.95] text-brand-rose-500">
           confession
           <br />
           #17
@@ -545,7 +545,7 @@ export function FeedPreview() {
     {
       bg: "var(--mp-50)",
       el: (
-        <div className="p-[14px] font-mono text-[10px] tracking-[0.1em] text-[var(--dr-400)]">
+        <div className="p-[14px] font-mono text-[10px] tracking-[0.1em] text-brand-rose-400">
           [ PHOTO ]
           <br />
           balcony am
@@ -555,7 +555,7 @@ export function FeedPreview() {
     {
       bg: "var(--paper-2)",
       el: (
-        <div className="h-display p-[14px] text-base leading-[0.95] text-[var(--pp-700)]">
+        <div className="h-display p-[14px] text-base leading-[0.95] text-brand-purple-700">
           build log
           <br />
           three.js
@@ -575,7 +575,7 @@ export function FeedPreview() {
     {
       bg: "#e0d3ec",
       el: (
-        <div className="h-display p-[14px] text-[14px] leading-none text-[var(--pp-700)]">
+        <div className="h-display p-[14px] text-[14px] leading-none text-brand-purple-700">
           being
           <br />
           soft ≠
@@ -587,7 +587,7 @@ export function FeedPreview() {
     {
       bg: "var(--py-100)",
       el: (
-        <div className="h-display p-[14px] text-[14px] leading-none text-[var(--pp-700)]">
+        <div className="h-display p-[14px] text-[14px] leading-none text-brand-purple-700">
           svelte vs
           <br />
           react →
@@ -616,7 +616,7 @@ export function FeedPreview() {
 
   return (
     <div className="mx-auto max-w-[360px]">
-      <div className="rounded-xl border border-[var(--line)] bg-white p-4 shadow-[var(--sh-md)]">
+      <div className="rounded-xl border border-line bg-white p-4 shadow-sh-md">
         <div className="mb-[14px] flex items-center gap-2.5">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[linear-gradient(135deg,#8057a8,#d19ac5)]">
             <ClaudeSloth size={36} variant="heart" />
@@ -625,7 +625,7 @@ export function FeedPreview() {
             <div className="font-mono text-[13px] font-semibold">
               its_neluska
             </div>
-            <div className="font-body text-xs text-[var(--ink-soft)]">
+            <div className="font-body text-xs text-ink-soft">
               soft nerd princess ✦ dev by day ✦ sloth at heart
             </div>
           </div>
@@ -642,7 +642,7 @@ export function FeedPreview() {
           ))}
         </div>
       </div>
-      <div className="mt-2.5 text-center font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--ink-soft)]">
+      <div className="mt-2.5 text-center font-mono text-[10px] uppercase tracking-[0.16em] text-ink-soft">
         Feed rhythm – Princess / Nerd / Funny rotating diagonally
       </div>
     </div>

@@ -61,14 +61,14 @@ export function PrivacySection() {
       sub="I'm going to be visible. That's the job. But visibility ≠ exposure. These are the guardrails that let me stream, post, and still walk to the café without thinking about it."
     >
       <div className="mb-9">
-        <div className="eyebrow mb-3 text-[var(--pp-500)]">
+        <div className="eyebrow mb-3 text-brand-purple-500">
           DOMAIN ACCESS MAP · neluska.dev
         </div>
         <div className="grid gap-2">
           {routes.map((route) => (
             <div key={route.path} className="card overflow-hidden p-0">
               <div className="grid items-stretch min-[980px]:grid-cols-[2fr_1fr_2fr_80px]">
-                <div className="px-[18px] py-[14px] font-mono text-[13px] text-[var(--ink)]">
+                <div className="px-[18px] py-[14px] font-mono text-[13px] text-ink">
                   {route.path}
                 </div>
                 <div
@@ -77,10 +77,10 @@ export function PrivacySection() {
                 >
                   {route.access}
                 </div>
-                <div className="flex items-center px-[18px] py-[14px] text-xs text-[var(--ink-soft)]">
+                <div className="flex items-center px-[18px] py-[14px] text-xs text-ink-soft">
                   {route.who}
                 </div>
-                <div className="flex items-center justify-center border-l border-dashed border-[var(--line)] px-3 py-[14px] text-lg">
+                <div className="flex items-center justify-center border-l border-dashed border-line px-3 py-[14px] text-lg">
                   {route.access === "public"
                     ? "🌍"
                     : route.access === "owner-only"
@@ -91,7 +91,7 @@ export function PrivacySection() {
             </div>
           ))}
         </div>
-        <div className="mt-3 rounded-lg bg-[var(--pp-50)] px-4 py-3 text-xs leading-[1.6] text-[var(--pp-700)]">
+        <div className="mt-3 rounded-lg bg-brand-purple-50 px-4 py-3 text-xs leading-[1.6] text-brand-purple-700">
           <strong>Current state:</strong> web live brzy na{" "}
           <span className="mono">neluska.dev</span>. Brand kit bude za HTTP
           Basic Auth – heslo jen ty. Když budeš chtít poslat brand kit brandu,
@@ -101,19 +101,19 @@ export function PrivacySection() {
       </div>
 
       <div className="mb-9">
-        <div className="eyebrow mb-3 text-[var(--dr-400)]">
+        <div className="eyebrow mb-3 text-brand-rose-400">
           ✗ NEVER PUBLISH · anywhere, ever
         </div>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-2.5">
           {neverPublish.map((item) => (
             <div
               key={item.item}
-              className="rounded-lg border border-dashed border-[var(--dr-200)] bg-[#fbe9ee] px-4 py-3"
+              className="rounded-lg border border-dashed border-brand-rose-200 bg-[#fbe9ee] px-4 py-3"
             >
-              <div className="mb-1 text-[13px] font-semibold text-[var(--dr-500)]">
+              <div className="mb-1 text-[13px] font-semibold text-brand-rose-500">
                 {item.item}
               </div>
-              <div className="text-[11px] italic leading-[1.5] text-[var(--ink-soft)]">
+              <div className="text-[11px] italic leading-[1.5] text-ink-soft">
                 {item.why}
               </div>
             </div>
@@ -122,21 +122,21 @@ export function PrivacySection() {
       </div>
 
       <div className="mb-9">
-        <div className="eyebrow mb-3 text-[var(--pp-500)]">
+        <div className="eyebrow mb-3 text-brand-purple-500">
           ✓ 2FA CHECKLIST · enable on day one
         </div>
         <div className="card overflow-hidden p-0">
           <div className="section-x-scroll">
             <table className="min-w-[900px] w-full border-collapse text-[13px]">
               <thead>
-                <tr className="bg-[var(--pp-50)] text-left">
-                  <th className="px-4 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--pp-700)]">
+                <tr className="bg-brand-purple-50 text-left">
+                  <th className="px-4 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-brand-purple-700">
                     Service
                   </th>
-                  <th className="px-4 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--pp-700)]">
+                  <th className="px-4 py-3 font-mono text-[10px] uppercase tracking-[0.15em] text-brand-purple-700">
                     How
                   </th>
-                  <th className="w-[60px] px-4 py-3 text-center font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--pp-700)]">
+                  <th className="w-[60px] px-4 py-3 text-center font-mono text-[10px] uppercase tracking-[0.15em] text-brand-purple-700">
                     ✓
                   </th>
                 </tr>
@@ -145,15 +145,15 @@ export function PrivacySection() {
                 {checklist2fa.map((item, i) => (
                   <tr
                     key={item.service}
-                    className={cn(i !== 0 && "border-t border-[var(--line)]")}
+                    className={cn(i !== 0 && "border-t border-line")}
                   >
-                    <td className="px-4 py-2.5 font-semibold text-[var(--ink)]">
+                    <td className="px-4 py-2.5 font-semibold text-ink">
                       {item.service}
                     </td>
-                    <td className="px-4 py-2.5 text-xs text-[var(--ink-soft)]">
+                    <td className="px-4 py-2.5 text-xs text-ink-soft">
                       {item.how}
                     </td>
-                    <td className="px-4 py-2.5 text-center text-base text-[var(--ink-soft)]">
+                    <td className="px-4 py-2.5 text-center text-base text-ink-soft">
                       ☐
                     </td>
                   </tr>
@@ -162,14 +162,14 @@ export function PrivacySection() {
             </table>
           </div>
         </div>
-        <div className="mt-2.5 text-[11px] italic text-[var(--ink-soft)]">
+        <div className="mt-2.5 text-[11px] italic text-ink-soft">
           Authenticator app (Authy, 1Password, Aegis) &gt; SMS. SMS lze ukrást
           přes SIM-swap útok.
         </div>
       </div>
 
       <div className="mb-9">
-        <div className="eyebrow mb-3 text-[var(--dr-400)]">
+        <div className="eyebrow mb-3 text-brand-rose-400">
           🚨 RED FLAGS · what to do
         </div>
         <div className="grid gap-2.5">
@@ -180,12 +180,12 @@ export function PrivacySection() {
             >
               <div className="flex items-start gap-2.5">
                 <span className="shrink-0 text-lg">🚩</span>
-                <div className="text-[13px] leading-[1.5] text-[var(--ink)]">
+                <div className="text-[13px] leading-[1.5] text-ink">
                   {flag.sign}
                 </div>
               </div>
-              <div className="rounded-md bg-[var(--pp-50)] px-3 py-2.5 text-xs leading-[1.5] text-[var(--pp-700)]">
-                <strong className="mb-1 block font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--pp-500)]">
+              <div className="rounded-md bg-brand-purple-50 px-3 py-2.5 text-xs leading-[1.5] text-brand-purple-700">
+                <strong className="mb-1 block font-mono text-[10px] uppercase tracking-[0.15em] text-brand-purple-500">
                   Action
                 </strong>
                 {flag.action}
@@ -196,16 +196,16 @@ export function PrivacySection() {
       </div>
 
       <div className="mb-5">
-        <div className="eyebrow mb-3 text-[var(--pp-500)]">
+        <div className="eyebrow mb-3 text-brand-purple-500">
           ♡ BEST PRACTICES · set up once, benefit forever
         </div>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-3">
           {bestPractices.map((item) => (
             <div key={item.title} className="card p-4">
-              <div className="h-display mb-2 text-[15px] leading-[1.2] text-[var(--pp-700)]">
+              <div className="h-display mb-2 text-[15px] leading-[1.2] text-brand-purple-700">
                 {item.title}
               </div>
-              <div className="text-xs leading-[1.6] text-[var(--ink-soft)]">
+              <div className="text-xs leading-[1.6] text-ink-soft">
                 {item.body}
               </div>
             </div>
@@ -213,11 +213,11 @@ export function PrivacySection() {
         </div>
       </div>
 
-      <div className="card mt-7 bg-[var(--pp-50)] p-[22px]">
-        <div className="mb-2 font-script text-[30px] leading-none text-[var(--pp-700)]">
+      <div className="card mt-7 bg-brand-purple-50 p-[22px]">
+        <div className="mb-2 font-script text-[30px] leading-none text-brand-purple-700">
           my safety &gt; any viewer&apos;s feelings
         </div>
-        <p className="m-0 max-w-[720px] text-[14px] leading-[1.6] text-[var(--ink)]">
+        <p className="m-0 max-w-[720px] text-[14px] leading-[1.6] text-ink">
           I don&apos;t owe anyone an explanation for a block, a deleted
           comment, a canceled stream, a private account. People who get it will
           understand. People who don&apos;t get it weren&apos;t going to stay

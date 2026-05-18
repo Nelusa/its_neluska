@@ -50,23 +50,23 @@ export function CommunityRitualsSection() {
       sub="Communities form around repeatable moments – inside jokes, custom emotes, milestones that feel earned. This is my vocabulary layer. I use it consistently and let regulars teach newcomers."
     >
       <div className="mb-8">
-        <div className="eyebrow mb-3 text-[var(--pp-500)]">
+        <div className="eyebrow mb-3 text-brand-purple-500">
           EMOTE NAMING CONVENTION · sloth[Action]
         </div>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-3">
           {emotes.map((emote) => (
             <div key={emote.name} className="card p-[14px]">
-              <div className="mb-1 font-mono text-xs font-semibold text-[var(--pp-700)]">
+              <div className="mb-1 font-mono text-xs font-semibold text-brand-purple-700">
                 :{emote.name}:
               </div>
-              <div className="mb-1 text-xs text-[var(--ink)]">{emote.desc}</div>
-              <div className="text-[11px] italic text-[var(--ink-soft)]">
+              <div className="mb-1 text-xs text-ink">{emote.desc}</div>
+              <div className="text-[11px] italic text-ink-soft">
                 use: {emote.use}
               </div>
             </div>
           ))}
         </div>
-        <div className="mt-3 text-xs italic text-[var(--ink-soft)]">
+        <div className="mt-3 text-xs italic text-ink-soft">
           Commission emotes from one artist for visual consistency. Budget 2-3k
           CZK per emote. Commission order: slothLove → slothHuh → slothBonk
           first (highest daily use).
@@ -75,19 +75,19 @@ export function CommunityRitualsSection() {
 
       <div className="mb-8 grid gap-6 min-[980px]:grid-cols-2">
         <div>
-          <div className="eyebrow mb-3 text-[var(--pp-500)]">
+          <div className="eyebrow mb-3 text-brand-purple-500">
             INSIDE JOKES · CALLBACKS
           </div>
           <div className="grid gap-2.5">
             {insideJokes.map((joke) => (
               <div key={joke.phrase} className="card p-[14px]">
-                <div className="mb-1.5 font-script text-[22px] leading-none text-[var(--pp-700)]">
+                <div className="mb-1.5 font-script text-[22px] leading-none text-brand-purple-700">
                   {joke.phrase}
                 </div>
-                <div className="text-[11px] leading-[1.5] text-[var(--ink-soft)]">
-                  <strong className="text-[var(--pp-500)]">from:</strong>{" "}
+                <div className="text-[11px] leading-[1.5] text-ink-soft">
+                  <strong className="text-brand-purple-500">from:</strong>{" "}
                   {joke.origin} ·{" "}
-                  <strong className="text-[var(--pp-500)]">use:</strong>{" "}
+                  <strong className="text-brand-purple-500">use:</strong>{" "}
                   {joke.when}
                 </div>
               </div>
@@ -95,11 +95,11 @@ export function CommunityRitualsSection() {
           </div>
         </div>
         <div>
-          <div className="eyebrow mb-3 text-[var(--pp-500)]">
+          <div className="eyebrow mb-3 text-brand-purple-500">
             CHAT GREETING BANK
           </div>
           <div className="card p-[18px]">
-            <div className="mb-2.5 text-[11px] italic text-[var(--ink-soft)]">
+            <div className="mb-2.5 text-[11px] italic text-ink-soft">
               Load these into my Twitch chatbot (StreamElements, Nightbot) as
               welcome messages. Random rotation keeps it fresh.
             </div>
@@ -107,7 +107,7 @@ export function CommunityRitualsSection() {
               {greetings.map((greeting) => (
                 <div
                   key={greeting}
-                  className="rounded-md border-l-[3px] border-[var(--pp-300)] bg-[var(--paper-2)] px-3 py-2 text-xs text-[var(--ink)]"
+                  className="rounded-md border-l-[3px] border-brand-purple-300 bg-paper-2 px-3 py-2 text-xs text-ink"
                 >
                   {greeting}
                 </div>
@@ -118,7 +118,7 @@ export function CommunityRitualsSection() {
       </div>
 
       <div>
-        <div className="eyebrow mb-3 text-[var(--pp-500)]">
+        <div className="eyebrow mb-3 text-brand-purple-500">
           FOLLOWER MILESTONES · celebration ladder
         </div>
         <div className="grid gap-2.5">
@@ -127,13 +127,13 @@ export function CommunityRitualsSection() {
               key={milestone.count}
               className="card grid items-center gap-5 px-[18px] py-[14px] min-[980px]:grid-cols-[80px_minmax(0,1fr)_minmax(0,1fr)]"
             >
-              <div className="h-display text-[28px] leading-none text-[var(--pp-700)]">
+              <div className="h-display text-[28px] leading-none text-brand-purple-700">
                 {milestone.count}
               </div>
-              <div className="font-script text-[22px] leading-none text-[var(--pp-600)]">
+              <div className="font-script text-[22px] leading-none text-brand-purple-600">
                 {milestone.name}
               </div>
-              <div className="text-xs italic leading-[1.5] text-[var(--ink-soft)]">
+              <div className="text-xs italic leading-[1.5] text-ink-soft">
                 ✦ {milestone.reward}
               </div>
             </div>
@@ -141,11 +141,11 @@ export function CommunityRitualsSection() {
         </div>
       </div>
 
-      <div className="card mt-7 bg-[var(--pp-50)] p-[22px]">
-        <div className="mb-2 font-script text-[30px] leading-none text-[var(--pp-700)]">
+      <div className="card mt-7 bg-brand-purple-50 p-[22px]">
+        <div className="mb-2 font-script text-[30px] leading-none text-brand-purple-700">
           my community is not an audience
         </div>
-        <p className="m-0 max-w-[720px] text-[14px] leading-[1.6] text-[var(--ink)]">
+        <p className="m-0 max-w-[720px] text-[14px] leading-[1.6] text-ink">
           Audiences watch; communities participate. Every ritual here is
           designed to give regulars a way to contribute - emote names they
           suggested, greetings they use on newcomers, inside jokes they carry

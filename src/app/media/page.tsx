@@ -6,12 +6,12 @@ import { SiteFrame } from "@/components/SiteFrame";
 export default function MediaPage() {
   return (
     <SiteFrame bg="paper">
-      <section className="max-w-3xl rounded-[32px] border border-[rgba(78,52,100,0.12)] bg-[var(--paper-2)] p-8 shadow-[var(--sh-lg)]">
+      <section className="max-w-3xl rounded-[32px] border border-[rgba(78,52,100,0.12)] bg-paper-2 p-8 shadow-sh-lg">
         <p className="eyebrow">protected media space</p>
-        <h1 className="mt-3 text-5xl uppercase leading-[0.9] text-[var(--pp-700)] sm:text-6xl">
+        <h1 className="mt-3 text-5xl uppercase leading-[0.9] text-brand-purple-700 sm:text-6xl">
           brand hello
         </h1>
-        <p className="mt-4 text-base leading-7 text-[var(--ink-soft)] sm:text-lg">
+        <p className="mt-4 text-base leading-7 text-ink-soft sm:text-lg">
           This space is for brand partners and media shares. Use the links below
           for the full visual system, Twitch assets, and direct contact.
         </p>
@@ -46,12 +46,12 @@ export default function MediaPage() {
         />
       </div>
 
-      <p className="max-w-2xl text-sm leading-6 text-[var(--ink-soft)]">
+      <p className="max-w-2xl text-sm leading-6 text-ink-soft">
         Need a quick summary instead of the full kit? Start with the protected
         visual guide, then reach out directly and we can tailor the deck.{" "}
         <Link
           href="/brand"
-          className="font-medium text-[var(--pp-700)] underline decoration-[rgba(78,52,100,0.25)] underline-offset-4"
+          className="font-medium text-brand-purple-700 underline decoration-[rgba(78,52,100,0.25)] underline-offset-4"
         >
           Brand kit lives here
         </Link>

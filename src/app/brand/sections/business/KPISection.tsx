@@ -110,14 +110,14 @@ export function KPISection() {
       bg="var(--paper-2)"
     >
       <div className="mb-8">
-        <div className="eyebrow mb-3 text-[var(--pp-500)]">
+        <div className="eyebrow mb-3 text-brand-purple-500">
           YEAR 1 QUARTERLY TARGETS
         </div>
         <div className="card overflow-hidden p-0">
           <div className="section-x-scroll">
             <table className="min-w-[980px] w-full border-collapse text-[13px]">
               <thead>
-                <tr className="bg-[var(--pp-50)] text-left">
+                <tr className="bg-brand-purple-50 text-left">
                   {[
                     "Channel",
                     "Metric",
@@ -129,7 +129,7 @@ export function KPISection() {
                   ].map((head, i) => (
                     <th
                       key={head}
-                      className="font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--pp-700)]"
+                      className="font-mono text-[10px] uppercase tracking-[0.15em] text-brand-purple-700"
                       style={{
                         padding:
                           i >= 2 && i <= 5 ? "12px 8px" : "12px 14px",
@@ -145,27 +145,27 @@ export function KPISection() {
                 {quarterly.map((row, i) => (
                   <tr
                     key={`${row.ch}-${row.metric}`}
-                    className={cn(i !== 0 && "border-t border-[var(--line)]")}
+                    className={cn(i !== 0 && "border-t border-line")}
                   >
-                    <td className="px-[14px] py-2.5 font-mono text-[11px] text-[var(--pp-600)]">
+                    <td className="px-[14px] py-2.5 font-mono text-[11px] text-brand-purple-600">
                       {row.ch}
                     </td>
-                    <td className="px-[14px] py-2.5 text-[var(--ink)]">
+                    <td className="px-[14px] py-2.5 text-ink">
                       {row.metric}
                     </td>
-                    <td className="px-2 py-2.5 text-center font-mono text-xs text-[var(--ink-soft)]">
+                    <td className="px-2 py-2.5 text-center font-mono text-xs text-ink-soft">
                       {row.q1}
                     </td>
-                    <td className="px-2 py-2.5 text-center font-mono text-xs text-[var(--ink-soft)]">
+                    <td className="px-2 py-2.5 text-center font-mono text-xs text-ink-soft">
                       {row.q2}
                     </td>
-                    <td className="px-2 py-2.5 text-center font-mono text-xs text-[var(--ink-soft)]">
+                    <td className="px-2 py-2.5 text-center font-mono text-xs text-ink-soft">
                       {row.q3}
                     </td>
-                    <td className="px-2 py-2.5 text-center font-mono text-xs font-semibold text-[var(--pp-700)]">
+                    <td className="px-2 py-2.5 text-center font-mono text-xs font-semibold text-brand-purple-700">
                       {row.q4}
                     </td>
-                    <td className="px-[14px] py-2.5 text-xs italic text-[var(--ink-soft)]">
+                    <td className="px-[14px] py-2.5 text-xs italic text-ink-soft">
                       {row.north}
                     </td>
                   </tr>
@@ -176,11 +176,11 @@ export function KPISection() {
         </div>
       </div>
 
-      <div className="card mb-8 bg-[var(--pp-50)] p-6">
-        <div className="font-script text-4xl leading-none text-[var(--pp-700)]">
+      <div className="card mb-8 bg-brand-purple-50 p-6">
+        <div className="font-script text-4xl leading-none text-brand-purple-700">
           the only metric that really matters
         </div>
-        <p className="mb-0 mt-2.5 max-w-[640px] text-[14px] leading-[1.6] text-[var(--ink)]">
+        <p className="mb-0 mt-2.5 max-w-[640px] text-[14px] leading-[1.6] text-ink">
           <strong>Did I enjoy making this?</strong> If yes, 80% of the other
           numbers will take care of themselves over 18 months. If no, no growth
           hack saves me. Burnout is the silent brand-killer.
@@ -188,19 +188,19 @@ export function KPISection() {
       </div>
 
       <div>
-        <div className="eyebrow mb-3 text-[var(--pp-500)]">
+        <div className="eyebrow mb-3 text-brand-purple-500">
           HEALTH-CHECK RHYTHM
         </div>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-[14px]">
           {healthChecks.map((item) => (
             <div key={item.when} className="card p-4">
-              <div className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--pp-500)]">
+              <div className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-brand-purple-500">
                 {item.when}
               </div>
-              <div className="mb-1 text-[13px] font-semibold text-[var(--ink)]">
+              <div className="mb-1 text-[13px] font-semibold text-ink">
                 {item.what}
               </div>
-              <div className="text-xs leading-[1.5] text-[var(--ink-soft)]">
+              <div className="text-xs leading-[1.5] text-ink-soft">
                 {item.why}
               </div>
             </div>

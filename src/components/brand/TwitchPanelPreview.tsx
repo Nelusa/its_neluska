@@ -8,7 +8,7 @@ export interface TwitchPanelPreviewProps {
 function RuleRow({ text }: { text: string }) {
   return (
     <div className="flex items-start gap-2 text-[11px] leading-4 text-white/90">
-      <span className="mt-0.5 text-[var(--tw-butter)]">✦</span>
+      <span className="mt-0.5 text-brand-twitch-butter">✦</span>
       <span>{text}</span>
     </div>
   );
@@ -16,17 +16,17 @@ function RuleRow({ text }: { text: string }) {
 
 export function TwitchPanelPreview({ panel }: TwitchPanelPreviewProps) {
   return (
-    <article className="rounded-[28px] border border-[rgba(78,52,100,0.1)] bg-[rgba(255,253,242,0.9)] p-5 shadow-[var(--sh-sm)]">
+    <article className="rounded-[28px] border border-[rgba(78,52,100,0.1)] bg-[rgba(255,253,242,0.9)] p-5 shadow-sh-sm">
       <div className="mb-4 flex items-center gap-3">
-        <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-[var(--pp-700)] px-2 font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--tw-butter)]">
+        <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-brand-purple-700 px-2 font-mono text-[10px] uppercase tracking-[0.16em] text-brand-twitch-butter">
           {panel.number}
         </span>
-        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--pp-500)]">
+        <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-purple-500">
           {panel.label}
         </p>
       </div>
 
-      <div className="relative aspect-[16/5] overflow-hidden rounded-[22px] bg-[var(--tw-purple)] p-4 text-white shadow-[var(--sh-md)]">
+      <div className="relative aspect-[16/5] overflow-hidden rounded-[22px] bg-brand-twitch-purple p-4 text-white shadow-sh-md">
         <div
           className="pointer-events-none absolute inset-0 opacity-25"
           style={{
@@ -42,10 +42,10 @@ export function TwitchPanelPreview({ panel }: TwitchPanelPreviewProps) {
           <div className="relative z-10 flex h-full items-center gap-4">
             <Sloth variant="balloons" size={68} />
             <div className="min-w-0">
-              <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--tw-lav)]">
+              <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-twitch-lav">
                 {panel.eyebrow}
               </p>
-              <h3 className="mt-2 text-xl uppercase leading-[0.9] text-[var(--tw-butter)]">
+              <h3 className="mt-2 text-xl uppercase leading-[0.9] text-brand-twitch-butter">
                 {panel.title}
               </h3>
               <p className="mt-2 text-[11px] leading-4 text-white/90">
@@ -57,10 +57,10 @@ export function TwitchPanelPreview({ panel }: TwitchPanelPreviewProps) {
 
         {panel.slug === "schedule" ? (
           <div className="relative z-10 h-full">
-            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--tw-lav)]">
+            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-twitch-lav">
               {panel.eyebrow}
             </p>
-            <h3 className="mt-2 text-lg uppercase leading-[0.9] text-[var(--tw-butter)]">
+            <h3 className="mt-2 text-lg uppercase leading-[0.9] text-brand-twitch-butter">
               {panel.title}
             </h3>
             <div className="mt-3 grid grid-cols-3 gap-2">
@@ -73,13 +73,13 @@ export function TwitchPanelPreview({ panel }: TwitchPanelPreviewProps) {
                   key={day}
                   className="rounded-xl border border-[rgba(245,229,116,0.18)] bg-[rgba(245,229,116,0.1)] px-2 py-2"
                 >
-                  <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-[var(--tw-butter)]">
+                  <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-brand-twitch-butter">
                     {day}
                   </p>
                   <p className="mt-1 text-sm uppercase leading-none text-white">
                     {time}
                   </p>
-                  <p className="mt-1 text-[10px] leading-4 text-[var(--tw-lav)]">
+                  <p className="mt-1 text-[10px] leading-4 text-brand-twitch-lav">
                     {note}
                   </p>
                 </div>
@@ -90,10 +90,10 @@ export function TwitchPanelPreview({ panel }: TwitchPanelPreviewProps) {
 
         {panel.slug === "rules" ? (
           <div className="relative z-10">
-            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--tw-lav)]">
+            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-twitch-lav">
               {panel.eyebrow}
             </p>
-            <h3 className="mt-2 text-lg uppercase leading-[0.9] text-[var(--tw-butter)]">
+            <h3 className="mt-2 text-lg uppercase leading-[0.9] text-brand-twitch-butter">
               {panel.title}
             </h3>
             <div className="mt-3 space-y-1.5">
@@ -106,10 +106,10 @@ export function TwitchPanelPreview({ panel }: TwitchPanelPreviewProps) {
 
         {panel.slug === "setup" ? (
           <div className="relative z-10">
-            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--tw-lav)]">
+            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-twitch-lav">
               {panel.eyebrow}
             </p>
-            <h3 className="mt-2 text-lg uppercase leading-[0.9] text-[var(--tw-butter)]">
+            <h3 className="mt-2 text-lg uppercase leading-[0.9] text-brand-twitch-butter">
               {panel.title}
             </h3>
             <div className="mt-3 grid grid-cols-2 gap-2">
@@ -120,10 +120,10 @@ export function TwitchPanelPreview({ panel }: TwitchPanelPreviewProps) {
                 ["light", "Elgato Key Light"],
               ].map(([label, value]) => (
                 <div key={label}>
-                  <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-[var(--tw-lav)]">
+                  <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-brand-twitch-lav">
                     {label}
                   </p>
-                  <p className="mt-1 text-[11px] leading-4 text-[var(--tw-butter)]">
+                  <p className="mt-1 text-[11px] leading-4 text-brand-twitch-butter">
                     {value}
                   </p>
                 </div>
@@ -134,10 +134,10 @@ export function TwitchPanelPreview({ panel }: TwitchPanelPreviewProps) {
 
         {panel.slug === "socials" ? (
           <div className="relative z-10">
-            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--tw-lav)]">
+            <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-twitch-lav">
               {panel.eyebrow}
             </p>
-            <h3 className="mt-2 text-lg uppercase leading-[0.9] text-[var(--tw-butter)]">
+            <h3 className="mt-2 text-lg uppercase leading-[0.9] text-brand-twitch-butter">
               {panel.title}
             </h3>
             <div className="mt-3 grid grid-cols-2 gap-2 text-[11px]">
@@ -151,7 +151,7 @@ export function TwitchPanelPreview({ panel }: TwitchPanelPreviewProps) {
                   key={label}
                   className="rounded-xl bg-white/6 px-2 py-2 backdrop-blur-sm"
                 >
-                  <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-[var(--tw-lav)]">
+                  <p className="font-mono text-[8px] uppercase tracking-[0.18em] text-brand-twitch-lav">
                     {label}
                   </p>
                   <p className="mt-1 leading-4 text-white">{value}</p>
@@ -164,16 +164,16 @@ export function TwitchPanelPreview({ panel }: TwitchPanelPreviewProps) {
         {panel.slug === "support" ? (
           <div className="relative z-10 flex h-full items-center justify-between gap-3">
             <div className="min-w-0">
-              <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[var(--tw-lav)]">
+              <p className="font-mono text-[9px] uppercase tracking-[0.2em] text-brand-twitch-lav">
                 {panel.eyebrow}
               </p>
-              <h3 className="mt-2 text-lg uppercase leading-[0.9] text-[var(--tw-butter)]">
+              <h3 className="mt-2 text-lg uppercase leading-[0.9] text-brand-twitch-butter">
                 {panel.title}
               </h3>
               <p className="mt-2 text-[11px] leading-4 text-white/90">
                 {panel.body}
               </p>
-              <p className="mt-2 font-script text-lg text-[var(--py-300)]">
+              <p className="mt-2 font-script text-lg text-brand-yellow-300">
                 thanks pookies
               </p>
             </div>
@@ -182,7 +182,7 @@ export function TwitchPanelPreview({ panel }: TwitchPanelPreviewProps) {
         ) : null}
       </div>
 
-      <p className="mt-4 text-sm leading-6 text-[var(--ink-soft)]">{panel.body}</p>
+      <p className="mt-4 text-sm leading-6 text-ink-soft">{panel.body}</p>
     </article>
   );
 }

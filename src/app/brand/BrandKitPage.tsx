@@ -39,7 +39,7 @@ import {
 
 export default function BrandKitPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[var(--paper)]">
+    <main className="min-h-screen overflow-x-hidden bg-paper">
       <BrandKitChrome />
       <LegacyTopNav />
       <HeroSection />

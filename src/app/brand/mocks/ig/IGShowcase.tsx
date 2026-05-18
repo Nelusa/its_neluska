@@ -24,7 +24,7 @@ export function IGShowcase() {
       {views.map((view) => (
         <div key={view.label} className="text-center">
           <IGPhoneFrame>{view.content}</IGPhoneFrame>
-          <div className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--ink-soft)]">
+          <div className="mt-3 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-soft">
             {view.label}
           </div>
         </div>

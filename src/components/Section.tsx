@@ -24,7 +24,7 @@ export function Section({
   return (
     <section
       className={cn(
-        "rounded-[32px] border border-[rgba(78,52,100,0.1)] p-6 shadow-[var(--sh-md)] sm:p-8",
+        "rounded-[32px] border border-[rgba(78,52,100,0.1)] p-6 shadow-sh-md sm:p-8",
         surface,
       )}
     >
@@ -32,7 +32,7 @@ export function Section({
         <div className="mb-6">
           {label ? <SectionLabel>{label}</SectionLabel> : null}
           {title ? (
-            <h2 className="mt-3 text-4xl uppercase leading-[0.92] text-[var(--pp-700)] sm:text-5xl">
+            <h2 className="mt-3 text-4xl uppercase leading-[0.92] text-brand-purple-700 sm:text-5xl">
               {title}
             </h2>
           ) : null}

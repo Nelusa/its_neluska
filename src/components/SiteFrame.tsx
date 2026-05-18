@@ -11,7 +11,7 @@ interface SiteFrameProps {
 }
 
 export function SiteFrame({ children, bg = "paper" }: SiteFrameProps) {
-  const pageBg = bg === "lavender" ? "bg-[var(--tw-lav)]" : "bg-[var(--paper)]";
+  const pageBg = bg === "lavender" ? "bg-brand-twitch-lav" : "bg-paper";
 
   return (
     <div className={cn("min-h-screen overflow-x-hidden", pageBg)}>

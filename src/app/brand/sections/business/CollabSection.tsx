@@ -70,29 +70,29 @@ no pressure, repo here: [link] ♡`,
           <div key={template.title} className="card p-[22px]">
             <div className="mb-2.5 flex flex-wrap items-baseline justify-between gap-4">
               <div>
-                <div className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--pp-500)]">
+                <div className="mb-1.5 font-mono text-[10px] uppercase tracking-[0.15em] text-brand-purple-500">
                   TEMPLATE {String(i + 1).padStart(2, "0")}
                 </div>
-                <div className="h-display text-[17px] leading-[1.2] text-[var(--pp-700)]">
+                <div className="h-display text-[17px] leading-[1.2] text-brand-purple-700">
                   {template.title}
                 </div>
               </div>
-              <div className="max-w-[200px] text-right text-[11px] italic text-[var(--ink-soft)]">
+              <div className="max-w-[200px] text-right text-[11px] italic text-ink-soft">
                 {template.when}
               </div>
             </div>
-            <pre className="mt-3 whitespace-pre-wrap rounded-lg border border-dashed border-[var(--line)] bg-[var(--paper-2)] px-4 py-[14px] font-body text-xs leading-[1.6] text-[var(--ink)]">
+            <pre className="mt-3 whitespace-pre-wrap rounded-lg border border-dashed border-line bg-paper-2 px-4 py-[14px] font-body text-xs leading-[1.6] text-ink">
               {template.dm}
             </pre>
-            <div className="mt-3 text-xs italic text-[var(--dr-400)]">
+            <div className="mt-3 text-xs italic text-brand-rose-400">
               ✦ rule: {template.rule}
             </div>
           </div>
         ))}
       </div>
 
-      <div className="card bg-[var(--pp-50)] p-[22px]">
-        <div className="eyebrow mb-2.5 text-[var(--pp-700)]">
+      <div className="card bg-brand-purple-50 p-[22px]">
+        <div className="eyebrow mb-2.5 text-brand-purple-700">
           COLLAB TYPES · WHAT TO SUGGEST
         </div>
         <div className="flex flex-wrap gap-2">
@@ -106,7 +106,7 @@ no pressure, repo here: [link] ♡`,
             </span>
           ))}
         </div>
-        <p className="mb-0 mt-[14px] text-[13px] leading-[1.6] text-[var(--ink)]">
+        <p className="mb-0 mt-[14px] text-[13px] leading-[1.6] text-ink">
           <strong>Start tiny.</strong> A single IG story tag is a collab. A
           full co-stream is a year-3 move. I don't skip steps.
         </p>

@@ -57,10 +57,10 @@ export default function SchedulePage() {
     <SiteFrame bg="paper">
       <section className="max-w-3xl">
         <p className="eyebrow">live events</p>
-        <h1 className="mt-3 text-5xl uppercase leading-[0.9] text-[var(--pp-700)] sm:text-6xl">
+        <h1 className="mt-3 text-5xl uppercase leading-[0.9] text-brand-purple-700 sm:text-6xl">
           catch me live
         </h1>
-        <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--ink-soft)] sm:text-lg">
+        <p className="mt-4 max-w-2xl text-base leading-7 text-ink-soft sm:text-lg">
           Streams are occasional events, not a weekly grid. Timezone CET / CEST
           (Prague). Exact dates land on Instagram first; Twitch notifications
           ping the exact go-live minute.
@@ -76,7 +76,7 @@ export default function SchedulePage() {
             return (
               <article
                 key={`${slot.day}-${slot.title}`}
-                className="rounded-[28px] border border-[rgba(78,52,100,0.12)] p-6 shadow-[var(--sh-md)]"
+                className="rounded-[28px] border border-[rgba(78,52,100,0.12)] p-6 shadow-sh-md"
                 style={{
                   background: style.bg,
                   color: isDark ? "#fff" : "var(--ink)",
@@ -108,8 +108,8 @@ export default function SchedulePage() {
       </Section>
 
       <Section label="♡ note" title="gentle disclaimer" bg="paper">
-        <article className="max-w-2xl rounded-[28px] border border-[rgba(78,52,100,0.12)] bg-[var(--paper-2)] p-6 shadow-[var(--sh-md)]">
-          <p className="text-sm leading-7 text-[var(--ink-soft)]">
+        <article className="max-w-2xl rounded-[28px] border border-[rgba(78,52,100,0.12)] bg-paper-2 p-6 shadow-sh-md">
+          <p className="text-sm leading-7 text-ink-soft">
             Schedule may shift with life, energy, and the occasional sloth pace.
             Notifications on Twitch stay the best ping for the exact go-live
             moment.

@@ -76,27 +76,27 @@ export function CrisisSection() {
             className="card grid gap-6 p-5 min-[980px]:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]"
           >
             <div>
-              <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-[var(--dr-400)]">
+              <div className="mb-2 font-mono text-[10px] uppercase tracking-[0.15em] text-brand-rose-400">
                 SCENARIO {String(i + 1).padStart(2, "0")}
               </div>
-              <div className="h-display mb-3 text-lg leading-[1.2] text-[var(--pp-700)]">
+              <div className="h-display mb-3 text-lg leading-[1.2] text-brand-purple-700">
                 {scenario.title}
               </div>
-              <div className="rounded-md bg-[var(--dr-50)] px-2.5 py-2 text-[11px] italic text-[var(--dr-400)]">
+              <div className="rounded-md bg-brand-rose-50 px-2.5 py-2 text-[11px] italic text-brand-rose-400">
                 Wrong instinct: {scenario.gut}
               </div>
             </div>
 
             <div>
-              <div className="eyebrow mb-2.5 text-[var(--pp-500)]">
+              <div className="eyebrow mb-2.5 text-brand-purple-500">
                 DO INSTEAD
               </div>
-              <ol className="m-0 list-decimal pl-5 text-[13px] leading-[1.7] text-[var(--ink)]">
+              <ol className="m-0 list-decimal pl-5 text-[13px] leading-[1.7] text-ink">
                 {scenario.do.map((step) => (
                   <li key={step}>{step}</li>
                 ))}
               </ol>
-              <div className="mt-3.5 rounded-md bg-[var(--pp-50)] px-3 py-2.5 text-xs italic leading-[1.5] text-[var(--pp-700)]">
+              <div className="mt-3.5 rounded-md bg-brand-purple-50 px-3 py-2.5 text-xs italic leading-[1.5] text-brand-purple-700">
                 ♡ {scenario.note}
               </div>
             </div>

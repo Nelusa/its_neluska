@@ -96,28 +96,28 @@ export function MonetizationSection() {
             />
             <div className="grid gap-6 pl-4 min-[980px]:grid-cols-[200px_minmax(0,1fr)_240px]">
               <div>
-                <div className="mb-1 font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--pp-500)]">
+                <div className="mb-1 font-mono text-[10px] uppercase tracking-[0.2em] text-brand-purple-500">
                   {phase.tag} · {phase.when}
                 </div>
-                <div className="h-display mb-2.5 text-xl leading-[1.15] text-[var(--pp-700)]">
+                <div className="h-display mb-2.5 text-xl leading-[1.15] text-brand-purple-700">
                   {phase.name}
                 </div>
                 <div
-                  className="inline-block rounded-md px-2.5 py-1 font-mono text-[11px] text-[var(--pp-700)]"
+                  className="inline-block rounded-md px-2.5 py-1 font-mono text-[11px] text-brand-purple-700"
                   style={{ background: phase.color }}
                 >
                   {phase.revenue}
                 </div>
               </div>
               <div>
-                <div className="eyebrow mb-2 text-[var(--pp-500)]">ACTIONS</div>
-                <ul className="m-0 list-disc pl-[18px] text-[13px] leading-[1.7] text-[var(--ink)]">
+                <div className="eyebrow mb-2 text-brand-purple-500">ACTIONS</div>
+                <ul className="m-0 list-disc pl-[18px] text-[13px] leading-[1.7] text-ink">
                   {phase.actions.map((action) => (
                     <li key={action}>{action}</li>
                   ))}
                 </ul>
               </div>
-              <div className="rounded-lg border border-dashed border-[var(--line)] bg-[var(--paper-2)] px-[14px] py-3 text-xs italic leading-[1.6] text-[var(--ink-soft)]">
+              <div className="rounded-lg border border-dashed border-line bg-paper-2 px-[14px] py-3 text-xs italic leading-[1.6] text-ink-soft">
                 ♡ {phase.why}
               </div>
             </div>
@@ -125,11 +125,11 @@ export function MonetizationSection() {
         ))}
       </div>
 
-      <div className="card mt-7 bg-[var(--pp-50)] p-6">
-        <div className="mb-2 font-script text-[32px] leading-none text-[var(--pp-700)]">
+      <div className="card mt-7 bg-brand-purple-50 p-6">
+        <div className="mb-2 font-script text-[32px] leading-none text-brand-purple-700">
           the sacred ratio
         </div>
-        <p className="m-0 max-w-[720px] text-[14px] leading-[1.6] text-[var(--ink)]">
+        <p className="m-0 max-w-[720px] text-[14px] leading-[1.6] text-ink">
           <strong>I give 10× before I ask once.</strong> Every paid post /
           brand mention / "link in bio" should be preceded by 10 posts of pure
           value (teaching, entertaining, sharing). The moment that ratio flips,

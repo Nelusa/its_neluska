@@ -44,9 +44,9 @@ export function StatusPill({
 
   if (loading && !resolved.title && !resolved.game && !resolved.startedAt) {
     return (
-      <div className="inline-flex min-h-11 w-full max-w-sm items-center gap-3 rounded-full bg-[var(--paper)] px-4 py-3 shadow-[var(--sh-sm)]">
-        <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-[var(--pp-200)]" />
-        <span className="h-3 w-40 animate-pulse rounded-full bg-[var(--pp-100)]" />
+      <div className="inline-flex min-h-11 w-full max-w-sm items-center gap-3 rounded-full bg-paper px-4 py-3 shadow-sh-sm">
+        <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-brand-purple-200" />
+        <span className="h-3 w-40 animate-pulse rounded-full bg-brand-purple-100" />
       </div>
     );
   }
@@ -58,10 +58,10 @@ export function StatusPill({
   return (
     <div
       className={cn(
-        "inline-flex min-h-11 max-w-full items-center gap-3 rounded-full px-4 py-3 shadow-[var(--sh-sm)]",
+        "inline-flex min-h-11 max-w-full items-center gap-3 rounded-full px-4 py-3 shadow-sh-sm",
         resolved.isLive
-          ? "bg-[var(--tw-purple)] text-white"
-          : "bg-[rgba(255,253,242,0.9)] text-[var(--pp-700)]",
+          ? "bg-brand-twitch-purple text-white"
+          : "bg-[rgba(255,253,242,0.9)] text-brand-purple-700",
       )}
     >
       <span
@@ -80,7 +80,7 @@ export function StatusPill({
         <p
           className={cn(
             "truncate text-sm",
-            resolved.isLive ? "text-[var(--tw-lav)]" : "text-[var(--ink-soft)]",
+            resolved.isLive ? "text-brand-twitch-lav" : "text-ink-soft",
           )}
         >
           {description}

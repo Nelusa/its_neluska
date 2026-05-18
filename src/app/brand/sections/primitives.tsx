@@ -65,7 +65,7 @@ export function KitSection({
     <section
       id={id}
       className={cn(
-        "border-t border-[var(--line)] px-8 py-[100px] text-[var(--ink)] min-[760px]:px-16",
+        "border-t border-line px-8 py-[100px] text-ink min-[760px]:px-16",
         className,
       )}
       style={{ background: bg }}
@@ -79,7 +79,7 @@ export function KitSection({
             </h2>
           </div>
           {sub ? (
-            <div className="max-w-[440px] text-[15px] leading-[1.55] text-[var(--ink-soft)]">
+            <div className="max-w-[440px] text-[15px] leading-[1.55] text-ink-soft">
               {sub}
             </div>
           ) : null}
@@ -115,7 +115,7 @@ export function SwatchRow({
           {name}
         </div>
         {note ? (
-          <div className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--ink-soft)]">
+          <div className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.14em] text-ink-soft">
             {note}
           </div>
         ) : null}
@@ -179,13 +179,13 @@ export function MotifCard({
     <div className="card overflow-hidden p-0">
       {preview}
       <div className="p-5">
-        <div className="h-display mb-2 text-lg text-[var(--pp-700)]">
+        <div className="h-display mb-2 text-lg text-brand-purple-700">
           {title}
         </div>
-        <p className="m-0 text-[13px] leading-[1.55] text-[var(--ink-soft)]">
+        <p className="m-0 text-[13px] leading-[1.55] text-ink-soft">
           {body}
         </p>
-        <div className="mt-3 font-mono text-[11px] text-[var(--pp-500)]">
+        <div className="mt-3 font-mono text-[11px] text-brand-purple-500">
           {use}
         </div>
       </div>
@@ -197,7 +197,7 @@ export function MotifCard({
 
 export function BrandMark() {
   return (
-    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[linear-gradient(135deg,#8057a8,#d19ac5)] shadow-[var(--sh-sm)]">
+    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[linear-gradient(135deg,#8057a8,#d19ac5)] shadow-sh-sm">
       <ClaudeSloth size={30} />
     </div>
   );
@@ -206,7 +206,7 @@ export function BrandMark() {
 export function HeroOrnament() {
   return (
     <div className="relative h-[360px] w-full min-w-0">
-      <div className="absolute right-[30px] top-5 h-[280px] w-[220px] rotate-[6deg] rounded-[18px] bg-[linear-gradient(180deg,#c3a9d7,#8057a8)] p-6 text-[#fff9d8] shadow-[var(--sh-lg)]">
+      <div className="absolute right-[30px] top-5 h-[280px] w-[220px] rotate-[6deg] rounded-[18px] bg-[linear-gradient(180deg,#c3a9d7,#8057a8)] p-6 text-[#fff9d8] shadow-sh-lg">
         <div className="font-mono text-[10px] tracking-[0.2em] opacity-85">
           ☾ MANTRA
         </div>
@@ -219,7 +219,7 @@ export function HeroOrnament() {
         </div>
       </div>
 
-      <div className="absolute left-0 top-20 h-60 w-[220px] -rotate-[5deg] rounded-[18px] bg-[#2a1d3d] p-5 font-mono text-xs leading-[1.55] text-[#f4e4ef] shadow-[var(--sh-lg)]">
+      <div className="absolute left-0 top-20 h-60 w-[220px] -rotate-[5deg] rounded-[18px] bg-[#2a1d3d] p-5 font-mono text-xs leading-[1.55] text-[#f4e4ef] shadow-sh-lg">
         <div className="text-[#ffe875]">
           $ <span className="text-[#c3a9d7]">whoami</span>
         </div>
@@ -399,7 +399,7 @@ export function Note({
 }) {
   return (
     <div
-      className="rounded px-5 py-[18px] font-script leading-[1.2] text-[var(--pp-700)] shadow-[0_8px_18px_rgba(70,50,90,0.12)]"
+      className="rounded px-5 py-[18px] font-script leading-[1.2] text-brand-purple-700 shadow-[0_8px_18px_rgba(70,50,90,0.12)]"
       style={{
         background: color,
         transform: `rotate(${rotate}deg)`,

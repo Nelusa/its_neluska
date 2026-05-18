@@ -104,19 +104,19 @@ export function ReelScriptsSection() {
       sub="Shot-by-shot timelines: Day-in-the-Life for cozy reach, Sloth ASMR for silent-scroll virality, Quick Dev Tip for batchable nerd growth. I clone the structure and swap the content."
     >
       <div className="mb-9">
-        <div className="mb-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--pp-500)]">
+        <div className="mb-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple-500">
           SCRIPT A · DAY IN THE LIFE · 60s · 13 cuts
         </div>
         <DayInLife />
       </div>
       <div className="mb-9">
-        <div className="mb-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--pp-500)]">
+        <div className="mb-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple-500">
           SCRIPT B · SLOTH COLLECTION ASMR · 58s · silent
         </div>
         <SlothASMR />
       </div>
       <div>
-        <div className="mb-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--pp-500)]">
+        <div className="mb-3.5 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple-500">
           SCRIPT C · QUICK DEV TIP · 30s · screen recording
         </div>
         <QuickDevTipReel />
@@ -186,10 +186,10 @@ export function RhythmSection() {
         {stats.map((card) => (
           <div key={card.k} className="card p-[22px]">
             <div className="eyebrow">{card.k}</div>
-            <div className="h-display mt-2 text-[30px] leading-[0.95] text-[var(--pp-700)]">
+            <div className="h-display mt-2 text-[30px] leading-[0.95] text-brand-purple-700">
               {card.v}
             </div>
-            <div className="mt-1.5 text-[13px] leading-[1.5] text-[var(--ink-soft)]">
+            <div className="mt-1.5 text-[13px] leading-[1.5] text-ink-soft">
               {card.s}
             </div>
           </div>
@@ -227,27 +227,27 @@ export function DailyWorkflowSection() {
     >
       <div className="grid gap-4 min-[760px]:grid-cols-3">
         {blocks.map((b) => (
-          <div key={b.range} className="card border border-[var(--line)] bg-white p-6">
-            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--pp-500)]">
+          <div key={b.range} className="card border border-line bg-white p-6">
+            <div className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-purple-500">
               {b.range}
             </div>
-            <div className="h-display mt-2 text-xl leading-[1.1] text-[var(--pp-700)]">
+            <div className="h-display mt-2 text-xl leading-[1.1] text-brand-purple-700">
               {b.title}
             </div>
-            <p className="mb-0 mt-2 text-[13px] leading-[1.55] text-[var(--ink-soft)]">
+            <p className="mb-0 mt-2 text-[13px] leading-[1.55] text-ink-soft">
               {b.body}
             </p>
           </div>
         ))}
       </div>
       <DotDivider />
-      <div className="grid gap-3 rounded-[var(--r-md)] bg-[var(--pp-50)] p-5 text-[13px] leading-[1.6] text-[var(--ink)]">
+      <div className="grid gap-3 rounded-[var(--r-md)] bg-brand-purple-50 p-5 text-[13px] leading-[1.6] text-ink">
         <p className="m-0">
-          <strong className="text-[var(--pp-700)]">If I only have 30 minutes,</strong> I do engagement
+          <strong className="text-brand-purple-700">If I only have 30 minutes,</strong> I do engagement
           only. Engagement beats posting when time is tight.
         </p>
         <p className="m-0">
-          <strong className="text-[var(--pp-700)]">If I have 0 minutes,</strong> that is ok.
+          <strong className="text-brand-purple-700">If I have 0 minutes,</strong> that is ok.
           Consistency is measured in months, not in single days.
         </p>
       </div>
@@ -348,8 +348,8 @@ export function RealPhotoSection() {
       <div className="mb-7 grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4">
         {photos.map((photo) => (
           <div key={photo.src} className="card overflow-hidden p-0">
-            <div className="relative bg-[var(--paper-3)] pb-[125%]">
-              <div className="absolute inset-0 flex items-center justify-center bg-[var(--paper-3)] px-8 text-center font-mono text-[10px] uppercase tracking-[0.16em] text-[var(--pp-500)]">
+            <div className="relative bg-paper-3 pb-[125%]">
+              <div className="absolute inset-0 flex items-center justify-center bg-paper-3 px-8 text-center font-mono text-[10px] uppercase tracking-[0.16em] text-brand-purple-500">
                 {photo.fallback}
               </div>
               <img
@@ -357,15 +357,15 @@ export function RealPhotoSection() {
                 alt={photo.label}
                 className="absolute inset-0 h-full w-full object-cover"
               />
-              <div className="absolute left-2.5 top-2.5 rounded-full bg-[rgba(255,255,255,0.92)] px-2 py-[3px] font-mono text-[9px] uppercase tracking-[0.15em] text-[var(--pp-700)]">
+              <div className="absolute left-2.5 top-2.5 rounded-full bg-[rgba(255,255,255,0.92)] px-2 py-[3px] font-mono text-[9px] uppercase tracking-[0.15em] text-brand-purple-700">
                 {photo.mood}
               </div>
             </div>
             <div className="px-[14px] py-3">
-              <div className="mb-1 font-mono text-[10px] uppercase tracking-[0.1em] text-[var(--pp-500)]">
+              <div className="mb-1 font-mono text-[10px] uppercase tracking-[0.1em] text-brand-purple-500">
                 {photo.label}
               </div>
-              <div className="text-[11.5px] leading-[1.45] text-[var(--ink-soft)]">
+              <div className="text-[11.5px] leading-[1.45] text-ink-soft">
                 {photo.note}
               </div>
             </div>
@@ -375,34 +375,34 @@ export function RealPhotoSection() {
 
       <div className="grid gap-5 min-[980px]:grid-cols-2">
         <div className="card p-6">
-          <div className="mb-3 font-mono text-[11px] tracking-[0.2em] text-[var(--pp-500)]">
+          <div className="mb-3 font-mono text-[11px] tracking-[0.2em] text-brand-purple-500">
             LIGHTROOM PRESET · "soft nerd"
           </div>
           <div className="grid grid-cols-1 gap-x-2 gap-y-0 text-[12.5px] font-mono min-[560px]:grid-cols-2">
             {preset.map(([k, v]) => (
               <div
                 key={k}
-                className="flex justify-between border-b border-dashed border-[var(--line)] py-[5px]"
+                className="flex justify-between border-b border-dashed border-line py-[5px]"
               >
-                <span className="text-[var(--ink-soft)]">{k}</span>
-                <span className="font-semibold text-[var(--pp-700)]">{v}</span>
+                <span className="text-ink-soft">{k}</span>
+                <span className="font-semibold text-brand-purple-700">{v}</span>
               </div>
             ))}
           </div>
-          <div className="mt-4 rounded-[var(--r-md)] bg-[var(--paper-2)] px-[14px] py-3 text-xs leading-[1.5] text-[var(--ink-soft)]">
-            <strong className="text-[var(--pp-700)]">HSL · Orange:</strong> hue
+          <div className="mt-4 rounded-[var(--r-md)] bg-paper-2 px-[14px] py-3 text-xs leading-[1.5] text-ink-soft">
+            <strong className="text-brand-purple-700">HSL · Orange:</strong> hue
             {" "}
             -6, sat -10, lum +8 ·{" "}
-            <strong className="text-[var(--pp-700)]">Purple:</strong> hue -4,
+            <strong className="text-brand-purple-700">Purple:</strong> hue -4,
             sat +5, lum +2 ·{" "}
-            <strong className="text-[var(--pp-700)]">Magenta:</strong> sat +8
+            <strong className="text-brand-purple-700">Magenta:</strong> sat +8
             (if skin tones, only +4)
           </div>
         </div>
 
         <div className="grid gap-4">
           <div className="card p-5">
-            <div className="h-display mb-2.5 text-base text-[var(--pp-700)]">
+            <div className="h-display mb-2.5 text-base text-brand-purple-700">
               LIGHT · shoot this time of day
             </div>
             <div className="grid grid-cols-5 gap-2.5">
@@ -416,10 +416,10 @@ export function RealPhotoSection() {
                       <div className="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_4px,rgba(0,0,0,0.15)_4px,rgba(0,0,0,0.15)_6px)]" />
                     ) : null}
                   </div>
-                  <div className="font-mono text-[10px] text-[var(--pp-700)]">
+                  <div className="font-mono text-[10px] text-brand-purple-700">
                     {time}
                   </div>
-                  <div className="text-[10px] leading-[1.2] text-[var(--ink-soft)]">
+                  <div className="text-[10px] leading-[1.2] text-ink-soft">
                     {label}
                   </div>
                 </div>
@@ -428,15 +428,15 @@ export function RealPhotoSection() {
           </div>
 
           <div className="card p-5">
-            <div className="h-display mb-2.5 text-base text-[var(--pp-700)]">
+            <div className="h-display mb-2.5 text-base text-brand-purple-700">
               BACKGROUND · KEEP / KILL
             </div>
             <div className="grid gap-3 text-xs min-[560px]:grid-cols-2">
               <div>
-                <div className="mb-1.5 font-mono text-[10px] tracking-[0.15em] text-[var(--pp-500)]">
+                <div className="mb-1.5 font-mono text-[10px] tracking-[0.15em] text-brand-purple-500">
                   KEEP ✓
                 </div>
-                <ul className="m-0 list-disc pl-4 leading-[1.6] text-[var(--ink)]">
+                <ul className="m-0 list-disc pl-4 leading-[1.6] text-ink">
                   <li>Light wood floor</li>
                   <li>Balcony / natural light</li>
                   <li>Solid bedding / plain sheet</li>
@@ -444,10 +444,10 @@ export function RealPhotoSection() {
                 </ul>
               </div>
               <div>
-                <div className="mb-1.5 font-mono text-[10px] tracking-[0.15em] text-[var(--dr-400)]">
+                <div className="mb-1.5 font-mono text-[10px] tracking-[0.15em] text-brand-rose-400">
                   KILL ✗
                 </div>
-                <ul className="m-0 list-disc pl-4 leading-[1.6] text-[var(--ink)]">
+                <ul className="m-0 list-disc pl-4 leading-[1.6] text-ink">
                   <li>Black & white patterns</li>
                   <li>Cluttered shelves behind</li>
                   <li>Mixed color lighting</li>
@@ -545,7 +545,7 @@ export function TwitchSection() {
   return (
     <section
       id="twitch"
-      className="border-t border-[var(--line)] px-8 py-[100px] min-[760px]:px-16"
+      className="border-t border-line px-8 py-[100px] min-[760px]:px-16"
       style={{ background: "var(--tw-deep)", color: "#fff" }}
     >
       <div className="mx-auto max-w-[1280px]">
@@ -559,14 +559,14 @@ export function TwitchSection() {
           <h2 className="h-display m-0 text-[clamp(40px,6vw,72px)] text-white">
             the stream, wrapped
           </h2>
-          <p className="mb-0 mt-4 max-w-[560px] text-[15px] leading-[1.55] text-[var(--tw-lav)]">
+          <p className="mb-0 mt-4 max-w-[560px] text-[15px] leading-[1.55] text-brand-twitch-lav">
             Twitch is my community space and content source. I stream when I can – every session feeds my Instagram for days.
           </p>
         </div>
 
         <div className="mb-8 grid gap-6 min-[980px]:grid-cols-2">
           <div>
-            <div className="mb-2.5 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--tw-butter)]">
+            <div className="mb-2.5 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-twitch-butter">
               ✓ DONE
             </div>
             {done.map((item) => (
@@ -579,7 +579,7 @@ export function TwitchSection() {
                   alt={item.alt}
                   className="block w-full"
                 />
-                <div className="px-4 py-3 font-mono text-[11px] text-[var(--tw-lav)]">
+                <div className="px-4 py-3 font-mono text-[11px] text-brand-twitch-lav">
                   <strong className="text-white">{item.file}</strong> ·{" "}
                   {item.note}
                 </div>
@@ -588,7 +588,7 @@ export function TwitchSection() {
           </div>
 
           <div>
-            <div className="mb-2.5 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--tw-heart)]">
+            <div className="mb-2.5 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-twitch-heart">
               ○ TO DO - recommended additions
             </div>
             <div className="flex flex-col gap-3">
@@ -597,10 +597,10 @@ export function TwitchSection() {
                   key={item.title}
                   className="rounded-[var(--r-md)] border border-dashed border-[rgba(245,229,116,0.3)] bg-[rgba(245,229,116,0.05)] p-[14px]"
                 >
-                  <div className="mb-1 font-display text-sm uppercase text-[var(--tw-butter)]">
+                  <div className="mb-1 font-display text-sm uppercase text-brand-twitch-butter">
                     {item.title}
                   </div>
-                  <div className="mb-2 font-mono text-[10px] tracking-[0.05em] text-[var(--tw-lav)] opacity-70">
+                  <div className="mb-2 font-mono text-[10px] tracking-[0.05em] text-brand-twitch-lav opacity-70">
                     {item.spec}
                   </div>
                   <div className="text-xs leading-[1.5] text-[rgba(255,255,255,0.7)]">
@@ -613,19 +613,19 @@ export function TwitchSection() {
         </div>
 
         <div className="rounded-[var(--r-lg)] border border-[rgba(245,229,116,0.2)] bg-[rgba(245,229,116,0.08)] p-6">
-          <div className="mb-3 font-mono text-[11px] uppercase tracking-[0.2em] text-[var(--tw-butter)]">
+          <div className="mb-3 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-twitch-butter">
             IG-first funnel
           </div>
           <div className="grid gap-4 min-[760px]:grid-cols-2 min-[1120px]:grid-cols-4">
             {funnel.map(([n, title, desc]) => (
               <div key={n}>
-                <div className="h-display mb-1 text-[32px] text-[var(--tw-butter)]">
+                <div className="h-display mb-1 text-[32px] text-brand-twitch-butter">
                   {n}
                 </div>
                 <div className="mb-1 text-[13px] font-bold text-white">
                   {title}
                 </div>
-                <div className="text-xs leading-[1.45] text-[var(--tw-lav)]">
+                <div className="text-xs leading-[1.45] text-brand-twitch-lav">
                   {desc}
                 </div>
               </div>

@@ -6,7 +6,7 @@ export function MonetizationSection() {
       tag: "Phase 0",
       when: "Month 0-3",
       name: "don't monetize · build",
-      color: "var(--pp-200)",
+      color: "var(--brand-purple-200)",
       revenue: "0 Kč / month",
       actions: [
         "No ads, no affiliate links, no subs",
@@ -20,7 +20,7 @@ export function MonetizationSection() {
       tag: "Phase 1",
       when: "Month 3-6",
       name: "soft on-ramp",
-      color: "var(--tw-butter)",
+      color: "var(--brand-twitch-butter)",
       revenue: "500 – 3 000 Kč / month",
       actions: [
         "IG Shop affiliate + LTK-style links for products I actually use",
@@ -35,7 +35,7 @@ export function MonetizationSection() {
       tag: "Phase 2",
       when: "Month 6-12",
       name: "brand partnerships · selective",
-      color: "var(--dr-200)",
+      color: "var(--brand-rose-200)",
       revenue: "3 000 – 15 000 Kč / month",
       actions: [
         "Media kit ready (1-pager PDF: audience, reach, examples, rates)",
@@ -50,7 +50,7 @@ export function MonetizationSection() {
       tag: "Phase 3",
       when: "Month 12-18",
       name: "own products",
-      color: "var(--mp-100)",
+      color: "var(--brand-pink-100)",
       revenue: "5 000 – 30 000 Kč / month",
       actions: [
         "Digital products: Lightroom preset pack, Notion template, dev tutorial",
@@ -64,7 +64,7 @@ export function MonetizationSection() {
       tag: "Phase 4",
       when: "Year 2+",
       name: "full-time creator (if I want)",
-      color: "var(--py-300)",
+      color: "var(--brand-yellow-300)",
       revenue: "30 000+ Kč / month",
       actions: [
         "Revenue mix: 40% own products · 30% subs · 20% brands · 10% ad revenue",

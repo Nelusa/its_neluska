@@ -100,7 +100,7 @@ no pressure, repo here: [link] ♡`,
             <span
               key={win}
               className="chip"
-              style={{ background: "#fff", borderColor: "var(--pp-200)" }}
+              style={{ background: "#fff", borderColor: "var(--brand-purple-200)" }}
             >
               {win}
             </span>

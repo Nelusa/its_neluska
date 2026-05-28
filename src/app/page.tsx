@@ -126,10 +126,11 @@ export default async function HomePage() {
             external={false}
           />
           <LinkCard
-            href="https://github.com/Nelusa"
-            label="code experiments"
-            sublabel="frontend builds, TypeScript, and little web toys"
+            href="/work"
+            label="what I've built"
+            sublabel="frontend projects, the soft little wins"
             icon={<span aria-hidden="true">✦</span>}
+            external={false}
           />
           <LinkCard
             href="/twitch-panels"

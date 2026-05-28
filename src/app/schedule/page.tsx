@@ -8,30 +8,11 @@ export const metadata: Metadata = {
   title: "schedule",
 };
 
-const categoryCopy: Record<
-  (typeof schedule)[number]["category"],
-  { label: string; accent: string; bg: string }
-> = {
-  dev: {
-    label: "dev jam",
-    accent: "var(--tw-butter)",
-    bg: "var(--tw-purple)",
-  },
-  lol: {
-    label: "LoL night",
-    accent: "var(--tw-heart)",
-    bg: "var(--paper-2)",
-  },
-  irl: {
-    label: "IRL / puzzle",
-    accent: "var(--pp-500)",
-    bg: "var(--py-100)",
-  },
-  chill: {
-    label: "chill",
-    accent: "var(--dr-400)",
-    bg: "var(--paper)",
-  },
+const categoryLabel: Record<(typeof schedule)[number]["category"], string> = {
+  dev: "dev jam",
+  lol: "LoL night",
+  irl: "IRL / puzzle",
+  chill: "chill",
 };
 
 const dayLabel: Record<(typeof schedule)[number]["day"], string> = {
@@ -69,41 +50,24 @@ export default function SchedulePage() {
 
       <Section label="✦ heads up" title="next slot" bg="lavender">
         <div className="grid gap-4 md:grid-cols-3">
-          {schedule.map((slot) => {
-            const style = categoryCopy[slot.category];
-            const isDark = style.bg === "var(--tw-purple)";
-
-            return (
-              <article
-                key={`${slot.day}-${slot.title}`}
-                className="rounded-[28px] border border-[rgba(78,52,100,0.12)] p-6 shadow-sh-md"
-                style={{
-                  background: style.bg,
-                  color: isDark ? "#fff" : "var(--ink)",
-                }}
-              >
-                <p
-                  className="font-mono text-[11px] uppercase tracking-[0.22em]"
-                  style={{ color: isDark ? "var(--tw-lav)" : "var(--pp-500)" }}
-                >
-                  {dayLabel[slot.day]} {timeWindow(slot.time)}
-                </p>
-                <h2
-                  className="mt-3 text-3xl uppercase leading-[0.95]"
-                  style={{ color: isDark ? style.accent : "var(--pp-700)" }}
-                >
-                  {style.label}
-                </h2>
-                <p
-                  className="mt-3 text-sm leading-6"
-                  style={{ color: isDark ? "var(--tw-lav)" : "var(--ink-soft)" }}
-                >
-                  {slot.emoji} {slot.title} · around {slot.time} · about{" "}
-                  {Math.round(slot.duration / 60)}h of cozy chaos.
-                </p>
-              </article>
-            );
-          })}
+          {schedule.map((slot) => (
+            <article
+              key={`${slot.day}-${slot.title}`}
+              data-category={slot.category}
+              className="schedule-slot rounded-[28px] border border-[rgba(78,52,100,0.12)] p-6 shadow-sh-md"
+            >
+              <p className="schedule-eyebrow font-mono text-[11px] uppercase tracking-[0.22em]">
+                {dayLabel[slot.day]} {timeWindow(slot.time)}
+              </p>
+              <h2 className="schedule-title mt-3 text-3xl uppercase leading-[0.95]">
+                {categoryLabel[slot.category]}
+              </h2>
+              <p className="schedule-body mt-3 text-sm leading-6">
+                {slot.emoji} {slot.title} · around {slot.time} · about{" "}
+                {Math.round(slot.duration / 60)}h of cozy chaos.
+              </p>
+            </article>
+          ))}
         </div>
       </Section>
 

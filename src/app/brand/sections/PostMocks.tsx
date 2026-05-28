@@ -49,10 +49,10 @@ function PostFrame({
           style={{
             background:
               mode === "princess"
-                ? "var(--pp-400)"
+                ? "var(--brand-purple-400)"
                 : mode === "nerd"
                   ? "#2a1d3d"
-                  : "var(--dr-300)",
+                  : "var(--brand-rose-300)",
           }}
         >
           {mode}
@@ -107,7 +107,7 @@ function PostSoftPhoto() {
     <PostFrame
       mode="princess"
       label="photo frame · cafe, skincare, balcony, setup"
-      bg="var(--mp-50)"
+      bg="var(--brand-pink-50)"
     >
       <div
         className="absolute rounded-lg"
@@ -125,13 +125,13 @@ function PostSoftPhoto() {
         </div>
       </div>
       <Washi
-        color="var(--py-200)"
+        color="var(--brand-yellow-200)"
         rotate={-8}
         width={160}
         style={{ top: 24, left: 70 }}
       />
       <Washi
-        color="var(--mp-100)"
+        color="var(--brand-pink-100)"
         rotate={12}
         width={140}
         style={{ top: 24, right: 60 }}
@@ -145,7 +145,7 @@ function PostSoftPhoto() {
             NO THOUGHTS · ONLY LATTE
           </div>
         </div>
-        <Heart size={26} color="var(--dr-300)" />
+        <Heart size={26} color="var(--brand-rose-300)" />
       </div>
       <div className="absolute right-10 top-16">
         <ClaudeSloth size={135} variant="princess" />
@@ -187,12 +187,12 @@ function PostQuote() {
       </div>
       <Sparkle
         size={14}
-        color="var(--py-400)"
+        color="var(--brand-yellow-400)"
         style={{ position: "absolute", right: 60, top: 110 }}
       />
       <Sparkle
         size={8}
-        color="var(--py-400)"
+        color="var(--brand-yellow-400)"
         style={{ position: "absolute", right: 110, top: 80 }}
       />
     </PostFrame>
@@ -287,7 +287,7 @@ function PostCompare() {
     <PostFrame
       mode="nerd"
       label="carousel intro · edu, hot takes"
-      bg="var(--py-100)"
+      bg="var(--brand-yellow-100)"
     >
       <div className="absolute left-9 top-9 font-mono text-[11px] tracking-[0.2em] text-brand-purple-500">
         CAROUSEL · 7 SLIDES →
@@ -335,7 +335,7 @@ function PostChaos() {
     <PostFrame
       mode="funny"
       label="confession · relatable chaos, sloth energy"
-      bg="var(--dr-100)"
+      bg="var(--brand-rose-100)"
     >
       <div className="absolute left-10 top-10 font-mono text-[11px] tracking-[0.18em] text-brand-rose-400">
         CONFESSION #17
@@ -356,7 +356,7 @@ function PostChaos() {
         <ClaudeSloth size={178} variant="puzzles" />
       </div>
       <Note
-        color="var(--py-200)"
+        color="var(--brand-yellow-200)"
         rotate={6}
         style={{ position: "absolute", right: 36, top: 36, fontSize: 18 }}
       >
@@ -456,7 +456,7 @@ function PostVibe() {
     <PostFrame
       mode="funny"
       label="vibe post · pure aesthetic, no agenda"
-      bg="var(--py-100)"
+      bg="var(--brand-yellow-100)"
     >
       <div className="absolute inset-[30px] grid grid-cols-3 grid-rows-4 gap-2">
         {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => (
@@ -466,10 +466,10 @@ function PostVibe() {
             style={{
               background:
                 i % 3 === 0
-                  ? "var(--mp-100)"
+                  ? "var(--brand-pink-100)"
                   : i % 3 === 1
-                    ? "var(--pp-100)"
-                    : "var(--dr-100)",
+                    ? "var(--brand-purple-100)"
+                    : "var(--brand-rose-100)",
             }}
           >
             <ClaudeSloth size={96} variant={collection[i]} />
@@ -533,7 +533,7 @@ export function FeedPreview() {
       ),
     },
     {
-      bg: "var(--dr-100)",
+      bg: "var(--brand-rose-100)",
       el: (
         <div className="h-display p-[14px] text-lg leading-[0.95] text-brand-rose-500">
           confession
@@ -543,7 +543,7 @@ export function FeedPreview() {
       ),
     },
     {
-      bg: "var(--mp-50)",
+      bg: "var(--brand-pink-50)",
       el: (
         <div className="p-[14px] font-mono text-[10px] tracking-[0.1em] text-brand-rose-400">
           [ PHOTO ]
@@ -585,7 +585,7 @@ export function FeedPreview() {
       ),
     },
     {
-      bg: "var(--py-100)",
+      bg: "var(--brand-yellow-100)",
       el: (
         <div className="h-display p-[14px] text-[14px] leading-none text-brand-purple-700">
           svelte vs
@@ -595,7 +595,7 @@ export function FeedPreview() {
       ),
     },
     {
-      bg: "var(--py-100)",
+      bg: "var(--brand-yellow-100)",
       el: (
         <div className="grid h-full grid-cols-2 gap-1 p-2.5">
           {[0, 1, 2, 3].map((i) => (
@@ -603,7 +603,7 @@ export function FeedPreview() {
               key={i}
               className="flex items-center justify-center rounded"
               style={{
-                background: i % 2 === 0 ? "var(--mp-100)" : "var(--pp-100)",
+                background: i % 2 === 0 ? "var(--brand-pink-100)" : "var(--brand-purple-100)",
               }}
             >
               <ClaudeSloth size={26} />

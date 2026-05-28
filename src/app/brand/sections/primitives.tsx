@@ -90,7 +90,7 @@ export function KitSection({
   );
 }
 
-export function DotDivider({ color = "var(--pp-200)" }: { color?: string }) {
+export function DotDivider({ color = "var(--brand-purple-200)" }: { color?: string }) {
   return (
     <div
       className="my-10 h-px border-t-2 border-dotted"
@@ -239,17 +239,17 @@ export function HeroOrnament() {
       </div>
       <Sparkle
         size={28}
-        color="var(--py-400)"
+        color="var(--brand-yellow-400)"
         className="absolute right-[100px] top-0"
       />
       <Sparkle
         size={16}
-        color="var(--py-400)"
+        color="var(--brand-yellow-400)"
         className="absolute right-2 top-10"
       />
       <Sparkle
         size={10}
-        color="var(--pp-400)"
+        color="var(--brand-purple-400)"
         className="absolute left-20 top-[70px]"
       />
     </div>
@@ -361,7 +361,7 @@ export function Heart({
 }
 
 export function Washi({
-  color = "var(--pp-200)",
+  color = "var(--brand-purple-200)",
   rotate = -6,
   width = 120,
   style,
@@ -389,7 +389,7 @@ export function Washi({
 export function Note({
   children,
   rotate = -2,
-  color = "var(--py-200)",
+  color = "var(--brand-yellow-200)",
   style,
 }: {
   children: ReactNode;

@@ -1,0 +1,177 @@
+/* Neutralize KitSection wrapper styling when used inside a JournalCard */
+[data-journal-card] section {
+  border-top: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+[data-journal-card] section > div {
+  max-width: none !important;
+}
+
+/* Hide KitSection's own eyebrow + title header — JournalCard provides its own */
+[data-journal-card] section > div > div:first-child {
+  display: none !important;
+}
+
+/* Live (Twitch) tab: cards take the deep purple Twitch styling so the
+   originally-yellow-on-dark text inside TwitchSection remains readable. */
+.journal-stage[data-tab="live"] [data-journal-card].card {
+  background: var(--brand-twitch-deep-2) !important;
+  border-color: var(--brand-twitch-purple) !important;
+  color: var(--brand-yellow-text);
+}
+.journal-stage[data-tab="live"] [data-journal-card] .text-brand-purple-700 {
+  color: var(--brand-yellow-text) !important;
+}
+.journal-stage[data-tab="live"] [data-journal-card] .text-ink-soft {
+  color: var(--brand-twitch-lav) !important;
+}
+.journal-stage[data-tab="live"] [data-journal-card] .text-brand-purple-500 {
+  color: var(--brand-twitch-butter) !important;
+}
+/* Brighten the decorative corner sloth on the dark Live tab —
+   default 40% opacity disappears against tw-deep. */
+.journal-stage[data-tab="live"] [data-page-sloth] > div {
+  opacity: 0.85 !important;
+}
+.journal-stage[data-tab="live"] [data-page-sloth] img {
+  filter: brightness(1.15) saturate(0.85);
+}
+
+/* Cap the Twitch preview images — original w-full makes them stretch
+   across the full-width JournalCard. */
+.journal-stage[data-tab="live"] [data-journal-card] img {
+  max-height: 360px;
+  width: auto !important;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Trim leading/trailing margin of section content so card padding controls
+   the breathing room, not the section internals. */
+[data-journal-card] section > div > *:first-child,
+[data-journal-card] section > div > div:not(:first-child) > *:first-child {
+  margin-top: 0 !important;
+}
+[data-journal-card] section > div > *:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Single-column stack — each card gets full width so embedded sections
+   (which were designed for full-page width) render correctly. */
+.journal-masonry {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Expand/collapse animation via CSS grid trick */
+.journal-card-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 320ms ease-out;
+}
+
+.journal-card-body[data-open="true"] {
+  grid-template-rows: 1fr;
+}
+
+.journal-card-body > div {
+  overflow: hidden;
+  min-height: 0;
+}
+
+/* Slide-in between tab pages — like flipping a journal page.
+   Uses the global pageSlideIn keyframe from globals.css. */
+.journal-stage {
+  animation: pageSlideIn 260ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* .float-slow / .float-fast utilities live in globals.css */
+
+/* .scrapbook-card utility lives in globals.css — shared by DeskScene
+   and ProjectCard. */
+
+/* Responsive sloth frame for scrapbook cards — overrides ClaudeSloth's
+   inline width/height so it scales with the card. */
+.sloth-frame {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sloth-frame > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Override ClaudeSloth's inline transform (subtle per-variant rotation)
+   with a scale so the actual sloth fills the frame — SVGs have internal
+   padding inside their viewBox. */
+.sloth-frame img {
+  transform: scale(1.7) !important;
+}
+
+/* Cover open animation */
+.journal-cover {
+  transition: transform 500ms ease-out, opacity 500ms ease-out;
+  transform-origin: left center;
+  perspective: 1600px;
+}
+
+.journal-cover[data-opening="true"] {
+  transform: rotateY(-120deg);
+  opacity: 0;
+}
+
+/* Desk scene item hover */
+.desk-item {
+  transition: transform 200ms ease, outline-color 200ms ease;
+  outline: 1.5px dashed transparent;
+  outline-offset: 4px;
+  cursor: pointer;
+}
+
+.desk-item:hover,
+.desk-item:focus-visible {
+  transform: scale(1.06);
+  outline-color: var(--brand-purple-200);
+}
+
+.desk-item .desk-tooltip {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.desk-item:hover .desk-tooltip,
+.desk-item:focus-visible .desk-tooltip {
+  opacity: 1;
+}
+
+/* Vertical tab text */
+.journal-tab-text {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .journal-cover,
+  .journal-card-body,
+  .journal-stage,
+  .desk-item,
+  .scrapbook-card,
+  .float-slow,
+  .float-fast {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}

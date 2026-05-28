@@ -330,11 +330,11 @@ export function RealPhotoSection() {
   ];
 
   const lightTimes = [
-    ["7-9h", "soft morning", "var(--tw-heart)", false],
-    ["10-12h", "ok", "var(--py-300)", false],
-    ["12-15h", "harsh - skip", "var(--dr-200)", true],
-    ["17-19h", "golden hour ★", "var(--py-500)", false],
-    ["19-21h", "blue hour", "var(--pp-300)", false],
+    ["7-9h", "soft morning", "var(--brand-twitch-heart)", false],
+    ["10-12h", "ok", "var(--brand-yellow-300)", false],
+    ["12-15h", "harsh - skip", "var(--brand-rose-200)", true],
+    ["17-19h", "golden hour ★", "var(--brand-yellow-500)", false],
+    ["19-21h", "blue hour", "var(--brand-purple-300)", false],
   ] as const;
 
   return (
@@ -546,13 +546,13 @@ export function TwitchSection() {
     <section
       id="twitch"
       className="border-t border-line px-8 py-[100px] min-[760px]:px-16"
-      style={{ background: "var(--tw-deep)", color: "#fff" }}
+      style={{ background: "var(--brand-twitch-deep)", color: "#fff" }}
     >
       <div className="mx-auto max-w-[1280px]">
         <div className="mb-12">
           <div
             className="eyebrow mb-2.5"
-            style={{ color: "var(--tw-butter)" }}
+            style={{ color: "var(--brand-twitch-butter)" }}
           >
             20 · TWITCH PACKAGE
           </div>

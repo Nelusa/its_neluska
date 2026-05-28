@@ -88,8 +88,8 @@ export function HeroSection() {
               <span
                 className="chip"
                 style={{
-                  background: "var(--pp-100)",
-                  color: "var(--pp-700)",
+                  background: "var(--brand-purple-100)",
+                  color: "var(--brand-purple-700)",
                   borderColor: "transparent",
                 }}
               >
@@ -98,7 +98,7 @@ export function HeroSection() {
               <span
                 className="chip"
                 style={{
-                  background: "var(--pp-500)",
+                  background: "var(--brand-purple-500)",
                   color: "#fff9d8",
                   borderColor: "transparent",
                 }}
@@ -108,8 +108,8 @@ export function HeroSection() {
               <span
                 className="chip"
                 style={{
-                  background: "var(--py-200)",
-                  color: "var(--pp-700)",
+                  background: "var(--brand-yellow-200)",
+                  color: "var(--brand-purple-700)",
                   borderColor: "transparent",
                 }}
               >
@@ -418,7 +418,7 @@ export function TypeSection() {
                   fontSize: scale.size,
                   marginTop: 10,
                   lineHeight: 1.05,
-                  color: "var(--pp-700)",
+                  color: "var(--brand-purple-700)",
                   textTransform: scale.cls === "h-display" ? "uppercase" : "none",
                   letterSpacing: scale.cls === "mono" ? "0.14em" : undefined,
                   overflowWrap: scale.cls === "h-display" ? "normal" : "anywhere",
@@ -518,8 +518,8 @@ const modes = [
     title: "the princess",
     tagline: "soft life, high res",
     pct: 45,
-    bg: "linear-gradient(135deg, var(--mp-50), var(--mp-100))",
-    ink: "var(--dr-500)",
+    bg: "linear-gradient(135deg, var(--brand-pink-50), var(--brand-pink-100))",
+    ink: "var(--brand-rose-500)",
     does: "cozy setup, cafe, yoga, skincare, balcony, slow mornings, pretty food",
     feels: "warm afternoon light, lavender, oat milk, silk pillow case",
     visual: "dusty rose + mauve + script accents · photo-forward",
@@ -540,8 +540,8 @@ const modes = [
     title: "the funny one",
     tagline: "mostly sloth",
     pct: 20,
-    bg: "var(--py-100)",
-    ink: "var(--pp-700)",
+    bg: "var(--brand-yellow-100)",
+    ink: "var(--brand-purple-700)",
     does: "sloth memes, confession posts, tiny disasters, Lego fails, playful chaos – stream highlights when I have them",
     feels: "slightly dissociating, mostly loving, has sent this as a reel",
     visual: "pastel yellow + sticker energy + chunky display",

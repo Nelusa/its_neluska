@@ -4,11 +4,11 @@ import { KitSection } from "../primitives";
 
 export function PrivacySection() {
   const routes = [
-    { path: "neluska.dev/", access: "public", who: "all visitors", color: "var(--pp-200)", ink: "var(--pp-700)" },
-    { path: "/about  ·  /schedule  ·  /twitch-panels", access: "public", who: "all visitors", color: "var(--pp-200)", ink: "var(--pp-700)" },
-    { path: "/brand", access: "owner-only", who: "only me · password-gated", color: "var(--dr-300)", ink: "#fff" },
-    { path: "/media", access: "password-gated", who: "me + brands I DM the password", color: "var(--py-300)", ink: "var(--pp-700)" },
-    { path: "/admin (later)", access: "owner-only", who: "only me", color: "var(--dr-400)", ink: "#fff" },
+    { path: "neluska.dev/", access: "public", who: "all visitors", color: "var(--brand-purple-200)", ink: "var(--brand-purple-700)" },
+    { path: "/about  ·  /schedule  ·  /twitch-panels", access: "public", who: "all visitors", color: "var(--brand-purple-200)", ink: "var(--brand-purple-700)" },
+    { path: "/brand", access: "owner-only", who: "only me · password-gated", color: "var(--brand-rose-300)", ink: "#fff" },
+    { path: "/media", access: "password-gated", who: "me + brands I DM the password", color: "var(--brand-yellow-300)", ink: "var(--brand-purple-700)" },
+    { path: "/admin (later)", access: "owner-only", who: "only me", color: "var(--brand-rose-400)", ink: "#fff" },
   ];
 
   const neverPublish = [

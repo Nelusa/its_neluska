@@ -1,47 +1,47 @@
 /* its_neluska – design tokens */
 :root {
   /* Princess Purple – exact hex */
-  --pp-50: #EEE6F4;
-  --pp-100: #DCCDE8;
-  --pp-200: #BCA3CC;
-  --pp-300: #875BA4;
-  --pp-400: #875BA4;
-  --pp-500: #6D4E82;
-  --pp-600: #4E3464;
-  --pp-700: #2A103F;
+  --brand-purple-50: #EEE6F4;
+  --brand-purple-100: #DCCDE8;
+  --brand-purple-200: #BCA3CC;
+  --brand-purple-300: #875BA4;
+  --brand-purple-400: #875BA4;
+  --brand-purple-500: #6D4E82;
+  --brand-purple-600: #4E3464;
+  --brand-purple-700: #2A103F;
 
   /* Pastel Yellow */
-  --py-50: #FFFDF6;
-  --py-100: #FFF7DA;
-  --py-200: #FFF0B2;
-  --py-300: #FCEB86;
-  --py-400: #F1E07C;
-  --py-500: #E6D571;
-  --py-600: #D8C765;
+  --brand-yellow-50: #FFFDF6;
+  --brand-yellow-100: #FFF7DA;
+  --brand-yellow-200: #FFF0B2;
+  --brand-yellow-300: #FCEB86;
+  --brand-yellow-400: #F1E07C;
+  --brand-yellow-500: #E6D571;
+  --brand-yellow-600: #D8C765;
 
   /* Dusty Rose */
-  --dr-50: #F6E8EE;
-  --dr-100: #EACFDA;
-  --dr-200: #D8A6B8;
-  --dr-300: #B97C93;
-  --dr-400: #8E5C72;
-  --dr-500: #8E5C72;
+  --brand-rose-50: #F6E8EE;
+  --brand-rose-100: #EACFDA;
+  --brand-rose-200: #D8A6B8;
+  --brand-rose-300: #B97C93;
+  --brand-rose-400: #8E5C72;
+  --brand-rose-500: #8E5C72;
 
   /* Mauve Pink */
-  --mp-50: #F3E6EF;
-  --mp-100: #E1BDD5;
-  --mp-200: #C58BB0;
-  --mp-300: #9F6D8E;
-  --mp-400: #744E68;
+  --brand-pink-50: #F3E6EF;
+  --brand-pink-100: #E1BDD5;
+  --brand-pink-200: #C58BB0;
+  --brand-pink-300: #9F6D8E;
+  --brand-pink-400: #744E68;
 
   /* Twitch exact hex */
-  --tw-deep: #2D1B4E;
-  --tw-deep-2: #1F1238;
-  --tw-purple: #2A103F;
-  --tw-lav: #DCC9E8;
-  --tw-butter: #F5E574;
-  --tw-heart: #F4A8C0;
-  --py-text: #FFF2A3;
+  --brand-twitch-deep: #2D1B4E;
+  --brand-twitch-deep-2: #1F1238;
+  --brand-twitch-purple: #2A103F;
+  --brand-twitch-lav: #DCC9E8;
+  --brand-twitch-butter: #F5E574;
+  --brand-twitch-heart: #F4A8C0;
+  --brand-yellow-text: #FFF2A3;
 
   /* Neutrals */
   --ink: oklch(0.24 0.03 310);
@@ -127,7 +127,7 @@ a {
   font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--pp-500);
+  color: var(--brand-purple-500);
 }
 
 .pill {
@@ -158,7 +158,7 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--pp-100);
+  background: var(--brand-purple-100);
   border-radius: 10px;
 }
 
@@ -167,12 +167,12 @@ a {
 }
 
 ::selection {
-  background: var(--pp-200);
-  color: var(--pp-700);
+  background: var(--brand-purple-200);
+  color: var(--brand-purple-700);
 }
 
 .contour-dark {
-  background-color: var(--tw-deep);
+  background-color: var(--brand-twitch-deep);
   background-image: url("/assets/patterns/waves.png");
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -185,13 +185,13 @@ a {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background-color: var(--tw-deep);
+  background-color: var(--brand-twitch-deep);
   mix-blend-mode: color;
   opacity: 0.55;
 }
 
 .contour-light {
-  background-color: var(--tw-lav);
+  background-color: var(--brand-twitch-lav);
   background-image: url("/assets/patterns/waves.png");
   background-repeat: no-repeat;
   background-position: bottom left;

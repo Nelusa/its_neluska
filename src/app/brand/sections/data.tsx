@@ -188,8 +188,8 @@ export const PILLARS = [
     pct: 35,
     name: "soft life",
     mode: "princess",
-    color: "var(--mp-100)",
-    ink: "var(--dr-500)",
+    color: "var(--brand-pink-100)",
+    ink: "var(--brand-rose-500)",
     desc: "cozy setup, balcony, coffee, skincare, yoga, slow mornings, flowers",
     formats: ["photo dump", "aesthetic reel", "story series"],
   },
@@ -197,8 +197,8 @@ export const PILLARS = [
     pct: 30,
     name: "builder mode",
     mode: "nerd",
-    color: "var(--pp-100)",
-    ink: "var(--pp-700)",
+    color: "var(--brand-purple-100)",
+    ink: "var(--brand-purple-700)",
     desc: "svelte, three.js, R3F, 3D template system, build logs, quick tips",
     formats: ["60s tutorial reel", "carousel tip", "code screenshot post"],
   },
@@ -206,8 +206,8 @@ export const PILLARS = [
     pct: 20,
     name: "sloth + personality",
     mode: "funny",
-    color: "var(--py-200)",
-    ink: "var(--pp-700)",
+    color: "var(--brand-yellow-200)",
+    ink: "var(--brand-purple-700)",
     desc: "sloth collection, Lego builds, puzzles, memes, confessions, gaming moments",
     formats: ["personality reel", "confession post", "photo with caption", "stream highlight reel"],
   },
@@ -215,19 +215,19 @@ export const PILLARS = [
     pct: 15,
     name: "real talk",
     mode: "princess",
-    color: "var(--dr-100)",
-    ink: "var(--dr-500)",
+    color: "var(--brand-rose-100)",
+    ink: "var(--brand-rose-500)",
     desc: "anxiety journey, women in tech, honest moments, small wins",
     formats: ["long caption post", "carousel essay", "quote card"],
   },
 ];
 
 export const CAL_KEY = {
-  princess: { color: "var(--mp-100)", ink: "var(--dr-500)", dot: "var(--dr-300)" },
-  nerd: { color: "var(--pp-100)", ink: "var(--pp-700)", dot: "var(--pp-500)" },
-  funny: { color: "var(--py-200)", ink: "var(--pp-700)", dot: "var(--dr-300)" },
+  princess: { color: "var(--brand-pink-100)", ink: "var(--brand-rose-500)", dot: "var(--brand-rose-300)" },
+  nerd: { color: "var(--brand-purple-100)", ink: "var(--brand-purple-700)", dot: "var(--brand-purple-500)" },
+  funny: { color: "var(--brand-yellow-200)", ink: "var(--brand-purple-700)", dot: "var(--brand-rose-300)" },
   live: { color: "#2a1d3d", ink: "#ffe875", dot: "#ff6b6b" },
-  stories: { color: "var(--mp-50)", ink: "var(--pp-600)", dot: "var(--pp-400)" },
+  stories: { color: "var(--brand-pink-50)", ink: "var(--brand-purple-600)", dot: "var(--brand-purple-400)" },
   rest: { color: "transparent", ink: "var(--ink-soft)", dot: "transparent" },
 } as const;
 
@@ -901,7 +901,7 @@ function StoryPoll() {
 
 function StoryLiveNow() {
   return (
-    <StoryFrame label="live now · ping followers" bg="var(--py-100)">
+    <StoryFrame label="live now · ping followers" bg="var(--brand-yellow-100)">
       <div className="absolute left-6 top-9 flex items-center gap-2">
         <div className="h-2.5 w-2.5 rounded-full bg-[#d14a6a] shadow-[0_0_0_6px_rgba(209,74,106,0.2)]" />
         <div className="font-mono text-[10px] tracking-[0.24em] text-brand-rose-500">
@@ -960,7 +960,7 @@ function StoryPhotoDump() {
         className="absolute right-[14px] top-[220px] flex h-[200px] w-[140px] items-center justify-center rounded-[10px] font-mono text-[9px] text-brand-rose-400 shadow-sh-md"
         style={{
           background:
-            "repeating-linear-gradient(135deg, var(--mp-100) 0 8px, var(--mp-50) 8px 16px)",
+            "repeating-linear-gradient(135deg, var(--brand-pink-100) 0 8px, var(--brand-pink-50) 8px 16px)",
           transform: "rotate(6deg)",
         }}
       >
@@ -970,13 +970,13 @@ function StoryPhotoDump() {
         rotate={-10}
         width={80}
         style={{ top: 172, left: 50 }}
-        color="var(--py-300)"
+        color="var(--brand-yellow-300)"
       />
       <Washi
         rotate={12}
         width={80}
         style={{ top: 212, right: 30 }}
-        color="var(--pp-200)"
+        color="var(--brand-purple-200)"
       />
       <div className="font-script absolute bottom-10 left-6 right-6 text-center text-[28px] text-brand-rose-400">
         no thoughts, just vibes
@@ -1130,7 +1130,7 @@ export function HighlightsRow() {
       <HighlightCover label="✦ dev" bg="#2a1d3d">
         <HighlightSloth variant="code" />
       </HighlightCover>
-      <HighlightCover label="✦ sloths" bg="var(--py-100)">
+      <HighlightCover label="✦ sloths" bg="var(--brand-yellow-100)">
         <HighlightSloth variant="heart" />
       </HighlightCover>
       <HighlightCover
@@ -1142,7 +1142,7 @@ export function HighlightsRow() {
       <HighlightCover label="✦ builds" bg="var(--paper-2)">
         <HighlightSloth variant="painting" />
       </HighlightCover>
-      <HighlightCover label="✦ lego" bg="var(--mp-100)">
+      <HighlightCover label="✦ lego" bg="var(--brand-pink-100)">
         <HighlightSloth variant="legoPurple" />
       </HighlightCover>
       <HighlightCover
@@ -1154,7 +1154,7 @@ export function HighlightsRow() {
       <HighlightCover label="✦ food" bg="#fff9d8">
         <HighlightSloth variant="banana" />
       </HighlightCover>
-      <HighlightCover label="✦ lol" bg="var(--pp-700)">
+      <HighlightCover label="✦ lol" bg="var(--brand-purple-700)">
         <HighlightSloth variant="singing" />
       </HighlightCover>
     </div>
@@ -1250,7 +1250,7 @@ export function ReelsRow() {
           </div>
         </ReelsCover>
 
-        <ReelsCover label="aesthetic" bg="var(--py-100)">
+        <ReelsCover label="aesthetic" bg="var(--brand-yellow-100)">
           <div className="absolute left-4 top-4 font-mono text-[9px] tracking-[0.2em] text-brand-purple-500">
             ASMR · SILENT
           </div>
@@ -1272,10 +1272,10 @@ export function ReelsRow() {
                 style={{
                   aspectRatio: "1/1",
                   background: [
-                    "var(--pp-200)",
-                    "var(--mp-200)",
-                    "var(--dr-200)",
-                    "var(--py-300)",
+                    "var(--brand-purple-200)",
+                    "var(--brand-pink-200)",
+                    "var(--brand-rose-200)",
+                    "var(--brand-yellow-300)",
                   ][i % 4],
                   clipPath:
                     "polygon(30% 0, 70% 0, 70% 30%, 100% 30%, 100% 70%, 70% 70%, 70% 100%, 30% 100%, 30% 70%, 0 70%, 0 30%, 30% 30%)",

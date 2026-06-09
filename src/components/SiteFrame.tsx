@@ -2,7 +2,6 @@ import type { CSSProperties, ReactNode } from "react";
 
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { Sloth } from "@/components/Sloth";
 import { WaveBg } from "@/components/WaveBg";
 import { cn } from "@/lib/cn";
 
@@ -112,13 +111,8 @@ export function SiteFrame({ children, bg = "paper" }: SiteFrameProps) {
           color="var(--brand-pink-300)"
           className="float-fast absolute right-[10%] top-[78%]"
         />
-
-        <div
-          className="float-slow absolute bottom-12 right-4 opacity-50 md:right-8"
-          style={{ transform: "rotate(-6deg)" }}
-        >
-          <Sloth size={56} variant="peek" />
-        </div>
+        {/* Corner peek sloth removed — the global <SlothCompanion> now lives
+            bottom-right across all pages. */}
       </div>
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-content flex-col gap-8 px-4 pb-10 pt-6 sm:px-6 lg:px-8">

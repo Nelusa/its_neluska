@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
+import { PrincessBoot } from "@/components/room/PrincessBoot";
+import { SlothCompanion } from "@/components/SlothCompanion";
 import { cn } from "@/lib/cn";
 import "@/styles/globals.css";
 
@@ -72,7 +74,11 @@ export default function RootLayout({
       lang="en"
       className={cn(display.variable, body.variable, script.variable)}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <SlothCompanion />
+        <PrincessBoot />
+      </body>
     </html>
   );
 }

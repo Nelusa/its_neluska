@@ -103,6 +103,57 @@ a {
 
 .float-slow { animation: journalFloat 4.2s ease-in-out infinite; }
 .float-fast { animation: journalFloat 2.8s ease-in-out infinite; }
+
+/* Sloth companion: pet particles float up + fade, live pulse ring */
+@keyframes companionFloatUp {
+  0%   { opacity: 0; transform: translate(0, 0) scale(0.6) rotate(0deg); }
+  20%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(var(--drift, 0), -54px) scale(1) rotate(var(--spin, 12deg)); }
+}
+@keyframes companionPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 229, 116, 0.55); }
+  50%      { box-shadow: 0 0 0 10px rgba(245, 229, 116, 0); }
+}
+.companion-particle { animation: companionFloatUp 900ms ease-out forwards; }
+.companion-live-ring { animation: companionPulse 1.8s ease-out infinite; }
+
+/* Entrance pop, happy wiggle on pet-combo, drifting sleep z's, bubble pop */
+@keyframes companionEnter {
+  0%   { opacity: 0; transform: translateY(46px) scale(0.5); }
+  60%  { opacity: 1; transform: translateY(-7px) scale(1.07); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes companionWiggle {
+  0%, 100% { transform: rotate(0deg); }
+  20%      { transform: rotate(-11deg); }
+  45%      { transform: rotate(8deg); }
+  70%      { transform: rotate(-5deg); }
+  88%      { transform: rotate(3deg); }
+}
+@keyframes companionZ {
+  0%   { opacity: 0; transform: translate(0, 0) scale(0.6) rotate(-8deg); }
+  25%  { opacity: 0.85; }
+  100% { opacity: 0; transform: translate(16px, -38px) scale(1.15) rotate(10deg); }
+}
+@keyframes companionBubblePop {
+  0%   { opacity: 0; transform: translateY(8px) scale(0.82); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes companionDotPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 90, 122, 0.6); }
+  50%      { box-shadow: 0 0 0 5px rgba(232, 90, 122, 0); }
+}
+.companion-enter   { animation: companionEnter 640ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+.companion-wiggle  { animation: companionWiggle 560ms ease-in-out; }
+.companion-z       { animation: companionZ 2.6s ease-out infinite; }
+.companion-bubble  { animation: companionBubblePop 240ms cubic-bezier(0.2, 0.8, 0.2, 1); }
+.companion-dot-live { animation: companionDotPulse 1.6s ease-out infinite; }
+
+/* Terminal boot cursor */
+.boot-cursor {
+  animation: blink 1.05s steps(1) infinite;
+  color: var(--brand-twitch-butter);
+}
 .page-slide-in {
   animation: pageSlideIn 260ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }

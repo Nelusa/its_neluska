@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const routes = ["", "/about", "/work", "/schedule", "/twitch-panels"];
+const routes = ["", "/about", "/work", "/lab", "/schedule", "/twitch-panels"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://neluska.dev";

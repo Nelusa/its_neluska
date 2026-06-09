@@ -18,6 +18,9 @@ export const OFFLINE_STATUS: TwitchStatus = {
   startedAt: null,
 };
 
+/** Stable fake start time for the dev mock (≈1h 23m before server boot). */
+const MOCK_STARTED_AT = new Date(Date.now() - 83 * 60 * 1000).toISOString();
+
 let cachedToken: { value: string; expiresAt: number } | null = null;
 
 async function getAppToken(): Promise<string | null> {
@@ -60,6 +63,20 @@ async function getAppToken(): Promise<string | null> {
 }
 
 export async function getTwitchStatus(): Promise<TwitchStatus> {
+  // ── TEMP DEV MOCK ──────────────────────────────────────────────────────
+  // Set TWITCH_MOCK_LIVE=1 in .env.local to force a fake live stream so the
+  // companion's live card + go-live celebration can be previewed. Remove
+  // (or unset) when done.
+  if (process.env.TWITCH_MOCK_LIVE === "1") {
+    return {
+      isLive: true,
+      title: "cozy late-night dev jam ♡ building the new site",
+      game: "Software and Game Development",
+      viewers: 142,
+      startedAt: MOCK_STARTED_AT,
+    };
+  }
+
   const token = await getAppToken();
 
   if (!token || !CLIENT_ID) {

@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
+
 import { SiteFrame } from "@/components/SiteFrame";
+
+export const metadata: Metadata = {
+  title: "owner tools",
+  robots: { index: false, follow: false },
+};
 
 export default function AdminPage() {
   return (

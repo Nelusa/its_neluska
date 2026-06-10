@@ -117,7 +117,9 @@ export function SiteFrame({ children, bg = "paper" }: SiteFrameProps) {
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-content flex-col gap-8 px-4 pb-10 pt-6 sm:px-6 lg:px-8">
         <SiteHeader />
-        <main className="flex flex-1 flex-col gap-8">{children}</main>
+        <main id="main" className="flex flex-1 flex-col gap-8">
+          {children}
+        </main>
         <SiteFooter />
       </div>
     </div>

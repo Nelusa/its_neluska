@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import { LinkCard } from "@/components/LinkCard";
 import { SiteFrame } from "@/components/SiteFrame";
+
+export const metadata: Metadata = {
+  title: "media",
+  robots: { index: false, follow: false },
+};
 
 export default function MediaPage() {
   return (

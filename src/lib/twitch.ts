@@ -65,9 +65,13 @@ async function getAppToken(): Promise<string | null> {
 export async function getTwitchStatus(): Promise<TwitchStatus> {
   // ── TEMP DEV MOCK ──────────────────────────────────────────────────────
   // Set TWITCH_MOCK_LIVE=1 in .env.local to force a fake live stream so the
-  // companion's live card + go-live celebration can be previewed. Remove
-  // (or unset) when done.
-  if (process.env.TWITCH_MOCK_LIVE === "1") {
+  // companion's live card + go-live celebration can be previewed. Gated to
+  // non-production so it can never fake-live on the deployed site, even if the
+  // flag accidentally leaks into the production env.
+  if (
+    process.env.TWITCH_MOCK_LIVE === "1" &&
+    process.env.NODE_ENV !== "production"
+  ) {
     return {
       isLive: true,
       title: "cozy late-night dev jam ♡ building the new site",

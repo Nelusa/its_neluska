@@ -12,6 +12,11 @@ npm run build
 npm run start
 ```
 
+> ⚠️ Never run `npm run build` while `npm run dev` is running against the same `.next` —
+> it corrupts the build manifests. Stop the dev server first.
+> The pre-existing ESLint `jsx-a11y` plugin warning is an upstream packaging issue and does
+> not block the build.
+
 What you want to confirm:
 
 - `/` loads even if Twitch environment variables are missing or invalid
@@ -58,6 +63,7 @@ git push -u origin main
 
 Set these in Development, Preview, and Production:
 
+- `NEXT_PUBLIC_SITE_URL` (e.g. `https://neluska.dev`)
 - `TWITCH_CLIENT_ID`
 - `TWITCH_CLIENT_SECRET`
 - `OWNER_USER`
@@ -69,6 +75,9 @@ Production recommendations:
 
 - use long unique values for `OWNER_PASS` and `MEDIA_PASS`
 - store the real passwords in 1Password or another password manager
+- **do NOT set `TWITCH_MOCK_LIVE`** in production (dev-only preview flag; also gated to
+  `NODE_ENV !== "production"` in `src/lib/twitch.ts`, so it can't fake-live on the live site)
+- confirm `metadataBase` in `src/app/layout.tsx` matches the real domain
 
 ## 5. Post-Deploy Verification
 
@@ -79,8 +88,15 @@ After deployment, check:
 - `/media` shows browser auth before login
 - `/admin` shows browser auth before login
 - logged-in `/brand` has `noindex,nofollow`
+- `/media` and `/admin` also send `noindex,nofollow`
 - `robots.txt` is live
 - `sitemap.xml` is live
+- OG cards render: open `/opengraph-image`, `/work/opengraph-image`, `/about/opengraph-image`,
+  `/schedule/opengraph-image`, `/lab/opengraph-image`, `/twitch-panels/opengraph-image`
+- `/manifest.webmanifest` returns valid JSON (installable)
+- sloth companion shows bottom-right; hover opens the offline "now board" card
+- Vercel Analytics receives pageviews (Vercel dashboard → Analytics)
+- keyboard: first Tab on any page reveals the "skip to content" link
 
 Headers to confirm:
 
@@ -94,7 +110,8 @@ Headers to confirm:
 ### Public content
 
 - landing / about / schedule / twitch-panels pages live in `src/app/`
-- schedule data lives in `src/lib/schedule.ts`
+- schedule data lives in `src/lib/schedule.ts` (add ISO `date` to a slot to light up the companion countdown)
+- the sloth companion's "now board" (vibe/OOTD, currently-building, latest Instagram post) lives in `src/lib/now.ts`
 
 ### Active brand system
 

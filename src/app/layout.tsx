@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
@@ -75,9 +76,13 @@ export default function RootLayout({
       className={cn(display.variable, body.variable, script.variable)}
     >
       <body>
+        <a href="#main" className="skip-link">
+          skip to content
+        </a>
         {children}
         <SlothCompanion />
         <PrincessBoot />
+        <Analytics />
       </body>
     </html>
   );

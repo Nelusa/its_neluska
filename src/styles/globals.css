@@ -158,6 +158,32 @@ a {
   animation: pageSlideIn 260ms cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 
+/* Skip-to-content link: off-screen until keyboard-focused. */
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 100;
+  transform: translateY(-200%);
+  border-radius: 999px;
+  border: 1px solid var(--brand-purple-200);
+  background: var(--paper);
+  padding: 8px 16px;
+  font-family: var(--ff-mono, monospace);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-purple-700);
+  box-shadow: var(--sh-md);
+  transition: transform 160ms ease;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+  outline: 2px solid var(--brand-purple-400);
+  outline-offset: 2px;
+}
+
 /* Scrapbook-style card: deterministic rotation via --rot CSS variable,
    straightens and lifts on hover/focus. Used by DeskScene + ProjectCard. */
 .scrapbook-card {
